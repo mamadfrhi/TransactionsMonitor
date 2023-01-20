@@ -25,7 +25,6 @@
 		897279A9297AE6B7004DCF21 /* TransactionsAPISessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 897279A8297AE6B7004DCF21 /* TransactionsAPISessionManager.swift */; };
 		897279AB297AE6E0004DCF21 /* TransactionsAPIRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 897279AA297AE6E0004DCF21 /* TransactionsAPIRouter.swift */; };
 		897279AD297AE742004DCF21 /* TransactionsAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 897279AC297AE742004DCF21 /* TransactionsAPI.swift */; };
-		897279B1297AE781004DCF21 /* PBTransactionDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 897279AF297AE781004DCF21 /* PBTransactionDetail.swift */; };
 		897279B2297AE781004DCF21 /* PBTransaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 897279B0297AE781004DCF21 /* PBTransaction.swift */; };
 		897279B4297AE7EC004DCF21 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 897279B3297AE7EC004DCF21 /* MainView.swift */; };
 		897279B6297AE84F004DCF21 /* ViewCodeableTemplate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 897279B5297AE84F004DCF21 /* ViewCodeableTemplate.swift */; };
@@ -53,7 +52,6 @@
 		897279A8297AE6B7004DCF21 /* TransactionsAPISessionManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionsAPISessionManager.swift; sourceTree = "<group>"; };
 		897279AA297AE6E0004DCF21 /* TransactionsAPIRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionsAPIRouter.swift; sourceTree = "<group>"; };
 		897279AC297AE742004DCF21 /* TransactionsAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionsAPI.swift; sourceTree = "<group>"; };
-		897279AF297AE781004DCF21 /* PBTransactionDetail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PBTransactionDetail.swift; sourceTree = "<group>"; };
 		897279B0297AE781004DCF21 /* PBTransaction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PBTransaction.swift; sourceTree = "<group>"; };
 		897279B3297AE7EC004DCF21 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		897279B5297AE84F004DCF21 /* ViewCodeableTemplate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewCodeableTemplate.swift; sourceTree = "<group>"; };
@@ -197,7 +195,6 @@
 			isa = PBXGroup;
 			children = (
 				897279B0297AE781004DCF21 /* PBTransaction.swift */,
-				897279AF297AE781004DCF21 /* PBTransactionDetail.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -329,7 +326,6 @@
 				897279B8297AEB22004DCF21 /* MainTableViewDataSource.swift in Sources */,
 				89727992297ADF67004DCF21 /* AppCoordinator.swift in Sources */,
 				897279B6297AE84F004DCF21 /* ViewCodeableTemplate.swift in Sources */,
-				897279B1297AE781004DCF21 /* PBTransactionDetail.swift in Sources */,
 				89727996297ADF91004DCF21 /* MainCoordinator.swift in Sources */,
 				89520F55297AD5A90092210A /* MainVC.swift in Sources */,
 				89727993297ADF67004DCF21 /* Coordinator.swift in Sources */,

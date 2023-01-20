@@ -7,16 +7,53 @@
 
 struct PBTransaction: Codable {
     let companyName: String
-    let alias: PBTransactionAlias
-    let category: Int
-    let transactionDetail: PBTransactionDetail
-    
-    enum CodingKeys: String, CodingKey {
-        case companyName = "partnerDisplayName",
-        alias, category, transactionDetail
-    }
-}
-
-struct PBTransactionAlias: Codable {
     let reference: String
+    let category: Int
+    
+    let description: String?
+    let bookingDate: String
+    
+    let amount   : Int
+    let currency : String
+    
+    // MARK: Keys
+    enum TransactionKeys: String, CodingKey {
+        case companyName = "partnerDisplayName",
+             alias,
+             category,
+             transactionDetail
+    }
+    
+    enum AliasKeys: String, CodingKey {
+        case reference
+    }
+    
+    enum TransactionDetailKeys: String, CodingKey {
+        case description,
+             bookingDate,
+             value
+    }
+    
+    enum ValueKeys: String, CodingKey {
+        case amount, currency
+    }
+    
+    // MARK: Init
+    
+    init(from decoder: Decoder) throws {
+        let transactionContainer = try decoder.container(keyedBy: TransactionKeys.self)
+        self.companyName = try transactionContainer.decode(String.self, forKey: .companyName)
+        self.category = try transactionContainer.decode(Int.self, forKey: .category)
+        
+        let aliasContainer = try transactionContainer.nestedContainer(keyedBy: AliasKeys.self, forKey: .alias)
+        self.reference = try aliasContainer.decode(String.self, forKey: .reference)
+        
+        let detailContainer = try transactionContainer.nestedContainer(keyedBy: TransactionDetailKeys.self, forKey: .transactionDetail)
+        self.description = try detailContainer.decodeIfPresent(String.self, forKey: .description)
+        self.bookingDate = try detailContainer.decode(String.self, forKey: .bookingDate)
+        
+        let valueContainer = try detailContainer.nestedContainer(keyedBy: ValueKeys.self, forKey: .value)
+        self.amount = try valueContainer.decode(Int.self, forKey: .amount)
+        self.currency = try valueContainer.decode(String.self, forKey: .currency)
+    }
 }
