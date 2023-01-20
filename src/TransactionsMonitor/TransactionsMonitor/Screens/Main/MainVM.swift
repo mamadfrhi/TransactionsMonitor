@@ -20,7 +20,7 @@ class MainVM {
                                                                 localJSONLoader: LocalJSONLoader()))
     
     // MARK: Obserbables
-    @Published var error: String?
+    @Published var errorMessage: String?
     @Published var transactions: [PBTransaction] = []
 }
 
@@ -52,7 +52,7 @@ extension MainVM {
     }
     
     private func showError(with errorMessage: String) {
-        self.viewDelegate?.showError(errorMessage: errorMessage)
+        self.errorMessage = errorMessage
     }
 }
 

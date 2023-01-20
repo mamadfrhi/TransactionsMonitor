@@ -44,6 +44,13 @@ extension MainVC {
             self?.mainTableViewDataSource.transactions = transactions
         }
         .store(in: &cancelables)
+        
+        mainVM.$errorMessage.sink {
+            [weak self] errorMessage in
+            let errorText = errorMessage ?? "Something wrong happened"
+            self?.showError(errorMessage: errorText)
+        }
+        .store(in: &cancelables)
     }
 }
 
@@ -60,8 +67,8 @@ extension MainVC: MainVMDelegate {
     }
     
     func showError(errorMessage: String) {
-        DispatchQueue.main.async {        
-            print("Error is: ", errorMessage)
+        DispatchQueue.main.async {
+            self.showAlert(alertTitle: "Error!", alertMessage: errorMessage)
         }
     }
     

@@ -32,6 +32,7 @@
 		897279BA297B08D7004DCF21 /* MainVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 897279B9297B08D7004DCF21 /* MainVM.swift */; };
 		897279BC297B0A17004DCF21 /* TransactionServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 897279BB297B0A17004DCF21 /* TransactionServices.swift */; };
 		897279BE297B12F2004DCF21 /* VMAbstractions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 897279BD297B12F2004DCF21 /* VMAbstractions.swift */; };
+		897279C1297B5E15004DCF21 /* UIViewController+showAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 897279C0297B5E15004DCF21 /* UIViewController+showAlert.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -62,6 +63,7 @@
 		897279B9297B08D7004DCF21 /* MainVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVM.swift; sourceTree = "<group>"; };
 		897279BB297B0A17004DCF21 /* TransactionServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionServices.swift; sourceTree = "<group>"; };
 		897279BD297B12F2004DCF21 /* VMAbstractions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VMAbstractions.swift; sourceTree = "<group>"; };
+		897279C0297B5E15004DCF21 /* UIViewController+showAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+showAlert.swift"; sourceTree = "<group>"; };
 		943136329B21FFF23497888D /* Pods-TransactionsMonitor.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TransactionsMonitor.debug.xcconfig"; path = "Target Support Files/Pods-TransactionsMonitor/Pods-TransactionsMonitor.debug.xcconfig"; sourceTree = "<group>"; };
 		E5B69045E4706E5A133BAA76 /* Pods_TransactionsMonitor.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TransactionsMonitor.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -107,6 +109,7 @@
 		89520F4F297AD5A90092210A /* TransactionsMonitor */ = {
 			isa = PBXGroup;
 			children = (
+				897279BF297B5E00004DCF21 /* Extensions */,
 				8972798C297ADE5D004DCF21 /* Delegates */,
 				8972798F297ADEBE004DCF21 /* Coordinator */,
 				897279AE297AE774004DCF21 /* Models */,
@@ -206,6 +209,14 @@
 				897279B0297AE781004DCF21 /* PBTransaction.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		897279BF297B5E00004DCF21 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				897279C0297B5E15004DCF21 /* UIViewController+showAlert.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		C6BE8A309C8B5F808352BDAD /* Pods */ = {
@@ -342,6 +353,7 @@
 				897279A1297AE565004DCF21 /* LocalJSONLoader.swift in Sources */,
 				897279B2297AE781004DCF21 /* PBTransaction.swift in Sources */,
 				8972799A297AE405004DCF21 /* AppDelegate.swift in Sources */,
+				897279C1297B5E15004DCF21 /* UIViewController+showAlert.swift in Sources */,
 				897279A7297AE6A6004DCF21 /* TransactionsError.swift in Sources */,
 				89727998297ADFFB004DCF21 /* Constants.swift in Sources */,
 				897279A9297AE6B7004DCF21 /* TransactionsAPISessionManager.swift in Sources */,
