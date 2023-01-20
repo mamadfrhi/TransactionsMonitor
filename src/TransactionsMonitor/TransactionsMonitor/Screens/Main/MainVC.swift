@@ -8,16 +8,25 @@
 import UIKit
 
 class MainVC: UIViewController {
-
+    // MARK: Dependencies
+    private let mainTableViewDataSource: MainTableViewDataSource = MainTableViewDataSource()
+    private let mainView = MainView(frame: screenBounds)
+    
+    // MARK: LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
-        print("Loaded")
+        configTableView()
     }
 
     override func loadView() {
-        let mainView = MainView(frame: screenBounds)
         self.view = mainView
+    }
+}
+
+// MARK: - SETUPS
+extension MainVC {
+    private func configTableView() {
+        mainView.tableView.dataSource = mainTableViewDataSource
     }
 }
 
