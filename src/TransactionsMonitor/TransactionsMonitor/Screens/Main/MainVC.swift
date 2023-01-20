@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  MainVC.swift
 //  TransactionsMonitor
 //
 //  Created by Mohammad Farrahi on 20.01.23.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class MainVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -16,9 +16,8 @@ class ViewController: UIViewController {
     }
 
     override func loadView() {
-        let vw = UIView(frame: screenBounds)
-        vw.backgroundColor = .red
-        self.view = vw
+        let mainView = MainView(frame: screenBounds)
+        self.view = mainView
     }
 }
 
