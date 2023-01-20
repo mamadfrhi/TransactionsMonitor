@@ -9,6 +9,10 @@ import Foundation
 
 class MainVM {
     
+    // MARK: Delegates
+    var mainCoordinatorDelegate: MainVMCoordinatorDelegate?
+    var viewDelegate: MainVMDelegate?
+    
     // MARK: Dependecies
     private let services = TransactionServices(transactionsAPI:
                                                 TransactionsAPI(session:
