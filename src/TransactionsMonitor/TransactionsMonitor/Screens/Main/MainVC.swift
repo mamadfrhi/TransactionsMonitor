@@ -47,3 +47,26 @@ extension MainVC {
     }
 }
 
+// MARK: MainVC
+extension MainVC: MainVMDelegate {
+    func updateScreen() {
+        DispatchQueue.main.async {
+            self.mainView.tableView.reloadData()
+        }
+    }
+    
+    func hud(show: Bool) {
+        print("HUD")
+    }
+    
+    func showError(errorMessage: String) {
+        print("Error is: ", errorMessage)
+    }
+    
+    func selectedTransationRow() -> Int {
+        print("Selected row is: ", mainView.tableView.indexPathForSelectedRow?.row as Any)
+        return 0
+    }
+    
+    
+}
