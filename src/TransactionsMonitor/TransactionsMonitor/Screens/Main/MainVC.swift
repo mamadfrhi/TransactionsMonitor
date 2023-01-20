@@ -15,10 +15,14 @@ class MainVC: UIViewController {
     private let mainView = MainView(frame: screenBounds)
     private let mainVM = MainVM()
     
+    // MARK: Properties
+    private var cancelables: Set<AnyCancellable> = []
+    
     // MARK: LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
         configTableView()
+        setupBindings()
         mainVM.viewDelegate = self
         mainVM.fetchTransactions()
     }
@@ -32,6 +36,14 @@ class MainVC: UIViewController {
 extension MainVC {
     private func configTableView() {
         mainView.tableView.dataSource = mainTableViewDataSource
+    }
+    
+    private func setupBindings() {
+        mainVM.$transactions.sink {
+            [weak self] transactions in
+            self?.mainTableViewDataSource.transactions = transactions
+        }
+        .store(in: &cancelables)
     }
 }
 
