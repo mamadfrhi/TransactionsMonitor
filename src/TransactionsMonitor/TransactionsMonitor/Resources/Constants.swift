@@ -8,3 +8,7 @@
 import UIKit
 
 let screenBounds = UIScreen.main.bounds
+
+struct Constants {
+    static let server: Servers = .production
+}

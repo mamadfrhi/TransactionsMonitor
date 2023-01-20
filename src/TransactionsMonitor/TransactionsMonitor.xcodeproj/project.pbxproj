@@ -23,7 +23,7 @@
 		897279A5297AE593004DCF21 /* Networkable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 897279A4297AE593004DCF21 /* Networkable.swift */; };
 		897279A7297AE6A6004DCF21 /* TransactionsError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 897279A6297AE6A6004DCF21 /* TransactionsError.swift */; };
 		897279A9297AE6B7004DCF21 /* TransactionsAPISessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 897279A8297AE6B7004DCF21 /* TransactionsAPISessionManager.swift */; };
-		897279AB297AE6E0004DCF21 /* TransactionAPIRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 897279AA297AE6E0004DCF21 /* TransactionAPIRouter.swift */; };
+		897279AB297AE6E0004DCF21 /* TransactionsAPIRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 897279AA297AE6E0004DCF21 /* TransactionsAPIRouter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,7 +45,7 @@
 		897279A4297AE593004DCF21 /* Networkable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Networkable.swift; sourceTree = "<group>"; };
 		897279A6297AE6A6004DCF21 /* TransactionsError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionsError.swift; sourceTree = "<group>"; };
 		897279A8297AE6B7004DCF21 /* TransactionsAPISessionManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionsAPISessionManager.swift; sourceTree = "<group>"; };
-		897279AA297AE6E0004DCF21 /* TransactionAPIRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionAPIRouter.swift; sourceTree = "<group>"; };
+		897279AA297AE6E0004DCF21 /* TransactionsAPIRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionsAPIRouter.swift; sourceTree = "<group>"; };
 		943136329B21FFF23497888D /* Pods-TransactionsMonitor.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TransactionsMonitor.debug.xcconfig"; path = "Target Support Files/Pods-TransactionsMonitor/Pods-TransactionsMonitor.debug.xcconfig"; sourceTree = "<group>"; };
 		E5B69045E4706E5A133BAA76 /* Pods_TransactionsMonitor.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TransactionsMonitor.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -163,7 +163,7 @@
 				897279A4297AE593004DCF21 /* Networkable.swift */,
 				897279A6297AE6A6004DCF21 /* TransactionsError.swift */,
 				897279A8297AE6B7004DCF21 /* TransactionsAPISessionManager.swift */,
-				897279AA297AE6E0004DCF21 /* TransactionAPIRouter.swift */,
+				897279AA297AE6E0004DCF21 /* TransactionsAPIRouter.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -309,7 +309,7 @@
 				897279A7297AE6A6004DCF21 /* TransactionsError.swift in Sources */,
 				89727998297ADFFB004DCF21 /* Constants.swift in Sources */,
 				897279A9297AE6B7004DCF21 /* TransactionsAPISessionManager.swift in Sources */,
-				897279AB297AE6E0004DCF21 /* TransactionAPIRouter.swift in Sources */,
+				897279AB297AE6E0004DCF21 /* TransactionsAPIRouter.swift in Sources */,
 				89520F53297AD5A90092210A /* SceneDelegate.swift in Sources */,
 				897279A5297AE593004DCF21 /* Networkable.swift in Sources */,
 				897279A3297AE576004DCF21 /* Servers.swift in Sources */,
