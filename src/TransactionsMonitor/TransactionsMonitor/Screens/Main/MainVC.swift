@@ -26,7 +26,7 @@ class MainVC: UIViewController {
         mainVM.viewDelegate = self
         mainVM.fetchTransactions()
     }
-
+    
     override func loadView() {
         self.view = mainView
     }
@@ -39,18 +39,21 @@ extension MainVC {
     }
     
     private func setupBindings() {
-        mainVM.$transactions.sink {
-            [weak self] transactions in
-            self?.mainTableViewDataSource.transactions = transactions
-        }
-        .store(in: &cancelables)
+        mainVM.$transactions
+            .sink {
+                [weak self] transactions in
+                self?.mainTableViewDataSource.transactions = transactions
+            }
+            .store(in: &cancelables)
         
-        mainVM.$errorMessage.sink {
-            [weak self] errorMessage in
-            let errorText = errorMessage ?? "Something wrong happened"
-            self?.showError(errorMessage: errorText)
-        }
-        .store(in: &cancelables)
+        mainVM.$errorMessage
+            .dropFirst()
+            .sink {
+                [weak self] errorMessage in
+                let errorText = errorMessage ?? "Something wrong happened"
+                self?.showError(errorMessage: errorText)
+            }
+            .store(in: &cancelables)
     }
 }
 
