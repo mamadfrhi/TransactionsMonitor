@@ -31,6 +31,7 @@
 		897279B8297AEB22004DCF21 /* MainTableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 897279B7297AEB22004DCF21 /* MainTableViewDataSource.swift */; };
 		897279BA297B08D7004DCF21 /* MainVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 897279B9297B08D7004DCF21 /* MainVM.swift */; };
 		897279BC297B0A17004DCF21 /* TransactionServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 897279BB297B0A17004DCF21 /* TransactionServices.swift */; };
+		897279BE297B12F2004DCF21 /* VMAbstractions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 897279BD297B12F2004DCF21 /* VMAbstractions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -60,6 +61,7 @@
 		897279B7297AEB22004DCF21 /* MainTableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableViewDataSource.swift; sourceTree = "<group>"; };
 		897279B9297B08D7004DCF21 /* MainVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVM.swift; sourceTree = "<group>"; };
 		897279BB297B0A17004DCF21 /* TransactionServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionServices.swift; sourceTree = "<group>"; };
+		897279BD297B12F2004DCF21 /* VMAbstractions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VMAbstractions.swift; sourceTree = "<group>"; };
 		943136329B21FFF23497888D /* Pods-TransactionsMonitor.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TransactionsMonitor.debug.xcconfig"; path = "Target Support Files/Pods-TransactionsMonitor/Pods-TransactionsMonitor.debug.xcconfig"; sourceTree = "<group>"; };
 		E5B69045E4706E5A133BAA76 /* Pods_TransactionsMonitor.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TransactionsMonitor.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -162,6 +164,7 @@
 				89520F54297AD5A90092210A /* MainVC.swift */,
 				897279B7297AEB22004DCF21 /* MainTableViewDataSource.swift */,
 				897279B9297B08D7004DCF21 /* MainVM.swift */,
+				897279BD297B12F2004DCF21 /* VMAbstractions.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -332,6 +335,7 @@
 				897279B8297AEB22004DCF21 /* MainTableViewDataSource.swift in Sources */,
 				89727992297ADF67004DCF21 /* AppCoordinator.swift in Sources */,
 				897279B6297AE84F004DCF21 /* ViewCodeableTemplate.swift in Sources */,
+				897279BE297B12F2004DCF21 /* VMAbstractions.swift in Sources */,
 				89727996297ADF91004DCF21 /* MainCoordinator.swift in Sources */,
 				89520F55297AD5A90092210A /* MainVC.swift in Sources */,
 				89727993297ADF67004DCF21 /* Coordinator.swift in Sources */,
