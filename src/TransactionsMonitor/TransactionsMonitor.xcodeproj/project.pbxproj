@@ -103,6 +103,7 @@
 			children = (
 				8972798C297ADE5D004DCF21 /* Delegates */,
 				8972798F297ADEBE004DCF21 /* Coordinator */,
+				897279AE297AE774004DCF21 /* Models */,
 				8972798E297ADEAB004DCF21 /* Screens */,
 				8972799B297AE530004DCF21 /* Services */,
 				8972798D297ADE87004DCF21 /* Resources */,
@@ -135,7 +136,6 @@
 		8972798E297ADEAB004DCF21 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
-				897279AE297AE774004DCF21 /* Models */,
 				89727994297ADF84004DCF21 /* Main */,
 			);
 			path = Screens;
