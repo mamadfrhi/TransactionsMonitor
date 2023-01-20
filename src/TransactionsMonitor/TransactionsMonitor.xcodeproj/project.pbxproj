@@ -29,6 +29,8 @@
 		897279B4297AE7EC004DCF21 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 897279B3297AE7EC004DCF21 /* MainView.swift */; };
 		897279B6297AE84F004DCF21 /* ViewCodeableTemplate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 897279B5297AE84F004DCF21 /* ViewCodeableTemplate.swift */; };
 		897279B8297AEB22004DCF21 /* MainTableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 897279B7297AEB22004DCF21 /* MainTableViewDataSource.swift */; };
+		897279BA297B08D7004DCF21 /* MainVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 897279B9297B08D7004DCF21 /* MainVM.swift */; };
+		897279BC297B0A17004DCF21 /* TransactionServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 897279BB297B0A17004DCF21 /* TransactionServices.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,6 +58,8 @@
 		897279B3297AE7EC004DCF21 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		897279B5297AE84F004DCF21 /* ViewCodeableTemplate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewCodeableTemplate.swift; sourceTree = "<group>"; };
 		897279B7297AEB22004DCF21 /* MainTableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableViewDataSource.swift; sourceTree = "<group>"; };
+		897279B9297B08D7004DCF21 /* MainVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVM.swift; sourceTree = "<group>"; };
+		897279BB297B0A17004DCF21 /* TransactionServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionServices.swift; sourceTree = "<group>"; };
 		943136329B21FFF23497888D /* Pods-TransactionsMonitor.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TransactionsMonitor.debug.xcconfig"; path = "Target Support Files/Pods-TransactionsMonitor/Pods-TransactionsMonitor.debug.xcconfig"; sourceTree = "<group>"; };
 		E5B69045E4706E5A133BAA76 /* Pods_TransactionsMonitor.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TransactionsMonitor.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -157,6 +161,7 @@
 				897279B3297AE7EC004DCF21 /* MainView.swift */,
 				89520F54297AD5A90092210A /* MainVC.swift */,
 				897279B7297AEB22004DCF21 /* MainTableViewDataSource.swift */,
+				897279B9297B08D7004DCF21 /* MainVM.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -164,6 +169,7 @@
 		8972799B297AE530004DCF21 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				897279BB297B0A17004DCF21 /* TransactionServices.swift */,
 				8972799E297AE55A004DCF21 /* Network */,
 			);
 			path = Services;
@@ -335,11 +341,13 @@
 				897279A7297AE6A6004DCF21 /* TransactionsError.swift in Sources */,
 				89727998297ADFFB004DCF21 /* Constants.swift in Sources */,
 				897279A9297AE6B7004DCF21 /* TransactionsAPISessionManager.swift in Sources */,
+				897279BA297B08D7004DCF21 /* MainVM.swift in Sources */,
 				897279B4297AE7EC004DCF21 /* MainView.swift in Sources */,
 				897279AB297AE6E0004DCF21 /* TransactionsAPIRouter.swift in Sources */,
 				89520F53297AD5A90092210A /* SceneDelegate.swift in Sources */,
 				897279A5297AE593004DCF21 /* Networkable.swift in Sources */,
 				897279A3297AE576004DCF21 /* Servers.swift in Sources */,
+				897279BC297B0A17004DCF21 /* TransactionServices.swift in Sources */,
 				897279AD297AE742004DCF21 /* TransactionsAPI.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
