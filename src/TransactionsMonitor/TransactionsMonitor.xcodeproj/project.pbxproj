@@ -17,6 +17,7 @@
 		89727998297ADFFB004DCF21 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89727997297ADFFB004DCF21 /* Constants.swift */; };
 		8972799A297AE405004DCF21 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89727999297AE405004DCF21 /* AppDelegate.swift */; };
 		8972799D297AE543004DCF21 /* PBTransactions.json in Resources */ = {isa = PBXBuildFile; fileRef = 8972799C297AE543004DCF21 /* PBTransactions.json */; };
+		897279A1297AE565004DCF21 /* LocalJSONLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 897279A0297AE565004DCF21 /* LocalJSONLoader.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		89727997297ADFFB004DCF21 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		89727999297AE405004DCF21 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8972799C297AE543004DCF21 /* PBTransactions.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = PBTransactions.json; sourceTree = "<group>"; };
+		897279A0297AE565004DCF21 /* LocalJSONLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalJSONLoader.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,8 +125,25 @@
 		8972799B297AE530004DCF21 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				8972799E297AE55A004DCF21 /* Network */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		8972799E297AE55A004DCF21 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				8972799F297AE565004DCF21 /* LocalJSONLoader */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		8972799F297AE565004DCF21 /* LocalJSONLoader */ = {
+			isa = PBXGroup;
+			children = (
+				897279A0297AE565004DCF21 /* LocalJSONLoader.swift */,
+			);
+			path = LocalJSONLoader;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -202,6 +221,7 @@
 				89727996297ADF91004DCF21 /* MainCoordinator.swift in Sources */,
 				89520F55297AD5A90092210A /* ViewController.swift in Sources */,
 				89727993297ADF67004DCF21 /* Coordinator.swift in Sources */,
+				897279A1297AE565004DCF21 /* LocalJSONLoader.swift in Sources */,
 				8972799A297AE405004DCF21 /* AppDelegate.swift in Sources */,
 				89727998297ADFFB004DCF21 /* Constants.swift in Sources */,
 				89520F53297AD5A90092210A /* SceneDelegate.swift in Sources */,
