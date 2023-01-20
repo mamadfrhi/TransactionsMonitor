@@ -27,6 +27,29 @@ class MainVM {
 
 extension MainVM {
     
+    func fetchTransactions() {
+        
+        self.viewDelegate?.hud(show: true)
+        
+        services.fetchTransactions { transactions, error in
+            // failure
+            if let error = error {
+                let errorMessage = error.localizedDescription
+                self.showError(with: errorMessage)
+                return
+            }
+            
+            if let transactions = transactions {
+                // success
+                self.transactions = transactions
+                self.viewDelegate?.updateScreen()
+                self.viewDelegate?.hud(show: false)
+            } else {
+                // failure
+                self.showError(with: TransactionsAPIError.noData.localizedDescription)
+            }
+        }
+    }
     
     private func showError(with errorMessage: String) {
         DispatchQueue.main.async {
