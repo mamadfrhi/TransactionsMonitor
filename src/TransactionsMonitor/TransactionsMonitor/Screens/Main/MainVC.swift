@@ -60,7 +60,9 @@ extension MainVC: MainVMDelegate {
     }
     
     func showError(errorMessage: String) {
-        print("Error is: ", errorMessage)
+        DispatchQueue.main.async {        
+            print("Error is: ", errorMessage)
+        }
     }
     
     func selectedTransationRow() -> Int {

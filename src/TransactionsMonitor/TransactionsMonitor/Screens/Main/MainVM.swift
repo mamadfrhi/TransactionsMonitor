@@ -52,9 +52,7 @@ extension MainVM {
     }
     
     private func showError(with errorMessage: String) {
-        DispatchQueue.main.async {
-            self.viewDelegate?.showError(errorMessage: errorMessage)
-        }
+        self.viewDelegate?.showError(errorMessage: errorMessage)
     }
 }
 
