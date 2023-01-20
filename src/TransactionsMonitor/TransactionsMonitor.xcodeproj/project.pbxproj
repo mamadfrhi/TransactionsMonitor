@@ -56,15 +56,47 @@
 		89520F4F297AD5A90092210A /* TransactionsMonitor */ = {
 			isa = PBXGroup;
 			children = (
+				8972798F297ADEBE004DCF21 /* Coordinator */,
+				8972798C297ADE5D004DCF21 /* Delegates */,
+				8972798E297ADEAB004DCF21 /* Screens */,
+				8972798D297ADE87004DCF21 /* Resources */,
+			);
+			path = TransactionsMonitor;
+			sourceTree = "<group>";
+		};
+		8972798C297ADE5D004DCF21 /* Delegates */ = {
+			isa = PBXGroup;
+			children = (
 				89520F50297AD5A90092210A /* AppDelegate.swift */,
 				89520F52297AD5A90092210A /* SceneDelegate.swift */,
-				89520F54297AD5A90092210A /* ViewController.swift */,
-				89520F56297AD5A90092210A /* Main.storyboard */,
+			);
+			path = Delegates;
+			sourceTree = "<group>";
+		};
+		8972798D297ADE87004DCF21 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
 				89520F59297AD5AB0092210A /* Assets.xcassets */,
 				89520F5B297AD5AB0092210A /* LaunchScreen.storyboard */,
 				89520F5E297AD5AB0092210A /* Info.plist */,
 			);
-			path = TransactionsMonitor;
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		8972798E297ADEAB004DCF21 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				89520F54297AD5A90092210A /* ViewController.swift */,
+				89520F56297AD5A90092210A /* Main.storyboard */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		8972798F297ADEBE004DCF21 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Coordinator;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -288,7 +320,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = TransactionsMonitor/Info.plist;
+				INFOPLIST_FILE = TransactionsMonitor/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -315,7 +347,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = TransactionsMonitor/Info.plist;
+				INFOPLIST_FILE = TransactionsMonitor/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
