@@ -13,11 +13,8 @@ class MainView: UIView {
     // MARK: Views
     let tableView: UITableView = {
         let table = UITableView()
-        table.translatesAutoresizingMaskIntoConstraints = false
         table.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
-        table.rowHeight = 470
         table.layer.backgroundColor = UIColor.white.cgColor
-        table.tableFooterView = UIView(frame: .zero)
         return table
     }()
     
@@ -39,7 +36,7 @@ extension MainView: ViewCodeableTemplate {
     
     func setupConstraints() {
         tableView.snp.makeConstraints { make in
-            make.width.height.equalToSuperview()
+            make.edges.equalToSuperview()
         }
     }
 }
