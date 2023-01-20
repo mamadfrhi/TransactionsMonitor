@@ -49,8 +49,10 @@ extension TransactionsAPI: Networkable {
             } else {
                 if let transactions = localJSONLoader.loadJson(filename: localJSONFileName) {
                     completionHandler(.success(transactions))
+                    return
                 }
                 completionHandler(.failure(TransactionsAPIError.serverError))
+                return
             }
         }
     }
