@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4E6882EC49A1693297AFE710 /* Pods_TransactionsMonitor.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5B69045E4706E5A133BAA76 /* Pods_TransactionsMonitor.framework */; };
 		89520F53297AD5A90092210A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89520F52297AD5A90092210A /* SceneDelegate.swift */; };
 		89520F55297AD5A90092210A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89520F54297AD5A90092210A /* ViewController.swift */; };
 		89520F5A297AD5AB0092210A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 89520F59297AD5AB0092210A /* Assets.xcassets */; };
@@ -23,6 +24,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5D2B6116BF967F39276E5720 /* Pods-TransactionsMonitor.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TransactionsMonitor.release.xcconfig"; path = "Target Support Files/Pods-TransactionsMonitor/Pods-TransactionsMonitor.release.xcconfig"; sourceTree = "<group>"; };
 		89520F4D297AD5A90092210A /* TransactionsMonitor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TransactionsMonitor.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		89520F52297AD5A90092210A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		89520F54297AD5A90092210A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -38,6 +40,8 @@
 		897279A0297AE565004DCF21 /* LocalJSONLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalJSONLoader.swift; sourceTree = "<group>"; };
 		897279A2297AE576004DCF21 /* Servers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Servers.swift; sourceTree = "<group>"; };
 		897279A4297AE593004DCF21 /* Networkable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Networkable.swift; sourceTree = "<group>"; };
+		943136329B21FFF23497888D /* Pods-TransactionsMonitor.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TransactionsMonitor.debug.xcconfig"; path = "Target Support Files/Pods-TransactionsMonitor/Pods-TransactionsMonitor.debug.xcconfig"; sourceTree = "<group>"; };
+		E5B69045E4706E5A133BAA76 /* Pods_TransactionsMonitor.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TransactionsMonitor.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,17 +49,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4E6882EC49A1693297AFE710 /* Pods_TransactionsMonitor.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3D242DED43EDD5D9511D5900 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E5B69045E4706E5A133BAA76 /* Pods_TransactionsMonitor.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		89520F44297AD5A90092210A = {
 			isa = PBXGroup;
 			children = (
 				89520F4F297AD5A90092210A /* TransactionsMonitor */,
 				89520F4E297AD5A90092210A /* Products */,
+				C6BE8A309C8B5F808352BDAD /* Pods */,
+				3D242DED43EDD5D9511D5900 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -152,6 +167,16 @@
 			path = LocalJSONLoader;
 			sourceTree = "<group>";
 		};
+		C6BE8A309C8B5F808352BDAD /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				943136329B21FFF23497888D /* Pods-TransactionsMonitor.debug.xcconfig */,
+				5D2B6116BF967F39276E5720 /* Pods-TransactionsMonitor.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -159,9 +184,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 89520F61297AD5AB0092210A /* Build configuration list for PBXNativeTarget "TransactionsMonitor" */;
 			buildPhases = (
+				DEAF7924076C749798A87421 /* [CP] Check Pods Manifest.lock */,
 				89520F49297AD5A90092210A /* Sources */,
 				89520F4A297AD5A90092210A /* Frameworks */,
 				89520F4B297AD5A90092210A /* Resources */,
+				EEC81D05EB1EFB79A312483E /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -217,6 +244,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		DEAF7924076C749798A87421 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TransactionsMonitor-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EEC81D05EB1EFB79A312483E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TransactionsMonitor/Pods-TransactionsMonitor-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TransactionsMonitor/Pods-TransactionsMonitor-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TransactionsMonitor/Pods-TransactionsMonitor-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		89520F49297AD5A90092210A /* Sources */ = {
@@ -366,6 +435,7 @@
 		};
 		89520F62297AD5AB0092210A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 943136329B21FFF23497888D /* Pods-TransactionsMonitor.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -396,6 +466,7 @@
 		};
 		89520F63297AD5AB0092210A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5D2B6116BF967F39276E5720 /* Pods-TransactionsMonitor.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
