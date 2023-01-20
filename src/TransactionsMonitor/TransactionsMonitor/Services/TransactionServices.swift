@@ -27,8 +27,10 @@ extension TransactionServices {
                     let transactionItemsData = try? JSONSerialization.data(withJSONObject: fetchedTransactions),
                    let transactions = try? decoder.decode(Array<PBTransaction>.self, from: transactionItemsData) {
                     completionHandler(transactions, nil)
+                    return
                 }
                 completionHandler(nil, TransactionsAPIError.noData)
+                return
             case .failure(let error):
                 completionHandler(nil, error)
             }
