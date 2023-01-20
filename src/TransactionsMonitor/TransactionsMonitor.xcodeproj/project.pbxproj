@@ -27,6 +27,8 @@
 		897279AD297AE742004DCF21 /* TransactionsAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 897279AC297AE742004DCF21 /* TransactionsAPI.swift */; };
 		897279B1297AE781004DCF21 /* PBTransactionDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 897279AF297AE781004DCF21 /* PBTransactionDetail.swift */; };
 		897279B2297AE781004DCF21 /* PBTransaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 897279B0297AE781004DCF21 /* PBTransaction.swift */; };
+		897279B4297AE7EC004DCF21 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 897279B3297AE7EC004DCF21 /* MainView.swift */; };
+		897279B6297AE84F004DCF21 /* ViewCodeableTemplate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 897279B5297AE84F004DCF21 /* ViewCodeableTemplate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +54,8 @@
 		897279AC297AE742004DCF21 /* TransactionsAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionsAPI.swift; sourceTree = "<group>"; };
 		897279AF297AE781004DCF21 /* PBTransactionDetail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PBTransactionDetail.swift; sourceTree = "<group>"; };
 		897279B0297AE781004DCF21 /* PBTransaction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PBTransaction.swift; sourceTree = "<group>"; };
+		897279B3297AE7EC004DCF21 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		897279B5297AE84F004DCF21 /* ViewCodeableTemplate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewCodeableTemplate.swift; sourceTree = "<group>"; };
 		943136329B21FFF23497888D /* Pods-TransactionsMonitor.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TransactionsMonitor.debug.xcconfig"; path = "Target Support Files/Pods-TransactionsMonitor/Pods-TransactionsMonitor.debug.xcconfig"; sourceTree = "<group>"; };
 		E5B69045E4706E5A133BAA76 /* Pods_TransactionsMonitor.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TransactionsMonitor.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -118,6 +122,7 @@
 		8972798D297ADE87004DCF21 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				897279B5297AE84F004DCF21 /* ViewCodeableTemplate.swift */,
 				8972799C297AE543004DCF21 /* PBTransactions.json */,
 				89520F59297AD5AB0092210A /* Assets.xcassets */,
 				89520F5B297AD5AB0092210A /* LaunchScreen.storyboard */,
@@ -150,6 +155,7 @@
 			isa = PBXGroup;
 			children = (
 				89727995297ADF91004DCF21 /* MainCoordinator.swift */,
+				897279B3297AE7EC004DCF21 /* MainView.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -318,6 +324,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				89727992297ADF67004DCF21 /* AppCoordinator.swift in Sources */,
+				897279B6297AE84F004DCF21 /* ViewCodeableTemplate.swift in Sources */,
 				897279B1297AE781004DCF21 /* PBTransactionDetail.swift in Sources */,
 				89727996297ADF91004DCF21 /* MainCoordinator.swift in Sources */,
 				89520F55297AD5A90092210A /* ViewController.swift in Sources */,
@@ -328,6 +335,7 @@
 				897279A7297AE6A6004DCF21 /* TransactionsError.swift in Sources */,
 				89727998297ADFFB004DCF21 /* Constants.swift in Sources */,
 				897279A9297AE6B7004DCF21 /* TransactionsAPISessionManager.swift in Sources */,
+				897279B4297AE7EC004DCF21 /* MainView.swift in Sources */,
 				897279AB297AE6E0004DCF21 /* TransactionsAPIRouter.swift in Sources */,
 				89520F53297AD5A90092210A /* SceneDelegate.swift in Sources */,
 				897279A5297AE593004DCF21 /* Networkable.swift in Sources */,
