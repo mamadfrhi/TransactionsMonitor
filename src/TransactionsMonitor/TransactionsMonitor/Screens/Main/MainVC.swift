@@ -6,16 +6,21 @@
 //
 
 import UIKit
+import Combine
 
 class MainVC: UIViewController {
+    
     // MARK: Dependencies
     private let mainTableViewDataSource: MainTableViewDataSource = MainTableViewDataSource()
     private let mainView = MainView(frame: screenBounds)
+    private let mainVM = MainVM()
     
     // MARK: LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
         configTableView()
+        mainVM.viewDelegate = self
+        mainVM.fetchTransactions()
     }
 
     override func loadView() {
