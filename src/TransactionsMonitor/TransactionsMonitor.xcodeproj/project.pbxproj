@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		4E6882EC49A1693297AFE710 /* Pods_TransactionsMonitor.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5B69045E4706E5A133BAA76 /* Pods_TransactionsMonitor.framework */; };
 		89520F53297AD5A90092210A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89520F52297AD5A90092210A /* SceneDelegate.swift */; };
-		89520F55297AD5A90092210A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89520F54297AD5A90092210A /* ViewController.swift */; };
+		89520F55297AD5A90092210A /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89520F54297AD5A90092210A /* MainVC.swift */; };
 		89520F5A297AD5AB0092210A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 89520F59297AD5AB0092210A /* Assets.xcassets */; };
 		89520F5D297AD5AB0092210A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 89520F5B297AD5AB0092210A /* LaunchScreen.storyboard */; };
 		89727992297ADF67004DCF21 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89727990297ADF67004DCF21 /* AppCoordinator.swift */; };
@@ -35,7 +35,7 @@
 		5D2B6116BF967F39276E5720 /* Pods-TransactionsMonitor.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TransactionsMonitor.release.xcconfig"; path = "Target Support Files/Pods-TransactionsMonitor/Pods-TransactionsMonitor.release.xcconfig"; sourceTree = "<group>"; };
 		89520F4D297AD5A90092210A /* TransactionsMonitor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TransactionsMonitor.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		89520F52297AD5A90092210A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		89520F54297AD5A90092210A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		89520F54297AD5A90092210A /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
 		89520F59297AD5AB0092210A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		89520F5C297AD5AB0092210A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		89520F5E297AD5AB0092210A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -137,7 +137,6 @@
 			children = (
 				897279AE297AE774004DCF21 /* Models */,
 				89727994297ADF84004DCF21 /* Main */,
-				89520F54297AD5A90092210A /* ViewController.swift */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -156,6 +155,7 @@
 			children = (
 				89727995297ADF91004DCF21 /* MainCoordinator.swift */,
 				897279B3297AE7EC004DCF21 /* MainView.swift */,
+				89520F54297AD5A90092210A /* MainVC.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -327,7 +327,7 @@
 				897279B6297AE84F004DCF21 /* ViewCodeableTemplate.swift in Sources */,
 				897279B1297AE781004DCF21 /* PBTransactionDetail.swift in Sources */,
 				89727996297ADF91004DCF21 /* MainCoordinator.swift in Sources */,
-				89520F55297AD5A90092210A /* ViewController.swift in Sources */,
+				89520F55297AD5A90092210A /* MainVC.swift in Sources */,
 				89727993297ADF67004DCF21 /* Coordinator.swift in Sources */,
 				897279A1297AE565004DCF21 /* LocalJSONLoader.swift in Sources */,
 				897279B2297AE781004DCF21 /* PBTransaction.swift in Sources */,
