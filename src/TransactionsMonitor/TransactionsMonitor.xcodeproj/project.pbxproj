@@ -16,6 +16,7 @@
 		89727996297ADF91004DCF21 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89727995297ADF91004DCF21 /* MainCoordinator.swift */; };
 		89727998297ADFFB004DCF21 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89727997297ADFFB004DCF21 /* Constants.swift */; };
 		8972799A297AE405004DCF21 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89727999297AE405004DCF21 /* AppDelegate.swift */; };
+		8972799D297AE543004DCF21 /* PBTransactions.json in Resources */ = {isa = PBXBuildFile; fileRef = 8972799C297AE543004DCF21 /* PBTransactions.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		89727995297ADF91004DCF21 /* MainCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
 		89727997297ADFFB004DCF21 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		89727999297AE405004DCF21 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		8972799C297AE543004DCF21 /* PBTransactions.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = PBTransactions.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +67,7 @@
 				8972798C297ADE5D004DCF21 /* Delegates */,
 				8972798F297ADEBE004DCF21 /* Coordinator */,
 				8972798E297ADEAB004DCF21 /* Screens */,
+				8972799B297AE530004DCF21 /* Services */,
 				8972798D297ADE87004DCF21 /* Resources */,
 			);
 			path = TransactionsMonitor;
@@ -82,6 +85,7 @@
 		8972798D297ADE87004DCF21 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				8972799C297AE543004DCF21 /* PBTransactions.json */,
 				89520F59297AD5AB0092210A /* Assets.xcassets */,
 				89520F5B297AD5AB0092210A /* LaunchScreen.storyboard */,
 				89520F5E297AD5AB0092210A /* Info.plist */,
@@ -114,6 +118,13 @@
 				89727995297ADF91004DCF21 /* MainCoordinator.swift */,
 			);
 			path = Main;
+			sourceTree = "<group>";
+		};
+		8972799B297AE530004DCF21 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -175,6 +186,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				89520F5D297AD5AB0092210A /* LaunchScreen.storyboard in Resources */,
+				8972799D297AE543004DCF21 /* PBTransactions.json in Resources */,
 				89520F5A297AD5AB0092210A /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
