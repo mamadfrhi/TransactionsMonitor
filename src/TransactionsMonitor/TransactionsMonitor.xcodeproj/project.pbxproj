@@ -19,6 +19,7 @@
 		8972799D297AE543004DCF21 /* PBTransactions.json in Resources */ = {isa = PBXBuildFile; fileRef = 8972799C297AE543004DCF21 /* PBTransactions.json */; };
 		897279A1297AE565004DCF21 /* LocalJSONLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 897279A0297AE565004DCF21 /* LocalJSONLoader.swift */; };
 		897279A3297AE576004DCF21 /* Servers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 897279A2297AE576004DCF21 /* Servers.swift */; };
+		897279A5297AE593004DCF21 /* Networkable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 897279A4297AE593004DCF21 /* Networkable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		8972799C297AE543004DCF21 /* PBTransactions.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = PBTransactions.json; sourceTree = "<group>"; };
 		897279A0297AE565004DCF21 /* LocalJSONLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalJSONLoader.swift; sourceTree = "<group>"; };
 		897279A2297AE576004DCF21 /* Servers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Servers.swift; sourceTree = "<group>"; };
+		897279A4297AE593004DCF21 /* Networkable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Networkable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,8 +137,9 @@
 		8972799E297AE55A004DCF21 /* Network */ = {
 			isa = PBXGroup;
 			children = (
-				897279A2297AE576004DCF21 /* Servers.swift */,
 				8972799F297AE565004DCF21 /* LocalJSONLoader */,
+				897279A2297AE576004DCF21 /* Servers.swift */,
+				897279A4297AE593004DCF21 /* Networkable.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -228,6 +231,7 @@
 				8972799A297AE405004DCF21 /* AppDelegate.swift in Sources */,
 				89727998297ADFFB004DCF21 /* Constants.swift in Sources */,
 				89520F53297AD5A90092210A /* SceneDelegate.swift in Sources */,
+				897279A5297AE593004DCF21 /* Networkable.swift in Sources */,
 				897279A3297AE576004DCF21 /* Servers.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
