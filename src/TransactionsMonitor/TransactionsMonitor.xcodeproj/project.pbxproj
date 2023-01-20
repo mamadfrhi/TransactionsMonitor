@@ -29,6 +29,7 @@
 		897279B2297AE781004DCF21 /* PBTransaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 897279B0297AE781004DCF21 /* PBTransaction.swift */; };
 		897279B4297AE7EC004DCF21 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 897279B3297AE7EC004DCF21 /* MainView.swift */; };
 		897279B6297AE84F004DCF21 /* ViewCodeableTemplate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 897279B5297AE84F004DCF21 /* ViewCodeableTemplate.swift */; };
+		897279B8297AEB22004DCF21 /* MainTableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 897279B7297AEB22004DCF21 /* MainTableViewDataSource.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,6 +57,7 @@
 		897279B0297AE781004DCF21 /* PBTransaction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PBTransaction.swift; sourceTree = "<group>"; };
 		897279B3297AE7EC004DCF21 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		897279B5297AE84F004DCF21 /* ViewCodeableTemplate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewCodeableTemplate.swift; sourceTree = "<group>"; };
+		897279B7297AEB22004DCF21 /* MainTableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableViewDataSource.swift; sourceTree = "<group>"; };
 		943136329B21FFF23497888D /* Pods-TransactionsMonitor.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TransactionsMonitor.debug.xcconfig"; path = "Target Support Files/Pods-TransactionsMonitor/Pods-TransactionsMonitor.debug.xcconfig"; sourceTree = "<group>"; };
 		E5B69045E4706E5A133BAA76 /* Pods_TransactionsMonitor.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TransactionsMonitor.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -156,6 +158,7 @@
 				89727995297ADF91004DCF21 /* MainCoordinator.swift */,
 				897279B3297AE7EC004DCF21 /* MainView.swift */,
 				89520F54297AD5A90092210A /* MainVC.swift */,
+				897279B7297AEB22004DCF21 /* MainTableViewDataSource.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -323,6 +326,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				897279B8297AEB22004DCF21 /* MainTableViewDataSource.swift in Sources */,
 				89727992297ADF67004DCF21 /* AppCoordinator.swift in Sources */,
 				897279B6297AE84F004DCF21 /* ViewCodeableTemplate.swift in Sources */,
 				897279B1297AE781004DCF21 /* PBTransactionDetail.swift in Sources */,
