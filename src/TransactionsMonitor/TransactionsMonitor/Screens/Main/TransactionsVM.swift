@@ -7,7 +7,7 @@
 
 import Foundation
 
-class MainVM {
+class TransactionsVM {
     
     // MARK: Delegates
     var mainCoordinatorDelegate: MainVMCoordinatorDelegate?
@@ -25,7 +25,7 @@ class MainVM {
 }
 
 
-extension MainVM {
+extension TransactionsVM {
     
     func fetchTransactions() {
         

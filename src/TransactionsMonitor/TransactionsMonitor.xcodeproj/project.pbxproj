@@ -29,7 +29,7 @@
 		897279B4297AE7EC004DCF21 /* TransactionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 897279B3297AE7EC004DCF21 /* TransactionsView.swift */; };
 		897279B6297AE84F004DCF21 /* ViewCodeableTemplate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 897279B5297AE84F004DCF21 /* ViewCodeableTemplate.swift */; };
 		897279B8297AEB22004DCF21 /* MainTableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 897279B7297AEB22004DCF21 /* MainTableViewDataSource.swift */; };
-		897279BA297B08D7004DCF21 /* MainVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 897279B9297B08D7004DCF21 /* MainVM.swift */; };
+		897279BA297B08D7004DCF21 /* TransactionsVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 897279B9297B08D7004DCF21 /* TransactionsVM.swift */; };
 		897279BC297B0A17004DCF21 /* TransactionServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 897279BB297B0A17004DCF21 /* TransactionServices.swift */; };
 		897279BE297B12F2004DCF21 /* VMAbstractions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 897279BD297B12F2004DCF21 /* VMAbstractions.swift */; };
 		897279C1297B5E15004DCF21 /* UIViewController+showAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 897279C0297B5E15004DCF21 /* UIViewController+showAlert.swift */; };
@@ -63,7 +63,7 @@
 		897279B3297AE7EC004DCF21 /* TransactionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsView.swift; sourceTree = "<group>"; };
 		897279B5297AE84F004DCF21 /* ViewCodeableTemplate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewCodeableTemplate.swift; sourceTree = "<group>"; };
 		897279B7297AEB22004DCF21 /* MainTableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableViewDataSource.swift; sourceTree = "<group>"; };
-		897279B9297B08D7004DCF21 /* MainVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVM.swift; sourceTree = "<group>"; };
+		897279B9297B08D7004DCF21 /* TransactionsVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsVM.swift; sourceTree = "<group>"; };
 		897279BB297B0A17004DCF21 /* TransactionServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionServices.swift; sourceTree = "<group>"; };
 		897279BD297B12F2004DCF21 /* VMAbstractions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VMAbstractions.swift; sourceTree = "<group>"; };
 		897279C0297B5E15004DCF21 /* UIViewController+showAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+showAlert.swift"; sourceTree = "<group>"; };
@@ -175,7 +175,7 @@
 				89520F54297AD5A90092210A /* TransactionsVC.swift */,
 				897279C4297B69C8004DCF21 /* TransactionTableViewCell.swift */,
 				897279B7297AEB22004DCF21 /* MainTableViewDataSource.swift */,
-				897279B9297B08D7004DCF21 /* MainVM.swift */,
+				897279B9297B08D7004DCF21 /* TransactionsVM.swift */,
 				897279BD297B12F2004DCF21 /* VMAbstractions.swift */,
 			);
 			path = Main;
@@ -369,7 +369,7 @@
 				897279C7297B7AA0004DCF21 /* DateFormatter.swift in Sources */,
 				89727998297ADFFB004DCF21 /* Constants.swift in Sources */,
 				897279A9297AE6B7004DCF21 /* TransactionsAPISessionManager.swift in Sources */,
-				897279BA297B08D7004DCF21 /* MainVM.swift in Sources */,
+				897279BA297B08D7004DCF21 /* TransactionsVM.swift in Sources */,
 				897279B4297AE7EC004DCF21 /* TransactionsView.swift in Sources */,
 				897279AB297AE6E0004DCF21 /* TransactionsAPIRouter.swift in Sources */,
 				89520F53297AD5A90092210A /* SceneDelegate.swift in Sources */,

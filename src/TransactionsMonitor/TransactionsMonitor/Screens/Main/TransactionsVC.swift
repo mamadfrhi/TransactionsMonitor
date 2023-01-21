@@ -13,7 +13,7 @@ class TransactionsVC: UIViewController {
     // MARK: Dependencies
     private let mainTableViewDataSource: MainTableViewDataSource = MainTableViewDataSource()
     private let transactionsView = TransactionsView(frame: screenBounds)
-    private let mainVM = MainVM()
+    private let mainVM = TransactionsVM()
     
     // MARK: Properties
     private let hud = ProgressHUD(title: "Please wait...", theme: .dark)
