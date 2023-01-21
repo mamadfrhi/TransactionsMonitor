@@ -18,51 +18,26 @@ class TransactionsCoordinator: Coordinator {
     override func start() {
         super.addChildCoordinator(self)
         let transactionsVC = TransactionsVC()
+        transactionsVC.transactionsCoordinatorDelegate = self
         rootNavigationController.pushViewController(transactionsVC, animated: true)
     }
 }
 
-//// MARK: - ViewModel Callbacks
-//extension MainCoordinator: MainViewModelCoordinatorDelegate {
-//    func didSelect(todoViewData: TodoViewData) {
-//        goToDetailsPage(with: todoViewData)
-//    }
-//
-//    func addButtonTapped(from controller: UIViewController) {
-//        goToAddPage(from: controller)
-//    }
-//
-//    func editButtonTapped(on todo: TodoObjectType, from controller: UIViewController) {
-//        goToEdit(todo: todo, from: controller)
-//    }
-//}
-//
-//// MARK: - Navigation
-//extension MainCoordinator {
-//    private func goToDetailsPage(with todoViewData: TodoViewData) {
-//        let detailVC = DetailsVC.`init`(todoViewData: todoViewData)
-//        rootNavigationController.present(detailVC,
-//                                         animated: true,
-//                                         completion: nil)
-//    }
-//
-//    private func goToAddPage(from controller: UIViewController) {
-//        guard let mainVC = controller as? MainVC,
-//              let mainVM = mainVC.viewModel else { return }
-//
-//        let addVC = AddVC.`init`(mainVM: mainVM)
-//        rootNavigationController.present(addVC,
-//                                         animated: true,
-//                                         completion: nil)
-//    }
-//
-//    private func goToEdit(todo: TodoObjectType, from controller: UIViewController) {
-//        guard let mainVC = controller as? MainVC,
-//              let mainVM = mainVC.viewModel else { return }
-//
-//        let editVC = EditVC.`init`(mainVM: mainVM, todoObject: todo)
-//        rootNavigationController.present(editVC,
-//                                         animated: true,
-//                                         completion: nil)
-//    }
-//}
+// MARK: - VC Callbacks
+extension TransactionsCoordinator: TransactionsVCCoordinatorDelegate {
+    func didSelect(transaction: PBTransaction, from controller: UIViewController) {
+        goToDetailsPage(with: transaction)
+    }
+}
+
+// MARK: - Navigation
+extension TransactionsCoordinator {
+    private func goToDetailsPage(with transaction: PBTransaction) {
+        let transactionDetails = TransactionDetails(companyName: transaction.companyName,
+                                                    description: transaction.description)
+        let detailVC = DetailsVC.`init`(transactionDetails)
+        rootNavigationController.present(detailVC,
+                                         animated: true,
+                                         completion: nil)
+    }
+}

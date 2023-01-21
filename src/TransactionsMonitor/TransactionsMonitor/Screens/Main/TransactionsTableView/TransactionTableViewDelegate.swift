@@ -10,7 +10,7 @@ import UIKit
 class TransactionTableViewDelegate: NSObject {
     
     let transactionTableViewFooter: TransactionTableViewFooter
-    @Published var selectedRow: Int?
+    @Published var selectedIndexPath: IndexPath?
     
     internal init(transactionTableViewFooter: TransactionTableViewFooter) {
         self.transactionTableViewFooter = transactionTableViewFooter
@@ -24,6 +24,6 @@ extension TransactionTableViewDelegate: UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        selectedRow = indexPath.row
+        selectedIndexPath = indexPath
     }
 }

@@ -16,6 +16,7 @@ class TransactionsVC: UIViewController {
     private let transactionsView = TransactionsView(frame: screenBounds)
     private let transactionsVM = TransactionsVM()
     private let filterPopoverVC = FilterPopoverVC.`init`(list: [])
+    var transactionsCoordinatorDelegate: TransactionsVCCoordinatorDelegate?
     
     // MARK: Properties
     private let hud = ProgressHUD(title: "Please wait...", theme: .dark)
@@ -117,6 +118,17 @@ extension TransactionsVC {
                 self?.setSummationLabel(sum)
             }
             .store(in: &cancelables)
+        
+        transactionsTableViewDelegate.$selectedIndexPath
+            .sink {
+                [weak self] selectedIndexPath in
+                guard
+                    let sSelf = self,
+                    let indexPath = selectedIndexPath,
+                    let transaction = self?.transactionsTableViewDataSource.getTransaction(at: indexPath) else { return }
+                sSelf.didSelect(transaction: transaction, from: sSelf)
+            }
+            .store(in: &cancelables)
     }
     
     private func setSummationLabel(_ value: Int) {
@@ -153,4 +165,11 @@ extension TransactionsVC: TransactionsVMDelegate {
     }
     
     
+}
+
+// MARK: Coordinator
+extension TransactionsVC: TransactionsVCCoordinatorDelegate {
+    func didSelect(transaction: PBTransaction, from controller: UIViewController) {
+        transactionsCoordinatorDelegate?.didSelect(transaction: transaction, from: self)
+    }
 }
