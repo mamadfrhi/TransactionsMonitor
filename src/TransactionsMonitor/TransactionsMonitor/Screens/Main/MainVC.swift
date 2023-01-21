@@ -51,6 +51,7 @@ extension MainVC {
     
     private func setupBindings() {
         mainVM.$transactions
+            .receive(on: DispatchQueue.main)
             .sink {
                 [weak self] transactions in
                 self?.mainTableViewDataSource.transactions = transactions
@@ -59,6 +60,7 @@ extension MainVC {
         
         mainVM.$errorMessage
             .dropFirst()
+            .receive(on: DispatchQueue.main)
             .sink {
                 [weak self] errorMessage in
                 let errorText = errorMessage ?? "Something wrong happened"
@@ -78,16 +80,12 @@ extension MainVC: MainVMDelegate {
     }
     
     func hud(show: Bool) {
-        DispatchQueue.main.async {
-            show ? self.hud.show() : self.hud.hide()
-        }
+        show ? self.hud.show() : self.hud.hide()
     }
     
     func showError(errorMessage: String) {
-        DispatchQueue.main.async {
-            self.showAlert(alertTitle: "Error!", alertMessage: errorMessage)
-            self.mainView.hideRetryButton(false)
-        }
+        self.showAlert(alertTitle: "Error!", alertMessage: errorMessage)
+        self.mainView.hideRetryButton(false)
     }
     
     func selectedTransationRow() -> Int {
