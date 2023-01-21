@@ -26,11 +26,20 @@ class MainVC: UIViewController {
         configTableView()
         setupBindings()
         mainVM.viewDelegate = self
-        mainVM.fetchTransactions()
+        fetchTransactions()
     }
     
     override func loadView() {
         self.view = mainView
+    }
+    
+    // MARK: Functions
+    private func fetchTransactions() {
+        mainVM.fetchTransactions()
+    }
+    
+    @objc func retryButtonPressed(_ sender: UIButton) {
+        fetchTransactions()
     }
 }
 
@@ -59,7 +68,7 @@ extension MainVC {
     }
 }
 
-// MARK: MainVC
+// MARK: MainVMDelegate
 extension MainVC: MainVMDelegate {
     func updateScreen() {
         DispatchQueue.main.async {
