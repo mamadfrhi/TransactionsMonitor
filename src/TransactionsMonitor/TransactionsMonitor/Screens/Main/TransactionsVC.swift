@@ -18,6 +18,7 @@ class TransactionsVC: UIViewController {
     // MARK: Properties
     private let hud = ProgressHUD(title: "Please wait...", theme: .dark)
     private var cancelables: Set<AnyCancellable> = []
+    private var filterBarButtonItem: UIBarButtonItem!
     
     // MARK: LifeCycle
     override func viewDidLoad() {
@@ -27,6 +28,7 @@ class TransactionsVC: UIViewController {
         setupBindings()
         transactionsVM.viewDelegate = self
         fetchTransactions()
+        setupFilterBarButtonItem()
     }
     
     override func loadView() {
@@ -42,12 +44,24 @@ class TransactionsVC: UIViewController {
     @objc func retryButtonPressed(_ sender: UIButton) {
         fetchTransactions()
     }
+    
+    @objc func filterBarButtonPressed(_ sender: Any) {
+        print("UI Bar Button Pressed!")
+    }
 }
 
 // MARK: - SETUPS
 extension TransactionsVC {
     private func configTableView() {
         transactionsView.tableView.dataSource = transactionsTableViewDataSource
+    }
+    
+    private func setupFilterBarButtonItem() {
+        filterBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "line.3.horizontal.decrease.circle"),
+                                              style: .done,
+                                              target: self,
+                                              action: #selector(filterBarButtonPressed(_:)))
+        self.navigationItem.setRightBarButton(filterBarButtonItem, animated: true)
     }
     
     private func setupBindings() {
