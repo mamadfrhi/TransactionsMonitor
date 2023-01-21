@@ -18,6 +18,7 @@ class TransactionsCoordinator: Coordinator {
     override func start() {
         super.addChildCoordinator(self)
         let transactionsVC = TransactionsVC()
+        transactionsVC.transactionsCoordinatorDelegate = self
         rootNavigationController.pushViewController(transactionsVC, animated: true)
     }
 }
@@ -32,6 +33,7 @@ extension TransactionsCoordinator: TransactionsVCCoordinatorDelegate {
 // MARK: - Navigation
 extension TransactionsCoordinator {
     private func goToDetailsPage(with transaction: PBTransaction) {
+        print("go to details with \(transaction)")
 //        let detailVC = DetailsVC.`init`(todoViewData: todoViewData)
 //        rootNavigationController.present(detailVC,
 //                                         animated: true,
