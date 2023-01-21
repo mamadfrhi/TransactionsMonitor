@@ -67,8 +67,8 @@ extension TransactionsVM {
     
     func getUniqueCategories() -> [String] {
         resetFilter()
-        let categories = transactions.map { "\($0.category)" }.sorted()
-        let uniqueCategories = Set(categories)
+        let categories = transactions.map { "\($0.category)" }
+        let uniqueCategories = Set(categories).sorted()
         return Array(uniqueCategories)
     }
     
