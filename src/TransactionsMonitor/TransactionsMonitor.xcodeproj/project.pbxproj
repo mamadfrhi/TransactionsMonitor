@@ -11,6 +11,8 @@
 		891C3462297C095400F8F8EA /* DateConverterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 891C3461297C095400F8F8EA /* DateConverterTests.swift */; };
 		891C3469297C106900F8F8EA /* Connectivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 891C3468297C106900F8F8EA /* Connectivity.swift */; };
 		891C346B297C112900F8F8EA /* InternetChecker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 891C346A297C112900F8F8EA /* InternetChecker.swift */; };
+		891C346E297C159F00F8F8EA /* ArraySorter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 891C346D297C159F00F8F8EA /* ArraySorter.swift */; };
+		891C3470297C15BC00F8F8EA /* TransactionsArraySorter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 891C346F297C15BC00F8F8EA /* TransactionsArraySorter.swift */; };
 		89520F53297AD5A90092210A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89520F52297AD5A90092210A /* SceneDelegate.swift */; };
 		89520F55297AD5A90092210A /* TransactionsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89520F54297AD5A90092210A /* TransactionsVC.swift */; };
 		89520F5A297AD5AB0092210A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 89520F59297AD5AB0092210A /* Assets.xcassets */; };
@@ -59,6 +61,8 @@
 		891C3461297C095400F8F8EA /* DateConverterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateConverterTests.swift; sourceTree = "<group>"; };
 		891C3468297C106900F8F8EA /* Connectivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Connectivity.swift; sourceTree = "<group>"; };
 		891C346A297C112900F8F8EA /* InternetChecker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InternetChecker.swift; sourceTree = "<group>"; };
+		891C346D297C159F00F8F8EA /* ArraySorter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArraySorter.swift; sourceTree = "<group>"; };
+		891C346F297C15BC00F8F8EA /* TransactionsArraySorter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsArraySorter.swift; sourceTree = "<group>"; };
 		89520F4D297AD5A90092210A /* TransactionsMonitor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TransactionsMonitor.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		89520F52297AD5A90092210A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		89520F54297AD5A90092210A /* TransactionsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsVC.swift; sourceTree = "<group>"; };
@@ -139,6 +143,15 @@
 			path = InternetChecker;
 			sourceTree = "<group>";
 		};
+		891C3471297C15C400F8F8EA /* TransactionsSorter */ = {
+			isa = PBXGroup;
+			children = (
+				891C346D297C159F00F8F8EA /* ArraySorter.swift */,
+				891C346F297C15BC00F8F8EA /* TransactionsArraySorter.swift */,
+			);
+			path = TransactionsSorter;
+			sourceTree = "<group>";
+		};
 		89520F44297AD5A90092210A = {
 			isa = PBXGroup;
 			children = (
@@ -192,6 +205,7 @@
 				89520F5E297AD5AB0092210A /* Info.plist */,
 				89727997297ADFFB004DCF21 /* Constants.swift */,
 				897279C6297B7AA0004DCF21 /* DateFormatter.swift */,
+				891C3471297C15C400F8F8EA /* TransactionsSorter */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -466,10 +480,12 @@
 				897279C5297B69C8004DCF21 /* TransactionTableViewCell.swift in Sources */,
 				89727993297ADF67004DCF21 /* Coordinator.swift in Sources */,
 				897279C3297B62C8004DCF21 /* ProgressHUD.swift in Sources */,
+				891C3470297C15BC00F8F8EA /* TransactionsArraySorter.swift in Sources */,
 				897279A1297AE565004DCF21 /* LocalJSONLoader.swift in Sources */,
 				891C346B297C112900F8F8EA /* InternetChecker.swift in Sources */,
 				897279B2297AE781004DCF21 /* PBTransaction.swift in Sources */,
 				8972799A297AE405004DCF21 /* AppDelegate.swift in Sources */,
+				891C346E297C159F00F8F8EA /* ArraySorter.swift in Sources */,
 				897279C1297B5E15004DCF21 /* UIViewController+showAlert.swift in Sources */,
 				897279A7297AE6A6004DCF21 /* TransactionsError.swift in Sources */,
 				897279C7297B7AA0004DCF21 /* DateFormatter.swift in Sources */,
