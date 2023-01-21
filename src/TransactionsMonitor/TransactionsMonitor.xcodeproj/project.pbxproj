@@ -13,6 +13,7 @@
 		891C346B297C112900F8F8EA /* InternetChecker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 891C346A297C112900F8F8EA /* InternetChecker.swift */; };
 		891C346E297C159F00F8F8EA /* ArraySorter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 891C346D297C159F00F8F8EA /* ArraySorter.swift */; };
 		891C3470297C15BC00F8F8EA /* TransactionsArraySorter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 891C346F297C15BC00F8F8EA /* TransactionsArraySorter.swift */; };
+		891C3473297C25AC00F8F8EA /* PBTransactionReadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 891C3472297C25AC00F8F8EA /* PBTransactionReadable.swift */; };
 		89520F53297AD5A90092210A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89520F52297AD5A90092210A /* SceneDelegate.swift */; };
 		89520F55297AD5A90092210A /* TransactionsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89520F54297AD5A90092210A /* TransactionsVC.swift */; };
 		89520F5A297AD5AB0092210A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 89520F59297AD5AB0092210A /* Assets.xcassets */; };
@@ -39,7 +40,7 @@
 		897279C1297B5E15004DCF21 /* UIViewController+showAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 897279C0297B5E15004DCF21 /* UIViewController+showAlert.swift */; };
 		897279C3297B62C8004DCF21 /* ProgressHUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 897279C2297B62C8004DCF21 /* ProgressHUD.swift */; };
 		897279C5297B69C8004DCF21 /* TransactionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 897279C4297B69C8004DCF21 /* TransactionTableViewCell.swift */; };
-		897279C7297B7AA0004DCF21 /* DateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 897279C6297B7AA0004DCF21 /* DateFormatter.swift */; };
+		897279C7297B7AA0004DCF21 /* DateConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 897279C6297B7AA0004DCF21 /* DateConverter.swift */; };
 		897279CA297B7F8D004DCF21 /* TransactionsVMDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 897279C9297B7F8D004DCF21 /* TransactionsVMDelegate.swift */; };
 		897279CC297B7FB2004DCF21 /* TransactionsVMCoordinatorDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 897279CB297B7FB2004DCF21 /* TransactionsVMCoordinatorDelegate.swift */; };
 		897279CE297B7FC4004DCF21 /* TransactionsVMType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 897279CD297B7FC4004DCF21 /* TransactionsVMType.swift */; };
@@ -63,6 +64,7 @@
 		891C346A297C112900F8F8EA /* InternetChecker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InternetChecker.swift; sourceTree = "<group>"; };
 		891C346D297C159F00F8F8EA /* ArraySorter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArraySorter.swift; sourceTree = "<group>"; };
 		891C346F297C15BC00F8F8EA /* TransactionsArraySorter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsArraySorter.swift; sourceTree = "<group>"; };
+		891C3472297C25AC00F8F8EA /* PBTransactionReadable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PBTransactionReadable.swift; sourceTree = "<group>"; };
 		89520F4D297AD5A90092210A /* TransactionsMonitor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TransactionsMonitor.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		89520F52297AD5A90092210A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		89520F54297AD5A90092210A /* TransactionsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsVC.swift; sourceTree = "<group>"; };
@@ -91,7 +93,7 @@
 		897279C0297B5E15004DCF21 /* UIViewController+showAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+showAlert.swift"; sourceTree = "<group>"; };
 		897279C2297B62C8004DCF21 /* ProgressHUD.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgressHUD.swift; sourceTree = "<group>"; };
 		897279C4297B69C8004DCF21 /* TransactionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionTableViewCell.swift; sourceTree = "<group>"; };
-		897279C6297B7AA0004DCF21 /* DateFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatter.swift; sourceTree = "<group>"; };
+		897279C6297B7AA0004DCF21 /* DateConverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateConverter.swift; sourceTree = "<group>"; };
 		897279C9297B7F8D004DCF21 /* TransactionsVMDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsVMDelegate.swift; sourceTree = "<group>"; };
 		897279CB297B7FB2004DCF21 /* TransactionsVMCoordinatorDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsVMCoordinatorDelegate.swift; sourceTree = "<group>"; };
 		897279CD297B7FC4004DCF21 /* TransactionsVMType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsVMType.swift; sourceTree = "<group>"; };
@@ -204,7 +206,7 @@
 				89520F5B297AD5AB0092210A /* LaunchScreen.storyboard */,
 				89520F5E297AD5AB0092210A /* Info.plist */,
 				89727997297ADFFB004DCF21 /* Constants.swift */,
-				897279C6297B7AA0004DCF21 /* DateFormatter.swift */,
+				897279C6297B7AA0004DCF21 /* DateConverter.swift */,
 				891C3471297C15C400F8F8EA /* TransactionsSorter */,
 			);
 			path = Resources;
@@ -276,6 +278,7 @@
 			isa = PBXGroup;
 			children = (
 				897279B0297AE781004DCF21 /* PBTransaction.swift */,
+				891C3472297C25AC00F8F8EA /* PBTransactionReadable.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -488,7 +491,7 @@
 				891C346E297C159F00F8F8EA /* ArraySorter.swift in Sources */,
 				897279C1297B5E15004DCF21 /* UIViewController+showAlert.swift in Sources */,
 				897279A7297AE6A6004DCF21 /* TransactionsError.swift in Sources */,
-				897279C7297B7AA0004DCF21 /* DateFormatter.swift in Sources */,
+				897279C7297B7AA0004DCF21 /* DateConverter.swift in Sources */,
 				89727998297ADFFB004DCF21 /* Constants.swift in Sources */,
 				897279A9297AE6B7004DCF21 /* TransactionsAPISessionManager.swift in Sources */,
 				897279BA297B08D7004DCF21 /* TransactionsVM.swift in Sources */,
@@ -500,6 +503,7 @@
 				897279A3297AE576004DCF21 /* Servers.swift in Sources */,
 				897279BC297B0A17004DCF21 /* TransactionServices.swift in Sources */,
 				897279CA297B7F8D004DCF21 /* TransactionsVMDelegate.swift in Sources */,
+				891C3473297C25AC00F8F8EA /* PBTransactionReadable.swift in Sources */,
 				897279AD297AE742004DCF21 /* TransactionsAPI.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

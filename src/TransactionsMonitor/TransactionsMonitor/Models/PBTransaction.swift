@@ -5,13 +5,15 @@
 //  Created by Mohammad Farrahi on 19.01.23.
 //
 
+import Foundation
+
 struct PBTransaction: Codable {
     let companyName: String
     let reference: String
     let category: Int
     
     let description: String?
-    let bookingDate: String
+    let bookingISODate: String
     
     let amount   : Int
     let currency : String
@@ -30,7 +32,7 @@ struct PBTransaction: Codable {
     
     enum TransactionDetailKeys: String, CodingKey {
         case description,
-             bookingDate,
+             bookingISODate = "bookingDate",
              value
     }
     
@@ -50,10 +52,23 @@ struct PBTransaction: Codable {
         
         let detailContainer = try transactionContainer.nestedContainer(keyedBy: TransactionDetailKeys.self, forKey: .transactionDetail)
         self.description = try detailContainer.decodeIfPresent(String.self, forKey: .description)
-        self.bookingDate = try detailContainer.decode(String.self, forKey: .bookingDate)
+        self.bookingISODate = try detailContainer.decode(String.self, forKey: .bookingISODate)
         
         let valueContainer = try detailContainer.nestedContainer(keyedBy: ValueKeys.self, forKey: .value)
         self.amount = try valueContainer.decode(Int.self, forKey: .amount)
         self.currency = try valueContainer.decode(String.self, forKey: .currency)
+    }
+}
+
+
+// MARK: PBTransactionReadable
+// it can be done also using Decorator Design Pattern
+extension PBTransaction: PBTransactionReadable {
+    func getBookingDate() -> Date? {
+        DateConverter().readableDate(from: bookingISODate)
+    }
+    
+    func getBookingDateString() -> String {
+        DateConverter().readablestringDate(from: bookingISODate)
     }
 }
