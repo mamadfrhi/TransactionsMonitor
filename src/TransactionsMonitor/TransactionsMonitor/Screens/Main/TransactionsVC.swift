@@ -90,11 +90,12 @@ extension TransactionsVC {
             .store(in: &cancelables)
         
         filterPopoverVC.$chosenCategory
+            .dropFirst()
             .sink {
                 [weak self] category in
-                self?.transactionsVM.filterTransactions(by: category ?? "Clear Filter")
+                self?.transactionsVM.filterTransactions(by: category ?? Constants.clearFilterKey)
             }
-        .store(in: &cancelables)
+            .store(in: &cancelables)
         
         transactionsVM.$filteredTransactions
             .sink {
