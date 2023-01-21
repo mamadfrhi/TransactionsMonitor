@@ -10,6 +10,7 @@
 		4E6882EC49A1693297AFE710 /* Pods_TransactionsMonitor.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5B69045E4706E5A133BAA76 /* Pods_TransactionsMonitor.framework */; };
 		891C3462297C095400F8F8EA /* DateConverterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 891C3461297C095400F8F8EA /* DateConverterTests.swift */; };
 		891C3469297C106900F8F8EA /* Connectivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 891C3468297C106900F8F8EA /* Connectivity.swift */; };
+		891C346B297C112900F8F8EA /* InternetChecker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 891C346A297C112900F8F8EA /* InternetChecker.swift */; };
 		89520F53297AD5A90092210A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89520F52297AD5A90092210A /* SceneDelegate.swift */; };
 		89520F55297AD5A90092210A /* TransactionsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89520F54297AD5A90092210A /* TransactionsVC.swift */; };
 		89520F5A297AD5AB0092210A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 89520F59297AD5AB0092210A /* Assets.xcassets */; };
@@ -57,6 +58,7 @@
 		891C345F297C095400F8F8EA /* DateFormatterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DateFormatterTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		891C3461297C095400F8F8EA /* DateConverterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateConverterTests.swift; sourceTree = "<group>"; };
 		891C3468297C106900F8F8EA /* Connectivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Connectivity.swift; sourceTree = "<group>"; };
+		891C346A297C112900F8F8EA /* InternetChecker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InternetChecker.swift; sourceTree = "<group>"; };
 		89520F4D297AD5A90092210A /* TransactionsMonitor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TransactionsMonitor.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		89520F52297AD5A90092210A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		89520F54297AD5A90092210A /* TransactionsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsVC.swift; sourceTree = "<group>"; };
@@ -128,6 +130,15 @@
 			path = DateFormatterTests;
 			sourceTree = "<group>";
 		};
+		891C346C297C113A00F8F8EA /* InternetChecker */ = {
+			isa = PBXGroup;
+			children = (
+				891C3468297C106900F8F8EA /* Connectivity.swift */,
+				891C346A297C112900F8F8EA /* InternetChecker.swift */,
+			);
+			path = InternetChecker;
+			sourceTree = "<group>";
+		};
 		89520F44297AD5A90092210A = {
 			isa = PBXGroup;
 			children = (
@@ -181,7 +192,6 @@
 				89520F5E297AD5AB0092210A /* Info.plist */,
 				89727997297ADFFB004DCF21 /* Constants.swift */,
 				897279C6297B7AA0004DCF21 /* DateFormatter.swift */,
-				891C3468297C106900F8F8EA /* Connectivity.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -228,6 +238,7 @@
 		8972799E297AE55A004DCF21 /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				891C346C297C113A00F8F8EA /* InternetChecker */,
 				8972799F297AE565004DCF21 /* LocalJSONLoader */,
 				897279A2297AE576004DCF21 /* Servers.swift */,
 				897279A4297AE593004DCF21 /* Networkable.swift */,
@@ -456,6 +467,7 @@
 				89727993297ADF67004DCF21 /* Coordinator.swift in Sources */,
 				897279C3297B62C8004DCF21 /* ProgressHUD.swift in Sources */,
 				897279A1297AE565004DCF21 /* LocalJSONLoader.swift in Sources */,
+				891C346B297C112900F8F8EA /* InternetChecker.swift in Sources */,
 				897279B2297AE781004DCF21 /* PBTransaction.swift in Sources */,
 				8972799A297AE405004DCF21 /* AppDelegate.swift in Sources */,
 				897279C1297B5E15004DCF21 /* UIViewController+showAlert.swift in Sources */,
