@@ -8,6 +8,6 @@
 import Foundation
 
 protocol PBTransactionReadable {
-    func getBookingDate() -> Date?
+    func getBookingDate() -> Date
     func getBookingDateString() -> String
 }
