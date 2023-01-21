@@ -14,7 +14,6 @@ class TransactionsView: UIView {
     let tableView: UITableView = {
         let table = UITableView()
         table.register(TransactionTableViewCell.self, forCellReuseIdentifier: "cell")
-        table.layer.backgroundColor = UIColor.white.cgColor
         return table
     }()
     
@@ -31,7 +30,7 @@ class TransactionsView: UIView {
     // MARK: Init
     override init(frame: CGRect) {
         super.init(frame: frame)
-        self.backgroundColor = .red
+        self.backgroundColor = .systemBackground
         self.setupView() // call template
     }
     required init?(coder: NSCoder) {
@@ -53,7 +52,7 @@ extension TransactionsView: ViewCodeableTemplate {
     
     func setupConstraints() {
         tableView.snp.makeConstraints { make in
-            make.edges.equalToSuperview()
+            make.edges.equalTo(safeAreaLayoutGuide)
         }
         
         retryButton.snp.makeConstraints { make in
