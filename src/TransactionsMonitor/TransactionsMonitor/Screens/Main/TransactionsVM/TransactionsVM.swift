@@ -57,6 +57,10 @@ extension TransactionsVM {
     private func showError(with errorMessage: String) {
         self.errorMessage = errorMessage
     }
+    
+    func getUniqueCategories() -> [String] {
+        let categories = transactions.map { "\($0.category)" }
+        let uniqueCategories = Set(categories)
+        return Array(uniqueCategories)
+    }
 }
-
-

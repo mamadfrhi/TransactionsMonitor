@@ -47,6 +47,8 @@ class TransactionsVC: UIViewController {
     }
     
     @objc func filterBarButtonPressed(_ sender: Any) {
+        let categories = transactionsVM.getUniqueCategories()
+        filterPopoverVC.list = categories
         self.present(filterPopoverVC, animated: true)
     }
 }
