@@ -48,6 +48,8 @@
 		897279CA297B7F8D004DCF21 /* TransactionsVMDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 897279C9297B7F8D004DCF21 /* TransactionsVMDelegate.swift */; };
 		897279CC297B7FB2004DCF21 /* TransactionsVMCoordinatorDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 897279CB297B7FB2004DCF21 /* TransactionsVMCoordinatorDelegate.swift */; };
 		897279CE297B7FC4004DCF21 /* TransactionsVMType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 897279CD297B7FC4004DCF21 /* TransactionsVMType.swift */; };
+		89731F47297C9F3B0063448D /* DetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89731F46297C9F3B0063448D /* DetailsVC.swift */; };
+		89731F49297CA06D0063448D /* DetailsView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 89731F48297CA06D0063448D /* DetailsView.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -105,6 +107,8 @@
 		897279C9297B7F8D004DCF21 /* TransactionsVMDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsVMDelegate.swift; sourceTree = "<group>"; };
 		897279CB297B7FB2004DCF21 /* TransactionsVMCoordinatorDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsVMCoordinatorDelegate.swift; sourceTree = "<group>"; };
 		897279CD297B7FC4004DCF21 /* TransactionsVMType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsVMType.swift; sourceTree = "<group>"; };
+		89731F46297C9F3B0063448D /* DetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsVC.swift; sourceTree = "<group>"; };
+		89731F48297CA06D0063448D /* DetailsView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DetailsView.storyboard; sourceTree = "<group>"; };
 		943136329B21FFF23497888D /* Pods-TransactionsMonitor.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TransactionsMonitor.debug.xcconfig"; path = "Target Support Files/Pods-TransactionsMonitor/Pods-TransactionsMonitor.debug.xcconfig"; sourceTree = "<group>"; };
 		E5B69045E4706E5A133BAA76 /* Pods_TransactionsMonitor.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TransactionsMonitor.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -223,6 +227,7 @@
 		8972798E297ADEAB004DCF21 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				89731F43297C9F150063448D /* DetailsScreen */,
 				897279C2297B62C8004DCF21 /* ProgressHUD.swift */,
 				89727994297ADF84004DCF21 /* Main */,
 			);
@@ -321,6 +326,15 @@
 				897279CD297B7FC4004DCF21 /* TransactionsVMType.swift */,
 			);
 			path = TransactionsVM;
+			sourceTree = "<group>";
+		};
+		89731F43297C9F150063448D /* DetailsScreen */ = {
+			isa = PBXGroup;
+			children = (
+				89731F46297C9F3B0063448D /* DetailsVC.swift */,
+				89731F48297CA06D0063448D /* DetailsView.storyboard */,
+			);
+			path = DetailsScreen;
 			sourceTree = "<group>";
 		};
 		C6BE8A309C8B5F808352BDAD /* Pods */ = {
@@ -424,6 +438,7 @@
 			files = (
 				89520F5D297AD5AB0092210A /* LaunchScreen.storyboard in Resources */,
 				8972799D297AE543004DCF21 /* PBTransactions.json in Resources */,
+				89731F49297CA06D0063448D /* DetailsView.storyboard in Resources */,
 				89520F5A297AD5AB0092210A /* Assets.xcassets in Resources */,
 				891C3477297C329A00F8F8EA /* FilterPopoverView.storyboard in Resources */,
 			);
@@ -499,6 +514,7 @@
 				897279C3297B62C8004DCF21 /* ProgressHUD.swift in Sources */,
 				891C3470297C15BC00F8F8EA /* TransactionsArraySorter.swift in Sources */,
 				897279A1297AE565004DCF21 /* LocalJSONLoader.swift in Sources */,
+				89731F47297C9F3B0063448D /* DetailsVC.swift in Sources */,
 				894B1B7A297C761000B3C3BB /* TransactionTableViewDelegate.swift in Sources */,
 				891C346B297C112900F8F8EA /* InternetChecker.swift in Sources */,
 				897279B2297AE781004DCF21 /* PBTransaction.swift in Sources */,
