@@ -22,7 +22,7 @@ class TransactionsView: UIView {
         let button = UIButton(type: .system)
         button.setTitle("Retry!", for: .normal)
         button.addTarget(nil,
-                         action: #selector(MainVC().retryButtonPressed(_:)),
+                         action: #selector(TransactionsVC().retryButtonPressed(_:)),
                          for: .touchUpInside)
         button.isHidden = true
         return button

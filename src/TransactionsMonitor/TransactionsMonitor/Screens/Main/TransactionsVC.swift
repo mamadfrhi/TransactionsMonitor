@@ -8,7 +8,7 @@
 import UIKit
 import Combine
 
-class MainVC: UIViewController {
+class TransactionsVC: UIViewController {
     
     // MARK: Dependencies
     private let mainTableViewDataSource: MainTableViewDataSource = MainTableViewDataSource()
@@ -44,7 +44,7 @@ class MainVC: UIViewController {
 }
 
 // MARK: - SETUPS
-extension MainVC {
+extension TransactionsVC {
     private func configTableView() {
         transactionsView.tableView.dataSource = mainTableViewDataSource
     }
@@ -71,7 +71,7 @@ extension MainVC {
 }
 
 // MARK: MainVMDelegate
-extension MainVC: MainVMDelegate {
+extension TransactionsVC: MainVMDelegate {
     func updateScreen() {
         DispatchQueue.main.async {
             self.transactionsView.tableView.reloadData()

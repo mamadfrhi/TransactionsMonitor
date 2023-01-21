@@ -17,7 +17,7 @@ class MainCoordinator: Coordinator {
     
     override func start() {
         super.addChildCoordinator(self)
-        let mainVC = MainVC()
+        let mainVC = TransactionsVC()
         rootNavigationController.pushViewController(mainVC, animated: true)
     }
 }
