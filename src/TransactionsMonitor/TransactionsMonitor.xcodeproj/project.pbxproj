@@ -248,8 +248,7 @@
 		89727994297ADF84004DCF21 /* Transactions */ = {
 			isa = PBXGroup;
 			children = (
-				891C3474297C328A00F8F8EA /* FilterPopoverVC.swift */,
-				891C3476297C329A00F8F8EA /* FilterPopoverView.storyboard */,
+				89731F4C297CA4B90063448D /* FilterPopover */,
 				897279C8297B7F68004DCF21 /* TransactionsTableView */,
 				897279CF297B803D004DCF21 /* TransactionsVM */,
 				89727995297ADF91004DCF21 /* TransactionsCoordinator.swift */,
@@ -338,6 +337,15 @@
 				89731F48297CA06D0063448D /* DetailsView.storyboard */,
 			);
 			path = DetailsScreen;
+			sourceTree = "<group>";
+		};
+		89731F4C297CA4B90063448D /* FilterPopover */ = {
+			isa = PBXGroup;
+			children = (
+				891C3474297C328A00F8F8EA /* FilterPopoverVC.swift */,
+				891C3476297C329A00F8F8EA /* FilterPopoverView.storyboard */,
+			);
+			path = FilterPopover;
 			sourceTree = "<group>";
 		};
 		C6BE8A309C8B5F808352BDAD /* Pods */ = {
