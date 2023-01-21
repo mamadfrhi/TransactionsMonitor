@@ -73,6 +73,7 @@ extension MainVC: MainVMDelegate {
     func updateScreen() {
         DispatchQueue.main.async {
             self.mainView.tableView.reloadData()
+            self.mainView.hideRetryButton(true)
         }
     }
     
@@ -85,6 +86,7 @@ extension MainVC: MainVMDelegate {
     func showError(errorMessage: String) {
         DispatchQueue.main.async {
             self.showAlert(alertTitle: "Error!", alertMessage: errorMessage)
+            self.mainView.hideRetryButton(false)
         }
     }
     

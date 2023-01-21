@@ -37,6 +37,11 @@ class MainView: UIView {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+    
+    // MARK: Function
+    func hideRetryButton(_ value: Bool) {
+        retryButton.isHidden = value
+    }
 }
 
 // MARK: Custom View Template
