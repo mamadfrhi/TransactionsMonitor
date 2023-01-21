@@ -7,15 +7,12 @@
 
 import UIKit
 
-protocol FilterPopoverDelegate: AnyObject {
-    func filterBy(category: Int)
-}
-
 class FilterPopoverVC: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
-    private var list: [String] = []
-    weak var delegagte: FilterPopoverDelegate?
+    var list: [String] = []
+    
+    @Published var chosenCategory: String?
     
     //MARK: Factory
     class func `init`(list: [String]) -> FilterPopoverVC {
@@ -30,6 +27,7 @@ class FilterPopoverVC: UIViewController {
         super.viewDidLoad()
         tableView.reloadData()
     }
+    
 }
 
 extension FilterPopoverVC: UITableViewDataSource {
@@ -38,8 +36,18 @@ extension FilterPopoverVC: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = UITableViewCell(style: .default, reuseIdentifier: nil)
-        cell.textLabel?.text = list[indexPath.row]
-        return cell
+        let cellID = "cell"
+        var cell = tableView.dequeueReusableCell(withIdentifier: cellID)
+        if (cell == nil) {
+            cell = UITableViewCell(style: .default, reuseIdentifier: cellID)
+        }
+        cell?.textLabel?.text = list[indexPath.row]
+        return cell!
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        chosenCategory = list[indexPath.row]
+        self.dismiss(animated: true)
+    }
+    
 }

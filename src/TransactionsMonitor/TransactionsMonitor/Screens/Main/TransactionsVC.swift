@@ -14,6 +14,7 @@ class TransactionsVC: UIViewController {
     private let transactionsTableViewDataSource: TransactionsTableViewDataSource = TransactionsTableViewDataSource()
     private let transactionsView = TransactionsView(frame: screenBounds)
     private let transactionsVM = TransactionsVM()
+    private let filterPopoverVC = FilterPopoverVC.`init`(list: [])
     
     // MARK: Properties
     private let hud = ProgressHUD(title: "Please wait...", theme: .dark)
@@ -46,7 +47,7 @@ class TransactionsVC: UIViewController {
     }
     
     @objc func filterBarButtonPressed(_ sender: Any) {
-        print("UI Bar Button Pressed!")
+        self.present(filterPopoverVC, animated: true)
     }
 }
 

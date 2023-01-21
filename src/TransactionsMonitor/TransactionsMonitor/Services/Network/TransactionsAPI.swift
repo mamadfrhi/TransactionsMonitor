@@ -67,7 +67,9 @@ extension TransactionsAPI: Networkable {
 
 
 extension TransactionsAPI {
-    private func raiseFailure() -> Bool { Bool.random() }
+    private func raiseFailure() -> Bool {
+        return false
+        Bool.random() }
 }
 
 
