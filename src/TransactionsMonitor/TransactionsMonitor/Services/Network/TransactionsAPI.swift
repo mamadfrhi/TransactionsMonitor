@@ -12,6 +12,7 @@ struct TransactionsAPI {
     private let session           : Session
     private let localJSONLoader   : any LocalJSONLoaderInterface
     private let localJSONFileName = "PBTransactions"
+    private let internetChecker = InternetChecker()
     
     internal init(session: Session,
                   localJSONLoader: any LocalJSONLoaderInterface) {
@@ -43,6 +44,12 @@ extension TransactionsAPI: Networkable {
     }
     
     func fetch(completionHandler: @escaping (Result<Any?, Error>) -> ()) {
+        
+        if !internetChecker.isOnline() {
+            completionHandler(.failure(TransactionsAPIError.disconnected))
+            return
+        }
+        
         DispatchQueue.global().asyncAfter(deadline: .now() + 2) {
             if raiseFailure() {
                 completionHandler(.failure(TransactionsAPIError.serverError))
