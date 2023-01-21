@@ -80,7 +80,9 @@ extension MainVC: MainVMDelegate {
     }
     
     func hud(show: Bool) {
-        show ? self.hud.show() : self.hud.hide()
+        DispatchQueue.main.async {
+            show ? self.hud.show() : self.hud.hide()
+        }
     }
     
     func showError(errorMessage: String) {
