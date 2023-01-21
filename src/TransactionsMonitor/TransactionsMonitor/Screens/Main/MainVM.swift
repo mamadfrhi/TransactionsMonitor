@@ -36,6 +36,7 @@ extension MainVM {
             if let error = error {
                 let errorMessage = error.localizedDescription
                 self.showError(with: errorMessage)
+                self.viewDelegate?.hud(show: false)
                 return
             }
             
@@ -43,11 +44,11 @@ extension MainVM {
                 // success
                 self.transactions = transactions
                 self.viewDelegate?.updateScreen()
-                self.viewDelegate?.hud(show: false)
             } else {
                 // failure
                 self.showError(with: TransactionsAPIError.noData.localizedDescription)
             }
+            self.viewDelegate?.hud(show: false)
         }
     }
     

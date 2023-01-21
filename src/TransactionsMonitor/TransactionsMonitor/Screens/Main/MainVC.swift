@@ -16,11 +16,13 @@ class MainVC: UIViewController {
     private let mainVM = MainVM()
     
     // MARK: Properties
+    private let hud = ProgressHUD(title: "Please wait...", theme: .dark)
     private var cancelables: Set<AnyCancellable> = []
     
     // MARK: LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        [hud].forEach(view.addSubview(_:)) // add HUD on VC
         configTableView()
         setupBindings()
         mainVM.viewDelegate = self
@@ -66,7 +68,9 @@ extension MainVC: MainVMDelegate {
     }
     
     func hud(show: Bool) {
-        print("HUD")
+        DispatchQueue.main.async {
+            show ? self.hud.show() : self.hud.hide()
+        }
     }
     
     func showError(errorMessage: String) {
