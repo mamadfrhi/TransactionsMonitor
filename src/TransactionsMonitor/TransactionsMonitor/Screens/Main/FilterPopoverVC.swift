@@ -25,6 +25,7 @@ class FilterPopoverVC: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        list.append("Clear Filter")
         tableView.reloadData()
     }
     
