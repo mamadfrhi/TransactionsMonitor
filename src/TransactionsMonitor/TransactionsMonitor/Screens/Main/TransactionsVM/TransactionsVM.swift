@@ -24,6 +24,8 @@ class TransactionsVM {
     @Published var errorMessage: String?
     @Published var transactions: [PBTransaction] = []
     @Published var filteredTransactions: [PBTransaction] = []
+    var filterIsActive = false
+    @Published var summation: Int = 0
 }
 
 // MARK: Network
@@ -63,7 +65,10 @@ extension TransactionsVM {
 // MARK: Filtering
 extension TransactionsVM {
     
-    private func resetFilter() { self.filteredTransactions = transactions }
+    private func resetFilter() {
+        self.filteredTransactions = transactions
+        filterIsActive = false
+    }
     
     func getUniqueCategories() -> [String] {
         resetFilter()
@@ -73,13 +78,33 @@ extension TransactionsVM {
     }
     
     func filterTransactions(by category: String) {
-        if category == "Clear Filter" { //TODO: It must convert to an enum
+        if category == Constants.clearFilterKey { //TODO: It must convert to an enum
             resetFilter()
-            return
+        } else {
+            let filtered = transactionsSorter.filter(transactions: transactions,
+                                                     by: category)
+            filteredTransactions = filtered
+            filterIsActive = true
         }
-        
-        let filtered = transactionsSorter.filter(transactions: transactions,
-                                                 by: category)
-        filteredTransactions = filtered
+        setSummationVarialbe()
     }
 }
+
+// MARK: Summation
+extension TransactionsVM {
+    func setSummationVarialbe() {
+        var sum = 0
+        if filterIsActive {
+            sum = filteredTransactions
+                .map { $0.amount }
+                .reduce(0, +)
+        } else {
+            sum = transactions
+                .map { $0.amount }
+                .reduce(0, +)
+        }
+        summation = sum
+    }
+}
+
+let clearFilter = "Clear Filter"
