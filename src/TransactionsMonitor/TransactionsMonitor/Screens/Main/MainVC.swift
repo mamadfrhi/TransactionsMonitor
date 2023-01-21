@@ -12,7 +12,7 @@ class MainVC: UIViewController {
     
     // MARK: Dependencies
     private let mainTableViewDataSource: MainTableViewDataSource = MainTableViewDataSource()
-    private let mainView = MainView(frame: screenBounds)
+    private let transactionsView = TransactionsView(frame: screenBounds)
     private let mainVM = MainVM()
     
     // MARK: Properties
@@ -30,7 +30,7 @@ class MainVC: UIViewController {
     }
     
     override func loadView() {
-        self.view = mainView
+        self.view = transactionsView
     }
     
     // MARK: Functions
@@ -46,7 +46,7 @@ class MainVC: UIViewController {
 // MARK: - SETUPS
 extension MainVC {
     private func configTableView() {
-        mainView.tableView.dataSource = mainTableViewDataSource
+        transactionsView.tableView.dataSource = mainTableViewDataSource
     }
     
     private func setupBindings() {
@@ -74,8 +74,8 @@ extension MainVC {
 extension MainVC: MainVMDelegate {
     func updateScreen() {
         DispatchQueue.main.async {
-            self.mainView.tableView.reloadData()
-            self.mainView.hideRetryButton(true)
+            self.transactionsView.tableView.reloadData()
+            self.transactionsView.hideRetryButton(true)
         }
     }
     
@@ -87,11 +87,11 @@ extension MainVC: MainVMDelegate {
     
     func showError(errorMessage: String) {
         self.showAlert(alertTitle: "Error!", alertMessage: errorMessage)
-        self.mainView.hideRetryButton(false)
+        self.transactionsView.hideRetryButton(false)
     }
     
     func selectedTransationRow() -> Int {
-        print("Selected row is: ", mainView.tableView.indexPathForSelectedRow?.row as Any)
+        print("Selected row is: ", transactionsView.tableView.indexPathForSelectedRow?.row as Any)
         return 0
     }
     

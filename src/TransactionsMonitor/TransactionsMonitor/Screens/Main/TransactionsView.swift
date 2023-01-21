@@ -8,7 +8,7 @@
 import UIKit
 import SnapKit
 
-class MainView: UIView {
+class TransactionsView: UIView {
     
     // MARK: Views
     let tableView: UITableView = {
@@ -45,7 +45,7 @@ class MainView: UIView {
 }
 
 // MARK: Custom View Template
-extension MainView: ViewCodeableTemplate {
+extension TransactionsView: ViewCodeableTemplate {
     func buildViewHierarchy() {
         self.addSubview(tableView)
         self.addSubview(retryButton)
