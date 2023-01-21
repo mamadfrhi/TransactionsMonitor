@@ -26,11 +26,20 @@ class MainTableViewDataSource: NSObject, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: cellID, for: indexPath)
-        if let companyName = _transactions?[indexPath.row].companyName {
-            cell.textLabel?.text = companyName
+        if let cell = tableView.dequeueReusableCell(withIdentifier: cellID,
+                                                    for: indexPath) as? TransactionTableViewCell,
+           let transaction = _transactions?[indexPath.row] {
+            
+            cell.companyNameLabel.text = transaction.companyName
+            cell.transactionDescriptionLabel.text = transaction.description
+            cell.bookingDateLabel.text = transaction.bookingDate
+            
+            cell.amountLabel.text = "\(transaction.amount)"
+            cell.currencyLabel.text = transaction.currency
+            
+            return cell
         }
-        return cell
+        return UITableViewCell()
     }
 }
 
