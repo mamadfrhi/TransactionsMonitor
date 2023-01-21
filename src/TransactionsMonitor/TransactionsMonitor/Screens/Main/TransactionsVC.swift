@@ -73,6 +73,7 @@ extension TransactionsVC {
             .sink {
                 [weak self] transactions in
                 self?.transactionsTableViewDataSource.transactions = transactions
+                self?.updateScreen()
             }
             .store(in: &cancelables)
         
@@ -83,6 +84,21 @@ extension TransactionsVC {
                 [weak self] errorMessage in
                 let errorText = errorMessage ?? "Something wrong happened"
                 self?.showError(errorMessage: errorText)
+            }
+            .store(in: &cancelables)
+        
+        filterPopoverVC.$chosenCategory
+            .sink {
+                [weak self] category in
+                self?.transactionsVM.filterTransactions(by: category ?? "Clear Filter")
+            }
+        .store(in: &cancelables)
+        
+        transactionsVM.$filteredTransactions
+            .sink {
+                [weak self] filteredTransactions in
+                self?.transactionsTableViewDataSource.transactions = filteredTransactions
+                self?.updateScreen()
             }
             .store(in: &cancelables)
     }
