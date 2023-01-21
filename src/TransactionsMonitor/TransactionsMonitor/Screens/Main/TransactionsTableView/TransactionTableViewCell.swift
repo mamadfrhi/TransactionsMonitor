@@ -13,6 +13,7 @@ class TransactionTableViewCell: UITableViewCell {
     // MARK: Left Side
     let companyNameLabel: UILabel = {
         let lbl = UILabel()
+        lbl.font = UIFont.boldSystemFont(ofSize: 18.0)
         return lbl
     }()
     
