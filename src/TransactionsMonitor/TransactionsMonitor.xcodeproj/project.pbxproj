@@ -230,7 +230,7 @@
 			isa = PBXGroup;
 			children = (
 				89727994297ADF84004DCF21 /* Transactions */,
-				89731F43297C9F150063448D /* DetailsScreen */,
+				89731F43297C9F150063448D /* Details */,
 				897279C2297B62C8004DCF21 /* ProgressHUD.swift */,
 			);
 			path = Screens;
@@ -329,14 +329,14 @@
 			path = TransactionsVM;
 			sourceTree = "<group>";
 		};
-		89731F43297C9F150063448D /* DetailsScreen */ = {
+		89731F43297C9F150063448D /* Details */ = {
 			isa = PBXGroup;
 			children = (
 				89731F4A297CA10B0063448D /* TransactionDetails.swift */,
 				89731F46297C9F3B0063448D /* DetailsVC.swift */,
 				89731F48297CA06D0063448D /* DetailsView.storyboard */,
 			);
-			path = DetailsScreen;
+			path = Details;
 			sourceTree = "<group>";
 		};
 		89731F4C297CA4B90063448D /* FilterPopover */ = {
