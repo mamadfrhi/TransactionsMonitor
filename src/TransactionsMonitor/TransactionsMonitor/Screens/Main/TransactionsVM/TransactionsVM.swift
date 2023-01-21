@@ -23,9 +23,10 @@ class TransactionsVM {
     // MARK: Obserbables
     @Published var errorMessage: String?
     @Published var transactions: [PBTransaction] = []
+    @Published var filteredTransactions: [PBTransaction] = []
 }
 
-
+// MARK: Network
 extension TransactionsVM {
     
     func fetchTransactions() {
@@ -57,10 +58,28 @@ extension TransactionsVM {
     private func showError(with errorMessage: String) {
         self.errorMessage = errorMessage
     }
+}
+
+// MARK: Filtering
+extension TransactionsVM {
+    
+    private func resetFilter() { self.filteredTransactions = transactions }
     
     func getUniqueCategories() -> [String] {
+        resetFilter()
         let categories = transactions.map { "\($0.category)" }
         let uniqueCategories = Set(categories)
         return Array(uniqueCategories)
+    }
+    
+    func filterTransactions(by category: String) {
+        if category == "Clear Filter" { //TODO: It must convert to an enum
+            transactions = transactions
+            return
+        }
+        
+        let filtered = transactionsSorter.filter(transactions: transactions,
+                                                 by: category)
+        filteredTransactions = filtered
     }
 }
