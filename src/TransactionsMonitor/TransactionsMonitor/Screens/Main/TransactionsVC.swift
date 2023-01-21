@@ -11,9 +11,9 @@ import Combine
 class TransactionsVC: UIViewController {
     
     // MARK: Dependencies
-    private let mainTableViewDataSource: TransactionsTableViewDataSource = TransactionsTableViewDataSource()
+    private let transactionsTableViewDataSource: TransactionsTableViewDataSource = TransactionsTableViewDataSource()
     private let transactionsView = TransactionsView(frame: screenBounds)
-    private let mainVM = TransactionsVM()
+    private let transactionsVM = TransactionsVM()
     
     // MARK: Properties
     private let hud = ProgressHUD(title: "Please wait...", theme: .dark)
@@ -25,7 +25,7 @@ class TransactionsVC: UIViewController {
         [hud].forEach(view.addSubview(_:)) // add HUD on VC
         configTableView()
         setupBindings()
-        mainVM.viewDelegate = self
+        transactionsVM.viewDelegate = self
         fetchTransactions()
     }
     
@@ -35,7 +35,7 @@ class TransactionsVC: UIViewController {
     
     // MARK: Functions
     private func fetchTransactions() {
-        mainVM.fetchTransactions()
+        transactionsVM.fetchTransactions()
     }
     
     @objc func retryButtonPressed(_ sender: UIButton) {
@@ -46,19 +46,19 @@ class TransactionsVC: UIViewController {
 // MARK: - SETUPS
 extension TransactionsVC {
     private func configTableView() {
-        transactionsView.tableView.dataSource = mainTableViewDataSource
+        transactionsView.tableView.dataSource = transactionsTableViewDataSource
     }
     
     private func setupBindings() {
-        mainVM.$transactions
+        transactionsVM.$transactions
             .receive(on: DispatchQueue.main)
             .sink {
                 [weak self] transactions in
-                self?.mainTableViewDataSource.transactions = transactions
+                self?.transactionsTableViewDataSource.transactions = transactions
             }
             .store(in: &cancelables)
         
-        mainVM.$errorMessage
+        transactionsVM.$errorMessage
             .dropFirst()
             .receive(on: DispatchQueue.main)
             .sink {
@@ -71,7 +71,7 @@ extension TransactionsVC {
 }
 
 // MARK: MainVMDelegate
-extension TransactionsVC: MainVMDelegate {
+extension TransactionsVC: TransactionsVMDelegate {
     func updateScreen() {
         DispatchQueue.main.async {
             self.transactionsView.tableView.reloadData()

@@ -13,7 +13,7 @@ import UIKit
 // implement in VM
 protocol MainVMType {
     
-    var viewDelegate: MainVMDelegate? { get set }
+    var viewDelegate: TransactionsVMDelegate? { get set }
     
     // Events
     
@@ -25,14 +25,14 @@ protocol MainVMType {
 // MARK: - MainVMDelegate(delegate)
 // implement in MainCoordinator
 // call in VM
-protocol MainVMCoordinatorDelegate {
+protocol TransactionsVMCoordinatorDelegate {
     func didSelect(transaction: PBTransaction, from controller: UIViewController)
 }
 
 // MARK: - MainVMDelegate
 // implement in VC
 // call on VM
-protocol MainVMDelegate {
+protocol TransactionsVMDelegate {
     func updateScreen()
     func hud(show: Bool)
     func showError(errorMessage: String)

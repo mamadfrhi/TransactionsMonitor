@@ -28,7 +28,7 @@
 		897279B2297AE781004DCF21 /* PBTransaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 897279B0297AE781004DCF21 /* PBTransaction.swift */; };
 		897279B4297AE7EC004DCF21 /* TransactionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 897279B3297AE7EC004DCF21 /* TransactionsView.swift */; };
 		897279B6297AE84F004DCF21 /* ViewCodeableTemplate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 897279B5297AE84F004DCF21 /* ViewCodeableTemplate.swift */; };
-		897279B8297AEB22004DCF21 /* MainTableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 897279B7297AEB22004DCF21 /* MainTableViewDataSource.swift */; };
+		897279B8297AEB22004DCF21 /* TransactionsTableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 897279B7297AEB22004DCF21 /* TransactionsTableViewDataSource.swift */; };
 		897279BA297B08D7004DCF21 /* TransactionsVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 897279B9297B08D7004DCF21 /* TransactionsVM.swift */; };
 		897279BC297B0A17004DCF21 /* TransactionServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 897279BB297B0A17004DCF21 /* TransactionServices.swift */; };
 		897279BE297B12F2004DCF21 /* VMAbstractions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 897279BD297B12F2004DCF21 /* VMAbstractions.swift */; };
@@ -62,7 +62,7 @@
 		897279B0297AE781004DCF21 /* PBTransaction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PBTransaction.swift; sourceTree = "<group>"; };
 		897279B3297AE7EC004DCF21 /* TransactionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsView.swift; sourceTree = "<group>"; };
 		897279B5297AE84F004DCF21 /* ViewCodeableTemplate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewCodeableTemplate.swift; sourceTree = "<group>"; };
-		897279B7297AEB22004DCF21 /* MainTableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableViewDataSource.swift; sourceTree = "<group>"; };
+		897279B7297AEB22004DCF21 /* TransactionsTableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsTableViewDataSource.swift; sourceTree = "<group>"; };
 		897279B9297B08D7004DCF21 /* TransactionsVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsVM.swift; sourceTree = "<group>"; };
 		897279BB297B0A17004DCF21 /* TransactionServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionServices.swift; sourceTree = "<group>"; };
 		897279BD297B12F2004DCF21 /* VMAbstractions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VMAbstractions.swift; sourceTree = "<group>"; };
@@ -174,7 +174,7 @@
 				897279B3297AE7EC004DCF21 /* TransactionsView.swift */,
 				89520F54297AD5A90092210A /* TransactionsVC.swift */,
 				897279C4297B69C8004DCF21 /* TransactionTableViewCell.swift */,
-				897279B7297AEB22004DCF21 /* MainTableViewDataSource.swift */,
+				897279B7297AEB22004DCF21 /* TransactionsTableViewDataSource.swift */,
 				897279B9297B08D7004DCF21 /* TransactionsVM.swift */,
 				897279BD297B12F2004DCF21 /* VMAbstractions.swift */,
 			);
@@ -352,7 +352,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				897279B8297AEB22004DCF21 /* MainTableViewDataSource.swift in Sources */,
+				897279B8297AEB22004DCF21 /* TransactionsTableViewDataSource.swift in Sources */,
 				89727992297ADF67004DCF21 /* AppCoordinator.swift in Sources */,
 				897279B6297AE84F004DCF21 /* ViewCodeableTemplate.swift in Sources */,
 				897279BE297B12F2004DCF21 /* VMAbstractions.swift in Sources */,
