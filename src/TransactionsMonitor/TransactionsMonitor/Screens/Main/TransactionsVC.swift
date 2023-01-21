@@ -33,6 +33,11 @@ class TransactionsVC: UIViewController {
         setupFilterBarButtonItem()
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        transactionsVM.filterTransactions(by: Constants.clearFilterKey)
+    }
+    
     override func loadView() {
         self.view = transactionsView
         self.title = "Transactions"

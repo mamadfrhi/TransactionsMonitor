@@ -106,5 +106,3 @@ extension TransactionsVM {
         summation = sum
     }
 }
-
-let clearFilter = "Clear Filter"
