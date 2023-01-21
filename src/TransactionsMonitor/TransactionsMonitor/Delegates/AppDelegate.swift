@@ -11,7 +11,7 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-    var mainCoordinator: MainCoordinator?
+    var transactionsCoordinator: TransactionsCoordinator?
     let navController = UINavigationController()
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
@@ -22,8 +22,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.makeKeyAndVisible()
         
         // Setup Coordinator
-        mainCoordinator = MainCoordinator(rootNavigationController: navController)
-        mainCoordinator!.start()
+        transactionsCoordinator = TransactionsCoordinator(rootNavigationController: navController)
+        transactionsCoordinator!.start()
 
         return true
     }

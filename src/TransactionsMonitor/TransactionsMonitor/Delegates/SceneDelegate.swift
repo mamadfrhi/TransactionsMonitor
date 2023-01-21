@@ -10,7 +10,7 @@ import UIKit
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     
     var window: UIWindow?
-    var mainCoordinator: MainCoordinator?
+    var transactionsCoordinator: TransactionsCoordinator?
     
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         guard let windowScene = (scene as? UIWindowScene) else { return }
@@ -21,8 +21,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         window?.rootViewController = navController
         window?.makeKeyAndVisible()
         
-        mainCoordinator = MainCoordinator(rootNavigationController: navController)
-        mainCoordinator?.start()
+        transactionsCoordinator = TransactionsCoordinator(rootNavigationController: navController)
+        transactionsCoordinator?.start()
     }
 }
 

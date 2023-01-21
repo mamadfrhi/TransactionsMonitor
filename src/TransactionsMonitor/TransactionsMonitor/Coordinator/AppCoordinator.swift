@@ -24,7 +24,7 @@ final class AppCoordinator: Coordinator {
         window.makeKeyAndVisible()
         
         // show Main.storyboard as the start point of the app
-        let mainCoordinator = MainCoordinator(rootNavigationController: rootNavigationController)
+        let mainCoordinator = TransactionsCoordinator(rootNavigationController: rootNavigationController)
         mainCoordinator.start()
     }
 }

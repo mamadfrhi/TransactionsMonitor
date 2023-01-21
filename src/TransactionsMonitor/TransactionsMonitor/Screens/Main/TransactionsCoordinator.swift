@@ -7,7 +7,7 @@
 
 import UIKit
 
-class MainCoordinator: Coordinator {
+class TransactionsCoordinator: Coordinator {
     
     // MARK: Properties
     private let rootNavigationController: UINavigationController
