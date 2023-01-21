@@ -229,9 +229,9 @@
 		8972798E297ADEAB004DCF21 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
-				89731F43297C9F150063448D /* DetailsScreen */,
+				89727994297ADF84004DCF21 /* Transactions */,
+				89731F43297C9F150063448D /* Details */,
 				897279C2297B62C8004DCF21 /* ProgressHUD.swift */,
-				89727994297ADF84004DCF21 /* Main */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -245,18 +245,17 @@
 			path = Coordinator;
 			sourceTree = "<group>";
 		};
-		89727994297ADF84004DCF21 /* Main */ = {
+		89727994297ADF84004DCF21 /* Transactions */ = {
 			isa = PBXGroup;
 			children = (
-				891C3474297C328A00F8F8EA /* FilterPopoverVC.swift */,
-				891C3476297C329A00F8F8EA /* FilterPopoverView.storyboard */,
+				89731F4C297CA4B90063448D /* FilterPopover */,
 				897279C8297B7F68004DCF21 /* TransactionsTableView */,
 				897279CF297B803D004DCF21 /* TransactionsVM */,
 				89727995297ADF91004DCF21 /* TransactionsCoordinator.swift */,
 				897279B3297AE7EC004DCF21 /* TransactionsView.swift */,
 				89520F54297AD5A90092210A /* TransactionsVC.swift */,
 			);
-			path = Main;
+			path = Transactions;
 			sourceTree = "<group>";
 		};
 		8972799B297AE530004DCF21 /* Services */ = {
@@ -330,14 +329,23 @@
 			path = TransactionsVM;
 			sourceTree = "<group>";
 		};
-		89731F43297C9F150063448D /* DetailsScreen */ = {
+		89731F43297C9F150063448D /* Details */ = {
 			isa = PBXGroup;
 			children = (
 				89731F4A297CA10B0063448D /* TransactionDetails.swift */,
 				89731F46297C9F3B0063448D /* DetailsVC.swift */,
 				89731F48297CA06D0063448D /* DetailsView.storyboard */,
 			);
-			path = DetailsScreen;
+			path = Details;
+			sourceTree = "<group>";
+		};
+		89731F4C297CA4B90063448D /* FilterPopover */ = {
+			isa = PBXGroup;
+			children = (
+				891C3474297C328A00F8F8EA /* FilterPopoverVC.swift */,
+				891C3476297C329A00F8F8EA /* FilterPopoverView.storyboard */,
+			);
+			path = FilterPopover;
 			sourceTree = "<group>";
 		};
 		C6BE8A309C8B5F808352BDAD /* Pods */ = {
