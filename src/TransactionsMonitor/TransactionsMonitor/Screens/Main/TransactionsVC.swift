@@ -31,6 +31,7 @@ class TransactionsVC: UIViewController {
     
     override func loadView() {
         self.view = transactionsView
+        self.title = "Transactions"
     }
     
     // MARK: Functions
