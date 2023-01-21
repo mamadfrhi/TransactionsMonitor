@@ -17,4 +17,19 @@ class DetailsVC: UIViewController {
         vc.transactionDetails = transactionDetails
         return vc
     }
+    
+    private var transactionDetails: TransactionDetails! = nil
+    
+    @IBOutlet weak var companyLabel: UILabel!
+    @IBOutlet weak var descriptionLabel: UILabel!
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        setupVC()
+    }
+    
+    private func setupVC() {
+        companyLabel.text = transactionDetails.companyName
+        descriptionLabel.text = transactionDetails.description ?? "No description"
+    }
 }
