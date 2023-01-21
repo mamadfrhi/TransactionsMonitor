@@ -18,6 +18,16 @@ class MainView: UIView {
         return table
     }()
     
+    let retryButton: UIButton = {
+        let button = UIButton(type: .system)
+        button.setTitle("Retry!", for: .normal)
+        button.addTarget(nil,
+                         action: #selector(MainVC().retryButtonPressed(_:)),
+                         for: .touchUpInside)
+        button.isHidden = true
+        return button
+    }()
+    
     // MARK: Init
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -29,14 +39,20 @@ class MainView: UIView {
     }
 }
 
+// MARK: Custom View Template
 extension MainView: ViewCodeableTemplate {
     func buildViewHierarchy() {
         self.addSubview(tableView)
+        self.addSubview(retryButton)
     }
     
     func setupConstraints() {
         tableView.snp.makeConstraints { make in
             make.edges.equalToSuperview()
+        }
+        
+        retryButton.snp.makeConstraints { make in
+            make.center.equalToSuperview()
         }
     }
 }
