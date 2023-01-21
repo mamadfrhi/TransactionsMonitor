@@ -10,7 +10,7 @@ import Foundation
 class TransactionsVM {
     
     // MARK: Delegates
-    var mainCoordinatorDelegate: TransactionsVMCoordinatorDelegate?
+    var transactionsCoordinatorDelegate: TransactionsVMCoordinatorDelegate?
     var viewDelegate: TransactionsVMDelegate?
     
     // MARK: Dependecies

@@ -11,7 +11,7 @@ import UIKit
 
 // MARK: - ViewModelType
 // implement in VM
-protocol MainVMType {
+protocol TransactionsVMType {
     
     var viewDelegate: TransactionsVMDelegate? { get set }
     
@@ -22,14 +22,14 @@ protocol MainVMType {
     func refreshView()
 }
 
-// MARK: - MainVMDelegate(delegate)
-// implement in MainCoordinator
+// MARK: - Transactions VM Coordinator Delegate
+// implement in TransactionsCoordinator
 // call in VM
 protocol TransactionsVMCoordinatorDelegate {
     func didSelect(transaction: PBTransaction, from controller: UIViewController)
 }
 
-// MARK: - MainVMDelegate
+// MARK: - Transactions VM Delegate
 // implement in VC
 // call on VM
 protocol TransactionsVMDelegate {

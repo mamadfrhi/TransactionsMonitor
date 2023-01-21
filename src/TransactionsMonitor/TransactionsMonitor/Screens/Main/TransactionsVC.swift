@@ -70,7 +70,7 @@ extension TransactionsVC {
     }
 }
 
-// MARK: MainVMDelegate
+// MARK: TransactionsVMDelegate
 extension TransactionsVC: TransactionsVMDelegate {
     func updateScreen() {
         DispatchQueue.main.async {
