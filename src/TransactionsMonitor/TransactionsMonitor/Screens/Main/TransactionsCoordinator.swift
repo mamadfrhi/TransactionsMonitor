@@ -34,9 +34,9 @@ extension TransactionsCoordinator: TransactionsVCCoordinatorDelegate {
 extension TransactionsCoordinator {
     private func goToDetailsPage(with transaction: PBTransaction) {
         print("go to details with \(transaction)")
-//        let detailVC = DetailsVC.`init`(todoViewData: todoViewData)
-//        rootNavigationController.present(detailVC,
-//                                         animated: true,
-//                                         completion: nil)
+        let detailVC = DetailsVC.`init`()
+        rootNavigationController.present(detailVC,
+                                         animated: true,
+                                         completion: nil)
     }
 }
