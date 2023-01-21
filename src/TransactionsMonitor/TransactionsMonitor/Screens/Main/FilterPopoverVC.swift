@@ -23,14 +23,14 @@ class FilterPopoverVC: UIViewController {
         return vc
     }
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         tableView.reloadData()
     }
     
 }
 
-extension FilterPopoverVC: UITableViewDataSource {
+extension FilterPopoverVC: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         list.count
     }
@@ -49,5 +49,4 @@ extension FilterPopoverVC: UITableViewDataSource {
         chosenCategory = list[indexPath.row]
         self.dismiss(animated: true)
     }
-    
 }
