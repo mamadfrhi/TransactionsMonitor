@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		4E6882EC49A1693297AFE710 /* Pods_TransactionsMonitor.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5B69045E4706E5A133BAA76 /* Pods_TransactionsMonitor.framework */; };
 		891C3462297C095400F8F8EA /* DateConverterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 891C3461297C095400F8F8EA /* DateConverterTests.swift */; };
+		891C3469297C106900F8F8EA /* Connectivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 891C3468297C106900F8F8EA /* Connectivity.swift */; };
 		89520F53297AD5A90092210A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89520F52297AD5A90092210A /* SceneDelegate.swift */; };
 		89520F55297AD5A90092210A /* TransactionsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89520F54297AD5A90092210A /* TransactionsVC.swift */; };
 		89520F5A297AD5AB0092210A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 89520F59297AD5AB0092210A /* Assets.xcassets */; };
@@ -55,6 +56,7 @@
 		5D2B6116BF967F39276E5720 /* Pods-TransactionsMonitor.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TransactionsMonitor.release.xcconfig"; path = "Target Support Files/Pods-TransactionsMonitor/Pods-TransactionsMonitor.release.xcconfig"; sourceTree = "<group>"; };
 		891C345F297C095400F8F8EA /* DateFormatterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DateFormatterTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		891C3461297C095400F8F8EA /* DateConverterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateConverterTests.swift; sourceTree = "<group>"; };
+		891C3468297C106900F8F8EA /* Connectivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Connectivity.swift; sourceTree = "<group>"; };
 		89520F4D297AD5A90092210A /* TransactionsMonitor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TransactionsMonitor.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		89520F52297AD5A90092210A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		89520F54297AD5A90092210A /* TransactionsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsVC.swift; sourceTree = "<group>"; };
@@ -179,6 +181,7 @@
 				89520F5E297AD5AB0092210A /* Info.plist */,
 				89727997297ADFFB004DCF21 /* Constants.swift */,
 				897279C6297B7AA0004DCF21 /* DateFormatter.swift */,
+				891C3468297C106900F8F8EA /* Connectivity.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -462,6 +465,7 @@
 				897279A9297AE6B7004DCF21 /* TransactionsAPISessionManager.swift in Sources */,
 				897279BA297B08D7004DCF21 /* TransactionsVM.swift in Sources */,
 				897279B4297AE7EC004DCF21 /* TransactionsView.swift in Sources */,
+				891C3469297C106900F8F8EA /* Connectivity.swift in Sources */,
 				897279AB297AE6E0004DCF21 /* TransactionsAPIRouter.swift in Sources */,
 				89520F53297AD5A90092210A /* SceneDelegate.swift in Sources */,
 				897279A5297AE593004DCF21 /* Networkable.swift in Sources */,
