@@ -229,9 +229,9 @@
 		8972798E297ADEAB004DCF21 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				89727994297ADF84004DCF21 /* Transactions */,
 				89731F43297C9F150063448D /* DetailsScreen */,
 				897279C2297B62C8004DCF21 /* ProgressHUD.swift */,
-				89727994297ADF84004DCF21 /* Main */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -245,7 +245,7 @@
 			path = Coordinator;
 			sourceTree = "<group>";
 		};
-		89727994297ADF84004DCF21 /* Main */ = {
+		89727994297ADF84004DCF21 /* Transactions */ = {
 			isa = PBXGroup;
 			children = (
 				891C3474297C328A00F8F8EA /* FilterPopoverVC.swift */,
@@ -256,7 +256,7 @@
 				897279B3297AE7EC004DCF21 /* TransactionsView.swift */,
 				89520F54297AD5A90092210A /* TransactionsVC.swift */,
 			);
-			path = Main;
+			path = Transactions;
 			sourceTree = "<group>";
 		};
 		8972799B297AE530004DCF21 /* Services */ = {
