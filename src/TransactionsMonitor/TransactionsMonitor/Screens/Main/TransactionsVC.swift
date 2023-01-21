@@ -12,6 +12,7 @@ class TransactionsVC: UIViewController {
     
     // MARK: Dependencies
     private let transactionsTableViewDataSource: TransactionsTableViewDataSource = TransactionsTableViewDataSource()
+    private let transactionsTableViewDelegate: TransactionTableViewDelegate = TransactionTableViewDelegate()
     private let transactionsView = TransactionsView(frame: screenBounds)
     private let transactionsVM = TransactionsVM()
     private let filterPopoverVC = FilterPopoverVC.`init`(list: [])
@@ -57,6 +58,7 @@ class TransactionsVC: UIViewController {
 extension TransactionsVC {
     private func configTableView() {
         transactionsView.tableView.dataSource = transactionsTableViewDataSource
+        transactionsView.tableView.delegate = transactionsTableViewDelegate
     }
     
     private func setupFilterBarButtonItem() {
