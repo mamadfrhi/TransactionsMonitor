@@ -14,6 +14,8 @@
 		891C346E297C159F00F8F8EA /* ArraySorter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 891C346D297C159F00F8F8EA /* ArraySorter.swift */; };
 		891C3470297C15BC00F8F8EA /* TransactionsArraySorter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 891C346F297C15BC00F8F8EA /* TransactionsArraySorter.swift */; };
 		891C3473297C25AC00F8F8EA /* PBTransactionReadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 891C3472297C25AC00F8F8EA /* PBTransactionReadable.swift */; };
+		891C3475297C328A00F8F8EA /* FilterPopoverVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 891C3474297C328A00F8F8EA /* FilterPopoverVC.swift */; };
+		891C3477297C329A00F8F8EA /* FilterPopoverView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 891C3476297C329A00F8F8EA /* FilterPopoverView.storyboard */; };
 		89520F53297AD5A90092210A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89520F52297AD5A90092210A /* SceneDelegate.swift */; };
 		89520F55297AD5A90092210A /* TransactionsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89520F54297AD5A90092210A /* TransactionsVC.swift */; };
 		89520F5A297AD5AB0092210A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 89520F59297AD5AB0092210A /* Assets.xcassets */; };
@@ -65,6 +67,8 @@
 		891C346D297C159F00F8F8EA /* ArraySorter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArraySorter.swift; sourceTree = "<group>"; };
 		891C346F297C15BC00F8F8EA /* TransactionsArraySorter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsArraySorter.swift; sourceTree = "<group>"; };
 		891C3472297C25AC00F8F8EA /* PBTransactionReadable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PBTransactionReadable.swift; sourceTree = "<group>"; };
+		891C3474297C328A00F8F8EA /* FilterPopoverVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterPopoverVC.swift; sourceTree = "<group>"; };
+		891C3476297C329A00F8F8EA /* FilterPopoverView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FilterPopoverView.storyboard; sourceTree = "<group>"; };
 		89520F4D297AD5A90092210A /* TransactionsMonitor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TransactionsMonitor.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		89520F52297AD5A90092210A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		89520F54297AD5A90092210A /* TransactionsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsVC.swift; sourceTree = "<group>"; };
@@ -233,6 +237,8 @@
 		89727994297ADF84004DCF21 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				891C3474297C328A00F8F8EA /* FilterPopoverVC.swift */,
+				891C3476297C329A00F8F8EA /* FilterPopoverView.storyboard */,
 				897279C8297B7F68004DCF21 /* TransactionsTableView */,
 				897279CF297B803D004DCF21 /* TransactionsVM */,
 				89727995297ADF91004DCF21 /* TransactionsCoordinator.swift */,
@@ -413,6 +419,7 @@
 				89520F5D297AD5AB0092210A /* LaunchScreen.storyboard in Resources */,
 				8972799D297AE543004DCF21 /* PBTransactions.json in Resources */,
 				89520F5A297AD5AB0092210A /* Assets.xcassets in Resources */,
+				891C3477297C329A00F8F8EA /* FilterPopoverView.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -478,6 +485,7 @@
 				89727992297ADF67004DCF21 /* AppCoordinator.swift in Sources */,
 				897279B6297AE84F004DCF21 /* ViewCodeableTemplate.swift in Sources */,
 				897279CC297B7FB2004DCF21 /* TransactionsVMCoordinatorDelegate.swift in Sources */,
+				891C3475297C328A00F8F8EA /* FilterPopoverVC.swift in Sources */,
 				89727996297ADF91004DCF21 /* TransactionsCoordinator.swift in Sources */,
 				89520F55297AD5A90092210A /* TransactionsVC.swift in Sources */,
 				897279C5297B69C8004DCF21 /* TransactionTableViewCell.swift in Sources */,
