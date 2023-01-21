@@ -177,14 +177,10 @@
 			isa = PBXGroup;
 			children = (
 				897279C8297B7F68004DCF21 /* TransactionsTableView */,
+				897279CF297B803D004DCF21 /* TransactionsVM */,
 				89727995297ADF91004DCF21 /* TransactionsCoordinator.swift */,
 				897279B3297AE7EC004DCF21 /* TransactionsView.swift */,
 				89520F54297AD5A90092210A /* TransactionsVC.swift */,
-				897279B9297B08D7004DCF21 /* TransactionsVM.swift */,
-				897279BD297B12F2004DCF21 /* VMAbstractions.swift */,
-				897279C9297B7F8D004DCF21 /* TransactionsVMDelegate.swift */,
-				897279CB297B7FB2004DCF21 /* TransactionsVMCoordinatorDelegate.swift */,
-				897279CD297B7FC4004DCF21 /* TransactionsVMType.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -243,6 +239,18 @@
 				897279B7297AEB22004DCF21 /* TransactionsTableViewDataSource.swift */,
 			);
 			path = TransactionsTableView;
+			sourceTree = "<group>";
+		};
+		897279CF297B803D004DCF21 /* TransactionsVM */ = {
+			isa = PBXGroup;
+			children = (
+				897279B9297B08D7004DCF21 /* TransactionsVM.swift */,
+				897279BD297B12F2004DCF21 /* VMAbstractions.swift */,
+				897279C9297B7F8D004DCF21 /* TransactionsVMDelegate.swift */,
+				897279CB297B7FB2004DCF21 /* TransactionsVMCoordinatorDelegate.swift */,
+				897279CD297B7FC4004DCF21 /* TransactionsVMType.swift */,
+			);
+			path = TransactionsVM;
 			sourceTree = "<group>";
 		};
 		C6BE8A309C8B5F808352BDAD /* Pods */ = {
