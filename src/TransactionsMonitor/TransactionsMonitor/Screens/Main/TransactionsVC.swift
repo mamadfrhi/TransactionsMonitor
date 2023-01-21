@@ -16,6 +16,7 @@ class TransactionsVC: UIViewController {
     private let transactionsView = TransactionsView(frame: screenBounds)
     private let transactionsVM = TransactionsVM()
     private let filterPopoverVC = FilterPopoverVC.`init`(list: [])
+    private let transactionsCoordinator: TransactionsCoordinator! = nil
     
     // MARK: Properties
     private let hud = ProgressHUD(title: "Please wait...", theme: .dark)
@@ -153,4 +154,11 @@ extension TransactionsVC: TransactionsVMDelegate {
     }
     
     
+}
+
+// MARK: Coordinator
+extension TransactionsVC: TransactionsVCCoordinatorDelegate {
+    func didSelect(transaction: PBTransaction, from controller: UIViewController) {
+        transactionsCoordinator.didSelect(transaction: transaction, from: self)
+    }
 }
