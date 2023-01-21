@@ -18,6 +18,7 @@ class TransactionsVM {
                                                 TransactionsAPI(session:
                                                                     TransactionsAPISessionManager(with: "Token").getTransactionsSession(),
                                                                 localJSONLoader: LocalJSONLoader()))
+    private let transactionsSorter = TransactionsArraySorter()
     
     // MARK: Obserbables
     @Published var errorMessage: String?
@@ -42,7 +43,8 @@ extension TransactionsVM {
             
             if let transactions = transactions {
                 // success
-                self.transactions = transactions
+                let sorted = self.transactionsSorter.sortByDate(transactions: transactions)
+                self.transactions = sorted
                 self.viewDelegate?.updateScreen()
             } else {
                 // failure
