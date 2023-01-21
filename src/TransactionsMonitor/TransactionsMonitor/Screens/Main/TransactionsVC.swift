@@ -12,7 +12,7 @@ class TransactionsVC: UIViewController {
     
     // MARK: Dependencies
     private let transactionsTableViewDataSource: TransactionsTableViewDataSource = TransactionsTableViewDataSource()
-    private let transactionsTableViewDelegate: TransactionTableViewDelegate = TransactionTableViewDelegate()
+    private let transactionsTableViewDelegate: TransactionTableViewDelegate = TransactionTableViewDelegate(transactionTableViewFooter: TransactionTableViewFooter(frame: .zero))
     private let transactionsView = TransactionsView(frame: screenBounds)
     private let transactionsVM = TransactionsVM()
     private let filterPopoverVC = FilterPopoverVC.`init`(list: [])

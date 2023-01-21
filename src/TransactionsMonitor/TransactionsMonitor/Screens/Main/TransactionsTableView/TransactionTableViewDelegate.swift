@@ -7,10 +7,19 @@
 
 import UIKit
 
-class TransactionTableViewDelegate: NSObject, UITableViewDelegate {
+class TransactionTableViewDelegate: NSObject {
+    
+    let transactionTableViewFooter: TransactionTableViewFooter
+    
+    internal init(transactionTableViewFooter: TransactionTableViewFooter) {
+        self.transactionTableViewFooter = transactionTableViewFooter
+    }
+}
+
+extension TransactionTableViewDelegate: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
-        TransactionTableViewFooter(frame: tableView.frame)
+        transactionTableViewFooter
     }
     
 }
