@@ -7,7 +7,7 @@
 
 import UIKit
 
-class MainCoordinator: Coordinator {
+class TransactionsCoordinator: Coordinator {
     
     // MARK: Properties
     private let rootNavigationController: UINavigationController
@@ -17,8 +17,8 @@ class MainCoordinator: Coordinator {
     
     override func start() {
         super.addChildCoordinator(self)
-        let mainVC = MainVC()
-        rootNavigationController.pushViewController(mainVC, animated: true)
+        let transactionsVC = TransactionsVC()
+        rootNavigationController.pushViewController(transactionsVC, animated: true)
     }
 }
 

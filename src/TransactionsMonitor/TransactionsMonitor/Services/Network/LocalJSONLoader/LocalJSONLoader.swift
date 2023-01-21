@@ -8,23 +8,18 @@
 import Foundation
 
 protocol LocalJSONLoaderInterface {
-    associatedtype T
-    func loadJson(filename fileName: String) -> [T]?
+    func loadJson(filename fileName: String) -> Any?
 }
 
 struct LocalJSONLoader: LocalJSONLoaderInterface {
     
-    func loadJson(filename fileName: String) -> [PBTransaction]? {
+    func loadJson(filename fileName: String) -> Any? {
         if let url = Bundle.main.url(forResource: fileName, withExtension: "json") {
             do {
                 let data = try Data(contentsOf: url)
-                if let wholeJSON = try JSONSerialization.jsonObject(with: data) as? [String: Any],
-                   let transactionItemsAny = wholeJSON["items"] {
-                    let transactionItemsData = try JSONSerialization.data(withJSONObject: transactionItemsAny)
-                    let decoder = JSONDecoder()
-                    let transactions = try decoder.decode(Array<PBTransaction>.self, from: transactionItemsData)
-                    return transactions
-                }
+                let wholeJSON = try JSONSerialization.jsonObject(with: data) as? [String: Any]
+                let transactionItemsAny = wholeJSON?["items"]
+                return transactionItemsAny
             } catch let error {
                 print(error)
                 return nil
