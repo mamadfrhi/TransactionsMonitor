@@ -32,7 +32,7 @@ class TransactionsTableViewDataSource: NSObject, UITableViewDataSource {
             
             cell.companyNameLabel.text = transaction.companyName
             cell.transactionDescriptionLabel.text = transaction.description
-            cell.bookingDateLabel.text = transaction.bookingDate
+            cell.bookingDateLabel.text = transaction.getBookingDateString()
             
             cell.amountLabel.text = "\(transaction.amount)"
             cell.currencyLabel.text = transaction.currency
