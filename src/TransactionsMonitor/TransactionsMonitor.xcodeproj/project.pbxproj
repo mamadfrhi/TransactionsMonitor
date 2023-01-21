@@ -50,6 +50,7 @@
 		897279CE297B7FC4004DCF21 /* TransactionsVMType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 897279CD297B7FC4004DCF21 /* TransactionsVMType.swift */; };
 		89731F47297C9F3B0063448D /* DetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89731F46297C9F3B0063448D /* DetailsVC.swift */; };
 		89731F49297CA06D0063448D /* DetailsView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 89731F48297CA06D0063448D /* DetailsView.storyboard */; };
+		89731F4B297CA10B0063448D /* TransactionDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89731F4A297CA10B0063448D /* TransactionDetails.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -109,6 +110,7 @@
 		897279CD297B7FC4004DCF21 /* TransactionsVMType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsVMType.swift; sourceTree = "<group>"; };
 		89731F46297C9F3B0063448D /* DetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsVC.swift; sourceTree = "<group>"; };
 		89731F48297CA06D0063448D /* DetailsView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DetailsView.storyboard; sourceTree = "<group>"; };
+		89731F4A297CA10B0063448D /* TransactionDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionDetails.swift; sourceTree = "<group>"; };
 		943136329B21FFF23497888D /* Pods-TransactionsMonitor.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TransactionsMonitor.debug.xcconfig"; path = "Target Support Files/Pods-TransactionsMonitor/Pods-TransactionsMonitor.debug.xcconfig"; sourceTree = "<group>"; };
 		E5B69045E4706E5A133BAA76 /* Pods_TransactionsMonitor.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TransactionsMonitor.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -331,6 +333,7 @@
 		89731F43297C9F150063448D /* DetailsScreen */ = {
 			isa = PBXGroup;
 			children = (
+				89731F4A297CA10B0063448D /* TransactionDetails.swift */,
 				89731F46297C9F3B0063448D /* DetailsVC.swift */,
 				89731F48297CA06D0063448D /* DetailsView.storyboard */,
 			);
@@ -512,6 +515,7 @@
 				897279C5297B69C8004DCF21 /* TransactionTableViewCell.swift in Sources */,
 				89727993297ADF67004DCF21 /* Coordinator.swift in Sources */,
 				897279C3297B62C8004DCF21 /* ProgressHUD.swift in Sources */,
+				89731F4B297CA10B0063448D /* TransactionDetails.swift in Sources */,
 				891C3470297C15BC00F8F8EA /* TransactionsArraySorter.swift in Sources */,
 				897279A1297AE565004DCF21 /* LocalJSONLoader.swift in Sources */,
 				89731F47297C9F3B0063448D /* DetailsVC.swift in Sources */,
