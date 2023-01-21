@@ -10,7 +10,7 @@ import Foundation
 struct TransactionsArraySorter: ArraySorter {
     
     func sortByDate(transactions: [PBTransaction]) -> [PBTransaction] {
-        transactions.sorted { $0.bookingDate > $1.bookingDate }
+        transactions.sorted { $0.getBookingDate() > $1.getBookingDate() }
     }
     
     func filter(transactions: [PBTransaction], by: String) -> [PBTransaction] {
