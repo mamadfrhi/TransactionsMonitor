@@ -104,6 +104,21 @@ extension TransactionsVC {
                 self?.updateScreen()
             }
             .store(in: &cancelables)
+        
+        transactionsVM.$summation
+            .receive(on: DispatchQueue.main)
+            .sink {
+                [weak self] sum in
+                self?.setSummationLabel(sum)
+            }
+            .store(in: &cancelables)
+    }
+    
+    private func setSummationLabel(_ value: Int) {
+        let footerView = transactionsTableViewDelegate.transactionTableViewFooter
+        DispatchQueue.main.async {
+            footerView.setSummation(value)
+        }
     }
 }
 
