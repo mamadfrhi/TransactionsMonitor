@@ -67,14 +67,14 @@ extension TransactionsVM {
     
     func getUniqueCategories() -> [String] {
         resetFilter()
-        let categories = transactions.map { "\($0.category)" }
+        let categories = transactions.map { "\($0.category)" }.sorted()
         let uniqueCategories = Set(categories)
         return Array(uniqueCategories)
     }
     
     func filterTransactions(by category: String) {
         if category == "Clear Filter" { //TODO: It must convert to an enum
-            transactions = transactions
+            resetFilter()
             return
         }
         
