@@ -7,7 +7,7 @@
 
 import UIKit
 
-class MainTableViewDataSource: NSObject, UITableViewDataSource {
+class TransactionsTableViewDataSource: NSObject, UITableViewDataSource {
     
     private var cellID = "cell"
     private var _transactions: [PBTransaction]?

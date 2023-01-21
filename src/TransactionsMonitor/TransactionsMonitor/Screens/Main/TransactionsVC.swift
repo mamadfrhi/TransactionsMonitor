@@ -11,7 +11,7 @@ import Combine
 class TransactionsVC: UIViewController {
     
     // MARK: Dependencies
-    private let mainTableViewDataSource: MainTableViewDataSource = MainTableViewDataSource()
+    private let mainTableViewDataSource: TransactionsTableViewDataSource = TransactionsTableViewDataSource()
     private let transactionsView = TransactionsView(frame: screenBounds)
     private let mainVM = TransactionsVM()
     
