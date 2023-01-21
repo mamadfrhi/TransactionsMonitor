@@ -34,6 +34,7 @@
 		897279BE297B12F2004DCF21 /* VMAbstractions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 897279BD297B12F2004DCF21 /* VMAbstractions.swift */; };
 		897279C1297B5E15004DCF21 /* UIViewController+showAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 897279C0297B5E15004DCF21 /* UIViewController+showAlert.swift */; };
 		897279C3297B62C8004DCF21 /* ProgressHUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 897279C2297B62C8004DCF21 /* ProgressHUD.swift */; };
+		897279C5297B69C8004DCF21 /* TransactionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 897279C4297B69C8004DCF21 /* TransactionTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -66,6 +67,7 @@
 		897279BD297B12F2004DCF21 /* VMAbstractions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VMAbstractions.swift; sourceTree = "<group>"; };
 		897279C0297B5E15004DCF21 /* UIViewController+showAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+showAlert.swift"; sourceTree = "<group>"; };
 		897279C2297B62C8004DCF21 /* ProgressHUD.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgressHUD.swift; sourceTree = "<group>"; };
+		897279C4297B69C8004DCF21 /* TransactionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionTableViewCell.swift; sourceTree = "<group>"; };
 		943136329B21FFF23497888D /* Pods-TransactionsMonitor.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TransactionsMonitor.debug.xcconfig"; path = "Target Support Files/Pods-TransactionsMonitor/Pods-TransactionsMonitor.debug.xcconfig"; sourceTree = "<group>"; };
 		E5B69045E4706E5A133BAA76 /* Pods_TransactionsMonitor.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TransactionsMonitor.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -168,6 +170,7 @@
 				89727995297ADF91004DCF21 /* MainCoordinator.swift */,
 				897279B3297AE7EC004DCF21 /* MainView.swift */,
 				89520F54297AD5A90092210A /* MainVC.swift */,
+				897279C4297B69C8004DCF21 /* TransactionTableViewCell.swift */,
 				897279B7297AEB22004DCF21 /* MainTableViewDataSource.swift */,
 				897279B9297B08D7004DCF21 /* MainVM.swift */,
 				897279BD297B12F2004DCF21 /* VMAbstractions.swift */,
@@ -352,6 +355,7 @@
 				897279BE297B12F2004DCF21 /* VMAbstractions.swift in Sources */,
 				89727996297ADF91004DCF21 /* MainCoordinator.swift in Sources */,
 				89520F55297AD5A90092210A /* MainVC.swift in Sources */,
+				897279C5297B69C8004DCF21 /* TransactionTableViewCell.swift in Sources */,
 				89727993297ADF67004DCF21 /* Coordinator.swift in Sources */,
 				897279C3297B62C8004DCF21 /* ProgressHUD.swift in Sources */,
 				897279A1297AE565004DCF21 /* LocalJSONLoader.swift in Sources */,

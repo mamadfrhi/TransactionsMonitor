@@ -10,10 +10,12 @@ import SnapKit
 
 class MainView: UIView {
     
+    let cellReuseID = "cell"
+    
     // MARK: Views
     let tableView: UITableView = {
         let table = UITableView()
-        table.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
+        table.register(TransactionTableViewCell.self, forCellReuseIdentifier: cellReuseID)
         table.layer.backgroundColor = UIColor.white.cgColor
         return table
     }()
