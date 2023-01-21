@@ -15,10 +15,10 @@ final class DateConverterTests: XCTestCase {
     func testDateConverter() {
         
         // Test time convertor (in catView wrapper)
-        let isoTimeStamp = "2022-04-10T16:16:36.940Z"    // input
-        let dateStringFromisoTimeStamp = "2022-04-10"    // output
+        let isoTimeStamp = "2022-07-22T10:59:05+0200"    // input
+        let dateStringFromisoTimeStamp = "2022-07-22"    // output
         
-        let convertedDate = dateConverter.readableDate(from: isoTimeStamp)
+        let convertedDate = dateConverter.readablestringDate(from: isoTimeStamp)
         
         XCTAssertEqual(convertedDate, dateStringFromisoTimeStamp)
         
