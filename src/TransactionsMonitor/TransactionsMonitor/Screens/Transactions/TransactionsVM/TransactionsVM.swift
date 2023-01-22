@@ -9,10 +9,6 @@ import Foundation
 
 class TransactionsVM {
     
-    // MARK: Delegates
-    
-    var viewDelegate: TransactionsVMDelegate?
-    
     // MARK: Dependecies
     
     private let services: TransactionServices
@@ -21,6 +17,7 @@ class TransactionsVM {
     
     // MARK: Obserbables
     
+    @Published var showHUD: Bool = false
     @Published var errorMessage: String?
     @Published var transactions: [PBTransaction] = []
     @Published var filteredTransactions: [PBTransaction] = []
@@ -43,7 +40,7 @@ extension TransactionsVM {
     
     func fetchTransactions() async {
         
-        viewDelegate?.hud(show: true)
+        showHUD = true
         let response = await services.fetchTransactions()
         
         switch response {
@@ -53,7 +50,7 @@ extension TransactionsVM {
             self.showError(with: error.localizedDescription)
         }
         
-        viewDelegate?.hud(show: false)
+        showHUD = false
         setSummationVarialbe()
     }
     

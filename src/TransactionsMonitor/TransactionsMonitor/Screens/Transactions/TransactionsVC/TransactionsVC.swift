@@ -52,7 +52,6 @@ class TransactionsVC: UIViewController {
         [hud].forEach(view.addSubview(_:)) // add HUD on VC
         configTableView()
         setupBindings()
-        transactionsVM.viewDelegate = self
         fetchTransactions()
         setupFilterBarButtonItem()
     }
