@@ -54,6 +54,7 @@ extension TransactionsVM {
         }
         
         self.viewDelegate?.hud(show: false)
+        setSummationVarialbe()
     }
     
     private func showError(with errorMessage: String) {
