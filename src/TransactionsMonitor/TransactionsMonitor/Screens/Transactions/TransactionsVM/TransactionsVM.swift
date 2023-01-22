@@ -25,6 +25,10 @@ class TransactionsVM {
     @Published var filteredTransactions: [PBTransaction] = []
     var filterIsActive = false
     @Published var summation: Int = 0
+    
+    init(transactions: [PBTransaction] = []) {
+        self.transactions = transactions
+    }
 }
 
 // MARK: Network
