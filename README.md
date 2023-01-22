@@ -1,6 +1,6 @@
 ## What is it? 🙋🏻
 
-It's a pet project which has been developed as a code challenge.
+You can touch my coding skills on this project.
 
 
 ## What do you want to show by this project❓
