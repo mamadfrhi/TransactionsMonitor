@@ -46,7 +46,9 @@ class TransactionsVC: UIViewController {
     
     // MARK: Functions
     private func fetchTransactions() {
-        transactionsVM.fetchTransactions()
+        Task {
+            await transactionsVM.fetchTransactions()
+        }
     }
     
     @objc func retryButtonPressed(_ sender: UIButton) {
