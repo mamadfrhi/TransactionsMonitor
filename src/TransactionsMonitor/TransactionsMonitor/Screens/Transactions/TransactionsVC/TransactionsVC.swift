@@ -94,6 +94,7 @@ extension TransactionsVC {
     }
     
     private func setupBindings() {
+        
         transactionsVM.$transactions
             .receive(on: DispatchQueue.main)
             .sink {
@@ -164,8 +165,8 @@ extension TransactionsVC {
     }
 }
 
-// MARK: Transactions VM Delegate
-extension TransactionsVC: TransactionsVMDelegate {
+// MARK: View Manipulate
+extension TransactionsVC {
     func updateScreen() {
         self.transactionsView.tableView.reloadData()
         self.transactionsView.hideRetryButton(true)
