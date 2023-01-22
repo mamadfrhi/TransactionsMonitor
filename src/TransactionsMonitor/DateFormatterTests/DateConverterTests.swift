@@ -23,7 +23,7 @@ extension DateConverterTests {
         let isoTimeStamp = "2022-07-22T10:59:05+0200"    // input
         let dateStringFromisoTimeStamp = "2022-07-22"    // output
         
-        let convertedDate = dateConverter.readablestringDate(from: isoTimeStamp)
+        let convertedDate = dateConverter.readableStringDate(from: isoTimeStamp)
         
         XCTAssertEqual(convertedDate, dateStringFromisoTimeStamp)
         
@@ -34,7 +34,7 @@ extension DateConverterTests {
         let isoTimeStamp = "1980-01-01T10:59:05+0000"    // input
         let dateStringFromisoTimeStamp = "1980-01-01"    // output
         
-        let convertedDate = dateConverter.readablestringDate(from: isoTimeStamp)
+        let convertedDate = dateConverter.readableStringDate(from: isoTimeStamp)
         
         XCTAssertEqual(convertedDate, dateStringFromisoTimeStamp)
         
@@ -52,7 +52,7 @@ extension DateConverterTests {
         
         XCTAssertNotNil(dateObject)
         
-        let convertedDate = dateConverter.readableDate(from: inputStringDate)
+        let convertedDate = dateConverter.isoDate(isoString: inputStringDate)
         
         XCTAssertEqual(convertedDate, convertedDate)
     }
@@ -64,7 +64,7 @@ extension DateConverterTests {
         
         XCTAssertNotNil(dateObject)
         
-        let convertedDate = dateConverter.readableDate(from: inputStringDate)
+        let convertedDate = dateConverter.isoDate(isoString: inputStringDate)
         
         XCTAssertEqual(convertedDate, convertedDate)
     }
