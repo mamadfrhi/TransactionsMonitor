@@ -15,23 +15,25 @@ class TransactionsVM {
     
     // MARK: Dependecies
     
-    private let services = TransactionServices(transactionsAPI:
-                                                TransactionsAPI(session:
-                                                                    TransactionsAPISessionManager(with: "Token").getTransactionsSession(),
-                                                                localJSONLoader: LocalJSONLoader()))
-    private let transactionsSorter = TransactionsArraySorter()
+    private let services: TransactionServices
+    private let transactionsSorter: TransactionsArraySorter
+    var filterIsActive = false
     
     // MARK: Obserbables
     
     @Published var errorMessage: String?
     @Published var transactions: [PBTransaction] = []
     @Published var filteredTransactions: [PBTransaction] = []
-    var filterIsActive = false
     @Published var summation: Int = 0
     
-    // MARK: Init
     
-    init(transactions: [PBTransaction] = []) {
+    // MARK: Init
+    required
+    init(services: TransactionServices,
+         transactionsSorter: TransactionsArraySorter,
+         transactions: [PBTransaction] = []) {
+        self.services = services
+        self.transactionsSorter = transactionsSorter
         self.transactions = transactions
     }
 }

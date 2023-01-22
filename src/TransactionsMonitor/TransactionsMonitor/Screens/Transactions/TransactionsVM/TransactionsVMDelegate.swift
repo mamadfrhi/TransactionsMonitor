@@ -14,5 +14,4 @@ protocol TransactionsVMDelegate {
     func updateScreen()
     func hud(show: Bool)
     func showError(errorMessage: String)
-    func selectedTransationRow() -> Int
 }

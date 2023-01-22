@@ -8,20 +8,43 @@
 import UIKit
 import Combine
 
+final
 class TransactionsVC: UIViewController {
     
     // MARK: Dependencies
-    private let transactionsTableViewDataSource: TransactionsTableViewDataSource = TransactionsTableViewDataSource()
-    private let transactionsTableViewDelegate: TransactionTableViewDelegate = TransactionTableViewDelegate(transactionTableViewFooter: TransactionTableViewFooter(frame: .zero))
-    private let transactionsView = TransactionsView(frame: screenBounds)
-    private let transactionsVM = TransactionsVM()
-    private let filterPopoverVC = FilterPopoverVC.`init`(list: [])
+    
+    private let transactionsTableViewDataSource: TransactionsTableViewDataSource
+    private let transactionsTableViewDelegate: TransactionTableViewDelegate
+    private let transactionsView: TransactionsView
+    private let transactionsVM : TransactionsVM
+    private let filterPopoverVC: FilterPopoverVC
+    
+    // MARK: Delegate
     var transactionsCoordinatorDelegate: TransactionsVCCoordinatorDelegate?
     
     // MARK: Properties
     private let hud = ProgressHUD(title: "Please wait...", theme: .dark)
     private var cancelables: Set<AnyCancellable> = []
     private var filterBarButtonItem: UIBarButtonItem!
+    
+    // MARK: Init
+    required
+    init(transactionsTableViewDataSource: TransactionsTableViewDataSource,
+         transactionsTableViewDelegate: TransactionTableViewDelegate,
+         transactionsView: TransactionsView,
+         transactionsVM: TransactionsVM,
+         filterPopoverVC: FilterPopoverVC) {
+        self.transactionsTableViewDataSource = transactionsTableViewDataSource
+        self.transactionsTableViewDelegate = transactionsTableViewDelegate
+        self.transactionsView = transactionsView
+        self.transactionsVM = transactionsVM
+        self.filterPopoverVC = filterPopoverVC
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
     
     // MARK: LifeCycle
     override func viewDidLoad() {
@@ -62,7 +85,7 @@ class TransactionsVC: UIViewController {
     }
 }
 
-// MARK: - SETUPS
+// MARK: - Setups
 extension TransactionsVC {
     private func configTableView() {
         transactionsView.tableView.dataSource = transactionsTableViewDataSource
@@ -141,7 +164,7 @@ extension TransactionsVC {
     }
 }
 
-// MARK: TransactionsVMDelegate
+// MARK: Transactions VM Delegate
 extension TransactionsVC: TransactionsVMDelegate {
     func updateScreen() {
         DispatchQueue.main.async {
@@ -161,15 +184,9 @@ extension TransactionsVC: TransactionsVMDelegate {
         self.transactionsView.hideRetryButton(false)
     }
     
-    func selectedTransationRow() -> Int {
-        print("Selected row is: ", transactionsView.tableView.indexPathForSelectedRow?.row as Any)
-        return 0
-    }
-    
-    
 }
 
-// MARK: Coordinator
+// MARK: Transactions VC Coordinator Delegate
 extension TransactionsVC: TransactionsVCCoordinatorDelegate {
     func didSelect(transaction: PBTransaction, from controller: UIViewController) {
         transactionsCoordinatorDelegate?.didSelect(transaction: transaction, from: self)

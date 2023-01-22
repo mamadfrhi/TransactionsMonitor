@@ -19,15 +19,43 @@ class TransactionsCoordinator: Coordinator {
     override func start() {
         super.addChildCoordinator(self)
         
-        let transactionsVC = TransactionsVC()
+        // TODO: Make Composite Layer to build dependency objects there
+        // build dependencies
+        let transactionsTableViewDataSource: TransactionsTableViewDataSource = TransactionsTableViewDataSource()
+        let transactionsTableViewDelegate: TransactionTableViewDelegate = TransactionTableViewDelegate(transactionTableViewFooter: TransactionTableViewFooter(frame: .zero))
+        let transactionsView = TransactionsView(frame: screenBounds)
+        let filterPopoverVC = FilterPopoverVC.`init`(list: [])
+        
+        let transactionsVM = buildTransactionsVM()
+        
+        let transactionsVC = TransactionsVC(transactionsTableViewDataSource: transactionsTableViewDataSource,
+                                            transactionsTableViewDelegate: transactionsTableViewDelegate,
+                                            transactionsView: transactionsView,
+                                            transactionsVM: transactionsVM,
+                                            filterPopoverVC: filterPopoverVC)
         transactionsVC.transactionsCoordinatorDelegate = self
         
+        // make tab bar
         let tabBar = UITabBarItem(title: "Transactions",
                                   image: UIImage(systemName: "banknote"), tag: 0)
         transactionsVC.tabBarItem = tabBar
         
+        // attach tab bar on tab bar controller
         transactionsNavigationContrller.setViewControllers([transactionsVC], animated: true)
         rootTabBarController.setViewControllers([transactionsNavigationContrller], animated: true)
+    }
+    
+    private func buildTransactionsVM() -> TransactionsVM {
+        
+        let jsonLoader = LocalJSONLoader()
+        let transactionSorter = TransactionsArraySorter()
+        
+        let session = TransactionsAPISessionManager(with: "Token").getTransactionsSession()
+        let transactionAPI = TransactionsAPI(session: session, localJSONLoader: jsonLoader)
+        let transactionServices = TransactionServices(transactionsAPI: transactionAPI)
+        let transactionsVM = TransactionsVM(services: transactionServices, transactionsSorter: transactionSorter)
+        return transactionsVM
+        
     }
 }
 
