@@ -43,7 +43,7 @@ extension TransactionsVM {
     
     func fetchTransactions() async {
         
-        self.viewDelegate?.hud(show: true)
+        viewDelegate?.hud(show: true)
         let response = await services.fetchTransactions()
         
         switch response {
@@ -53,7 +53,7 @@ extension TransactionsVM {
             self.showError(with: error.localizedDescription)
         }
         
-        self.viewDelegate?.hud(show: false)
+        viewDelegate?.hud(show: false)
         setSummationVarialbe()
     }
     
@@ -66,7 +66,7 @@ extension TransactionsVM {
 extension TransactionsVM {
     
     private func resetFilter() {
-        self.filteredTransactions = transactions
+        filteredTransactions = transactions
         filterIsActive = false
     }
     

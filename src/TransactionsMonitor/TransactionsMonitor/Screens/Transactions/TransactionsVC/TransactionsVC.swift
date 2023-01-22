@@ -175,8 +175,8 @@ extension TransactionsVC: TransactionsVMDelegate {
     }
     
     func showError(errorMessage: String) {
-        self.showAlert(alertTitle: "Error!", alertMessage: errorMessage)
-        self.transactionsView.hideRetryButton(false)
+        showAlert(alertTitle: "Error!", alertMessage: errorMessage)
+        transactionsView.hideRetryButton(false)
     }
     
 }
