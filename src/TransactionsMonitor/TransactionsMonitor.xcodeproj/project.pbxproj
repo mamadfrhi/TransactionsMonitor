@@ -56,7 +56,7 @@
 		89E2EEF2297D4D4E00E35AB7 /* SettingsView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 89E2EEF0297D4D4E00E35AB7 /* SettingsView.storyboard */; };
 		89E8490C297D64ED00B98DCC /* TransactionsVMFilteringTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89E8490B297D64ED00B98DCC /* TransactionsVMFilteringTests.swift */; };
 		89E8490E297D6BE700B98DCC /* TransactionsMockData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89E8490D297D6BE700B98DCC /* TransactionsMockData.swift */; };
-		89EF0AA7297D5EFE0016EE51 /* TransactionsMonitorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89EF0AA6297D5EFE0016EE51 /* TransactionsMonitorTests.swift */; };
+		89E84910297D7DC800B98DCC /* TransactionsVMGetUniqueCategoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89E8490F297D7DC800B98DCC /* TransactionsVMGetUniqueCategoryTests.swift */; };
 		89EF0AAF297D5F770016EE51 /* DateConverterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89EF0AAE297D5F770016EE51 /* DateConverterTests.swift */; };
 /* End PBXBuildFile section */
 
@@ -122,8 +122,8 @@
 		89E2EEF0297D4D4E00E35AB7 /* SettingsView.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SettingsView.storyboard; sourceTree = "<group>"; };
 		89E8490B297D64ED00B98DCC /* TransactionsVMFilteringTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsVMFilteringTests.swift; sourceTree = "<group>"; };
 		89E8490D297D6BE700B98DCC /* TransactionsMockData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsMockData.swift; sourceTree = "<group>"; };
+		89E8490F297D7DC800B98DCC /* TransactionsVMGetUniqueCategoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsVMGetUniqueCategoryTests.swift; sourceTree = "<group>"; };
 		89EF0AA4297D5EFE0016EE51 /* TransactionsMonitorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TransactionsMonitorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		89EF0AA6297D5EFE0016EE51 /* TransactionsMonitorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsMonitorTests.swift; sourceTree = "<group>"; };
 		89EF0AAE297D5F770016EE51 /* DateConverterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateConverterTests.swift; sourceTree = "<group>"; };
 		943136329B21FFF23497888D /* Pods-TransactionsMonitor.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TransactionsMonitor.debug.xcconfig"; path = "Target Support Files/Pods-TransactionsMonitor/Pods-TransactionsMonitor.debug.xcconfig"; sourceTree = "<group>"; };
 		E5B69045E4706E5A133BAA76 /* Pods_TransactionsMonitor.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TransactionsMonitor.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -393,10 +393,10 @@
 		89EF0AA5297D5EFE0016EE51 /* TransactionsMonitorTests */ = {
 			isa = PBXGroup;
 			children = (
-				89EF0AA6297D5EFE0016EE51 /* TransactionsMonitorTests.swift */,
+				89E8490D297D6BE700B98DCC /* TransactionsMockData.swift */,
 				89EF0AAE297D5F770016EE51 /* DateConverterTests.swift */,
 				89E8490B297D64ED00B98DCC /* TransactionsVMFilteringTests.swift */,
-				89E8490D297D6BE700B98DCC /* TransactionsMockData.swift */,
+				89E8490F297D7DC800B98DCC /* TransactionsVMGetUniqueCategoryTests.swift */,
 			);
 			path = TransactionsMonitorTests;
 			sourceTree = "<group>";
@@ -606,8 +606,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				89EF0AAF297D5F770016EE51 /* DateConverterTests.swift in Sources */,
+				89E84910297D7DC800B98DCC /* TransactionsVMGetUniqueCategoryTests.swift in Sources */,
 				89E8490E297D6BE700B98DCC /* TransactionsMockData.swift in Sources */,
-				89EF0AA7297D5EFE0016EE51 /* TransactionsMonitorTests.swift in Sources */,
 				89E8490C297D64ED00B98DCC /* TransactionsVMFilteringTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
