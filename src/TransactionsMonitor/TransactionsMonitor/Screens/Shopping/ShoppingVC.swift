@@ -8,22 +8,17 @@
 import UIKit
 
 class ShoppingVC: UIViewController {
+    
+    //MARK: Factory
+    class func `init`() -> ShoppingVC {
+        let id = "ShoppingView"
+        let storyboard = UIStoryboard(name: id, bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: id) as! ShoppingVC
+        return vc
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        self.view.backgroundColor = .red
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

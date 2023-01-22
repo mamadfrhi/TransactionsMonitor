@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		4E6882EC49A1693297AFE710 /* Pods_TransactionsMonitor.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5B69045E4706E5A133BAA76 /* Pods_TransactionsMonitor.framework */; };
-		890E6F0B297D35DA00FF4B88 /* Shopping.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 890E6F0A297D35DA00FF4B88 /* Shopping.storyboard */; };
+		890E6F0B297D35DA00FF4B88 /* ShoppingView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 890E6F0A297D35DA00FF4B88 /* ShoppingView.storyboard */; };
 		890E6F0D297D35F200FF4B88 /* ShoppingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 890E6F0C297D35F200FF4B88 /* ShoppingVC.swift */; };
 		891C3462297C095400F8F8EA /* DateConverterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 891C3461297C095400F8F8EA /* DateConverterTests.swift */; };
 		891C3469297C106900F8F8EA /* Connectivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 891C3468297C106900F8F8EA /* Connectivity.swift */; };
@@ -67,7 +67,7 @@
 
 /* Begin PBXFileReference section */
 		5D2B6116BF967F39276E5720 /* Pods-TransactionsMonitor.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TransactionsMonitor.release.xcconfig"; path = "Target Support Files/Pods-TransactionsMonitor/Pods-TransactionsMonitor.release.xcconfig"; sourceTree = "<group>"; };
-		890E6F0A297D35DA00FF4B88 /* Shopping.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Shopping.storyboard; sourceTree = "<group>"; };
+		890E6F0A297D35DA00FF4B88 /* ShoppingView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ShoppingView.storyboard; sourceTree = "<group>"; };
 		890E6F0C297D35F200FF4B88 /* ShoppingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingVC.swift; sourceTree = "<group>"; };
 		891C345F297C095400F8F8EA /* DateFormatterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DateFormatterTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		891C3461297C095400F8F8EA /* DateConverterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateConverterTests.swift; sourceTree = "<group>"; };
@@ -160,7 +160,7 @@
 		890E6F0E297D35F800FF4B88 /* Shopping */ = {
 			isa = PBXGroup;
 			children = (
-				890E6F0A297D35DA00FF4B88 /* Shopping.storyboard */,
+				890E6F0A297D35DA00FF4B88 /* ShoppingView.storyboard */,
 				890E6F0C297D35F200FF4B88 /* ShoppingVC.swift */,
 			);
 			path = Shopping;
@@ -469,7 +469,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				890E6F0B297D35DA00FF4B88 /* Shopping.storyboard in Resources */,
+				890E6F0B297D35DA00FF4B88 /* ShoppingView.storyboard in Resources */,
 				89520F5D297AD5AB0092210A /* LaunchScreen.storyboard in Resources */,
 				8972799D297AE543004DCF21 /* PBTransactions.json in Resources */,
 				89731F49297CA06D0063448D /* DetailsView.storyboard in Resources */,
