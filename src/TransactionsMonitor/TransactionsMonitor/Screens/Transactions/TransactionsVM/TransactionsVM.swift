@@ -30,30 +30,19 @@ class TransactionsVM {
 // MARK: Network
 extension TransactionsVM {
     
-    func fetchTransactions() {
+    func fetchTransactions() async {
         
         self.viewDelegate?.hud(show: true)
+        let response = await services.fetchTransactions()
         
-        services.fetchTransactions { transactions, error in
-            // failure
-            if let error = error {
-                let errorMessage = error.localizedDescription
-                self.showError(with: errorMessage)
-                self.viewDelegate?.hud(show: false)
-                return
-            }
-            
-            if let transactions = transactions {
-                // success
-                let sorted = self.transactionsSorter.sortByDate(transactions: transactions)
-                self.transactions = sorted
-                self.viewDelegate?.updateScreen()
-            } else {
-                // failure
-                self.showError(with: TransactionsAPIError.noData.localizedDescription)
-            }
-            self.viewDelegate?.hud(show: false)
+        switch response {
+        case .success(let transactions):
+            self.transactions = transactions
+        case .failure(let error):
+            self.showError(with: error.localizedDescription)
         }
+        
+        self.viewDelegate?.hud(show: false)
     }
     
     private func showError(with errorMessage: String) {
