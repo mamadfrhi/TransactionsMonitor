@@ -10,9 +10,11 @@ import Foundation
 class TransactionsVM {
     
     // MARK: Delegates
+    
     var viewDelegate: TransactionsVMDelegate?
     
     // MARK: Dependecies
+    
     private let services = TransactionServices(transactionsAPI:
                                                 TransactionsAPI(session:
                                                                     TransactionsAPISessionManager(with: "Token").getTransactionsSession(),
@@ -20,11 +22,14 @@ class TransactionsVM {
     private let transactionsSorter = TransactionsArraySorter()
     
     // MARK: Obserbables
+    
     @Published var errorMessage: String?
     @Published var transactions: [PBTransaction] = []
     @Published var filteredTransactions: [PBTransaction] = []
     var filterIsActive = false
     @Published var summation: Int = 0
+    
+    // MARK: Init
     
     init(transactions: [PBTransaction] = []) {
         self.transactions = transactions
