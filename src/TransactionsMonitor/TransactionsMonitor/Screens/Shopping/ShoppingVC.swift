@@ -16,9 +16,4 @@ class ShoppingVC: UIViewController {
         let vc = storyboard.instantiateViewController(withIdentifier: id) as! ShoppingVC
         return vc
     }
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        self.view.backgroundColor = .red
-    }
 }
