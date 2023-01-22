@@ -18,21 +18,27 @@ class TransactionServices {
 
 // MARK: API Calls
 extension TransactionServices {
-    func fetchTransactions(completionHandler: @escaping ([PBTransaction]?, Error?) -> ()) {
-        transactionsAPI.fetch { result in
-            switch result {
-            case .success(let success):
-                let decoder = JSONDecoder()
-                if let fetchedTransactions = success,
-                   let transactionItemsData = try? JSONSerialization.data(withJSONObject: fetchedTransactions),
-                   let transactions = try? decoder.decode(Array<PBTransaction>.self, from: transactionItemsData) {
-                    completionHandler(transactions, nil)
-                    return
-                }
-                completionHandler(nil, TransactionsAPIError.noData)
-            case .failure(let error):
-                completionHandler(nil, error)
+    
+    func fetchTransactions() async -> Result<[PBTransaction], Error> {
+        
+        let result = await transactionsAPI.fetch()
+        
+        switch result {
+            
+        case .success(let success):
+            
+            let decoder = JSONDecoder()
+            let fetchedTransactions = success
+            if let transactionItemsData = try? JSONSerialization.data(withJSONObject: fetchedTransactions),
+               let transactions = try? decoder.decode(Array<PBTransaction>.self, from: transactionItemsData) {
+                return .success(transactions)
             }
+            return .failure(TransactionsAPIError.noData)
+            
+        case .failure(let error):
+            return .failure(error)
+            
         }
     }
+    
 }

@@ -22,6 +22,23 @@ struct TransactionsAPI {
 }
 
 extension TransactionsAPI: Networkable {
+    
+    // API call mocked function
+    func fetch() async -> (Result<Any, Error>) {
+        
+        await delay(secounds: 2)
+        
+        if raiseFailure() {
+            return .failure(TransactionsAPIError.serverError)
+        } else {
+            if let transactions = localJSONLoader.loadJson(filename: localJSONFileName) {
+                return .success(transactions)
+            }
+            return .failure(TransactionsAPIError.serverError)
+        }
+    }
+    
+    // API call real function
     func fetchRealData(completionHandler: @escaping (Result<Any?, Error>) -> ()) {
         // mimic network request
         let getTransactionsURL = TransactionsAPIRouter.getTransactions
@@ -42,34 +59,20 @@ extension TransactionsAPI: Networkable {
                 }
             }
     }
-    
-    func fetch(completionHandler: @escaping (Result<Any?, Error>) -> ()) {
-        
-        if !internetChecker.isOnline() {
-            completionHandler(.failure(TransactionsAPIError.disconnected))
-            return
-        }
-        
-        DispatchQueue.global().asyncAfter(deadline: .now() + 2) {
-            if raiseFailure() {
-                completionHandler(.failure(TransactionsAPIError.serverError))
-            } else {
-                if let transactions = localJSONLoader.loadJson(filename: localJSONFileName) {
-                    completionHandler(.success(transactions))
-                    return
-                }
-                completionHandler(.failure(TransactionsAPIError.serverError))
-                return
-            }
-        }
-    }
 }
 
+// MARK: Helpers
 
 extension TransactionsAPI {
+    
     private func raiseFailure() -> Bool {
         return false
         Bool.random() }
+    
+    private func delay(secounds: Double) async {
+        try! await Task.sleep(nanoseconds: UInt64(secounds * Double(NSEC_PER_SEC)))
+    }
+    
 }
 
 

@@ -8,19 +8,42 @@
 import UIKit
 import Combine
 
+final
 class TransactionsVC: UIViewController {
     
     // MARK: Dependencies
-    private let transactionsTableViewDataSource: TransactionsTableViewDataSource = TransactionsTableViewDataSource()
-    private let transactionsTableViewDelegate: TransactionTableViewDelegate = TransactionTableViewDelegate(transactionTableViewFooter: TransactionTableViewFooter(frame: .zero))
-    private let transactionsView = TransactionsView(frame: screenBounds)
-    private let transactionsVM = TransactionsVM()
-    private let filterPopoverVC = FilterPopoverVC.`init`(list: [])
+    private let transactionsTableViewDataSource: TransactionsTableViewDataSource
+    private let transactionsTableViewDelegate: TransactionTableViewDelegate
+    private let transactionsView: TransactionsView
+    private let transactionsVM : TransactionsVM
+    private let filterPopoverVC: FilterPopoverVC
+    
+    // MARK: Delegate
+    var transactionsCoordinatorDelegate: TransactionsVCCoordinatorDelegate?
     
     // MARK: Properties
     private let hud = ProgressHUD(title: "Please wait...", theme: .dark)
     private var cancelables: Set<AnyCancellable> = []
     private var filterBarButtonItem: UIBarButtonItem!
+    
+    // MARK: Init
+    required
+    init(transactionsTableViewDataSource: TransactionsTableViewDataSource,
+         transactionsTableViewDelegate: TransactionTableViewDelegate,
+         transactionsView: TransactionsView,
+         transactionsVM: TransactionsVM,
+         filterPopoverVC: FilterPopoverVC) {
+        self.transactionsTableViewDataSource = transactionsTableViewDataSource
+        self.transactionsTableViewDelegate = transactionsTableViewDelegate
+        self.transactionsView = transactionsView
+        self.transactionsVM = transactionsVM
+        self.filterPopoverVC = filterPopoverVC
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
     
     // MARK: LifeCycle
     override func viewDidLoad() {
@@ -28,14 +51,8 @@ class TransactionsVC: UIViewController {
         [hud].forEach(view.addSubview(_:)) // add HUD on VC
         configTableView()
         setupBindings()
-        transactionsVM.viewDelegate = self
         fetchTransactions()
         setupFilterBarButtonItem()
-    }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        transactionsVM.filterTransactions(by: Constants.clearFilterKey)
     }
     
     override func loadView() {
@@ -45,7 +62,9 @@ class TransactionsVC: UIViewController {
     
     // MARK: Functions
     private func fetchTransactions() {
-        transactionsVM.fetchTransactions()
+        Task {
+            await transactionsVM.fetchTransactions()
+        }
     }
     
     @objc func retryButtonPressed(_ sender: UIButton) {
@@ -59,7 +78,7 @@ class TransactionsVC: UIViewController {
     }
 }
 
-// MARK: - SETUPS
+// MARK: Setups
 extension TransactionsVC {
     private func configTableView() {
         transactionsView.tableView.dataSource = transactionsTableViewDataSource
@@ -103,6 +122,7 @@ extension TransactionsVC {
             .store(in: &cancelables)
         
         transactionsVM.$filteredTransactions
+            .receive(on: DispatchQueue.main)
             .sink {
                 [weak self] filteredTransactions in
                 self?.transactionsTableViewDataSource.transactions = filteredTransactions
@@ -117,40 +137,54 @@ extension TransactionsVC {
                 self?.setSummationLabel(sum)
             }
             .store(in: &cancelables)
+        
+        transactionsTableViewDelegate.$selectedIndexPath
+            .sink {
+                [weak self] selectedIndexPath in
+                guard
+                    let sSelf = self,
+                    let indexPath = selectedIndexPath,
+                    let transaction = self?.transactionsTableViewDataSource.getTransaction(at: indexPath) else { return }
+                sSelf.didSelect(transaction: transaction, from: sSelf)
+            }
+            .store(in: &cancelables)
+        
+        transactionsVM.$showHUD
+            .receive(on: DispatchQueue.main)
+            .sink {
+                [weak self] showHUD in
+                self?.hud(show: showHUD)
+            }
+            .store(in: &cancelables)
     }
     
     private func setSummationLabel(_ value: Int) {
         let footerView = transactionsTableViewDelegate.transactionTableViewFooter
-        DispatchQueue.main.async {
-            footerView.setSummation(value)
-        }
+        footerView.setSummation(value)
     }
 }
 
-// MARK: TransactionsVMDelegate
+// MARK: Transactions VM Delegate
 extension TransactionsVC: TransactionsVMDelegate {
     func updateScreen() {
-        DispatchQueue.main.async {
-            self.transactionsView.tableView.reloadData()
-            self.transactionsView.hideRetryButton(true)
-        }
+        self.transactionsView.tableView.reloadData()
+        self.transactionsView.hideRetryButton(true)
     }
     
     func hud(show: Bool) {
-        DispatchQueue.main.async {
-            show ? self.hud.show() : self.hud.hide()
-        }
+        show ? self.hud.show() : self.hud.hide()
     }
     
     func showError(errorMessage: String) {
-        self.showAlert(alertTitle: "Error!", alertMessage: errorMessage)
-        self.transactionsView.hideRetryButton(false)
+        showAlert(alertTitle: "Error!", alertMessage: errorMessage)
+        transactionsView.hideRetryButton(false)
     }
     
-    func selectedTransationRow() -> Int {
-        print("Selected row is: ", transactionsView.tableView.indexPathForSelectedRow?.row as Any)
-        return 0
+}
+
+// MARK: Transactions VC Coordinator Delegate
+extension TransactionsVC: TransactionsVCCoordinatorDelegate {
+    func didSelect(transaction: PBTransaction, from controller: UIViewController) {
+        transactionsCoordinatorDelegate?.didSelect(transaction: transaction, from: self)
     }
-    
-    
 }

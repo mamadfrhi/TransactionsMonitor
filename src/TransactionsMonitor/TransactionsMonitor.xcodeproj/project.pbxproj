@@ -8,7 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		4E6882EC49A1693297AFE710 /* Pods_TransactionsMonitor.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5B69045E4706E5A133BAA76 /* Pods_TransactionsMonitor.framework */; };
-		891C3462297C095400F8F8EA /* DateConverterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 891C3461297C095400F8F8EA /* DateConverterTests.swift */; };
+		890E6F0B297D35DA00FF4B88 /* ShoppingView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 890E6F0A297D35DA00FF4B88 /* ShoppingView.storyboard */; };
+		890E6F0D297D35F200FF4B88 /* ShoppingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 890E6F0C297D35F200FF4B88 /* ShoppingVC.swift */; };
 		891C3469297C106900F8F8EA /* Connectivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 891C3468297C106900F8F8EA /* Connectivity.swift */; };
 		891C346B297C112900F8F8EA /* InternetChecker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 891C346A297C112900F8F8EA /* InternetChecker.swift */; };
 		891C346E297C159F00F8F8EA /* ArraySorter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 891C346D297C159F00F8F8EA /* ArraySorter.swift */; };
@@ -46,12 +47,21 @@
 		897279C5297B69C8004DCF21 /* TransactionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 897279C4297B69C8004DCF21 /* TransactionTableViewCell.swift */; };
 		897279C7297B7AA0004DCF21 /* DateConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 897279C6297B7AA0004DCF21 /* DateConverter.swift */; };
 		897279CA297B7F8D004DCF21 /* TransactionsVMDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 897279C9297B7F8D004DCF21 /* TransactionsVMDelegate.swift */; };
-		897279CC297B7FB2004DCF21 /* TransactionsVMCoordinatorDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 897279CB297B7FB2004DCF21 /* TransactionsVMCoordinatorDelegate.swift */; };
+		897279CC297B7FB2004DCF21 /* TransactionsVCCoordinatorDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 897279CB297B7FB2004DCF21 /* TransactionsVCCoordinatorDelegate.swift */; };
 		897279CE297B7FC4004DCF21 /* TransactionsVMType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 897279CD297B7FC4004DCF21 /* TransactionsVMType.swift */; };
+		89731F47297C9F3B0063448D /* DetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89731F46297C9F3B0063448D /* DetailsVC.swift */; };
+		89731F49297CA06D0063448D /* DetailsView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 89731F48297CA06D0063448D /* DetailsView.storyboard */; };
+		89731F4B297CA10B0063448D /* TransactionDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89731F4A297CA10B0063448D /* TransactionDetails.swift */; };
+		89E2EEF1297D4D4E00E35AB7 /* SettingsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89E2EEEF297D4D4E00E35AB7 /* SettingsVC.swift */; };
+		89E2EEF2297D4D4E00E35AB7 /* SettingsView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 89E2EEF0297D4D4E00E35AB7 /* SettingsView.storyboard */; };
+		89E8490C297D64ED00B98DCC /* TransactionsVMFilteringTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89E8490B297D64ED00B98DCC /* TransactionsVMFilteringTests.swift */; };
+		89E8490E297D6BE700B98DCC /* TransactionsMockData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89E8490D297D6BE700B98DCC /* TransactionsMockData.swift */; };
+		89E84910297D7DC800B98DCC /* TransactionsVMGetUniqueCategoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89E8490F297D7DC800B98DCC /* TransactionsVMGetUniqueCategoryTests.swift */; };
+		89EF0AAF297D5F770016EE51 /* DateConverterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89EF0AAE297D5F770016EE51 /* DateConverterTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		891C3463297C095400F8F8EA /* PBXContainerItemProxy */ = {
+		89EF0AA8297D5EFE0016EE51 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 89520F45297AD5A90092210A /* Project object */;
 			proxyType = 1;
@@ -62,8 +72,8 @@
 
 /* Begin PBXFileReference section */
 		5D2B6116BF967F39276E5720 /* Pods-TransactionsMonitor.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TransactionsMonitor.release.xcconfig"; path = "Target Support Files/Pods-TransactionsMonitor/Pods-TransactionsMonitor.release.xcconfig"; sourceTree = "<group>"; };
-		891C345F297C095400F8F8EA /* DateFormatterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DateFormatterTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		891C3461297C095400F8F8EA /* DateConverterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateConverterTests.swift; sourceTree = "<group>"; };
+		890E6F0A297D35DA00FF4B88 /* ShoppingView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ShoppingView.storyboard; sourceTree = "<group>"; };
+		890E6F0C297D35F200FF4B88 /* ShoppingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingVC.swift; sourceTree = "<group>"; };
 		891C3468297C106900F8F8EA /* Connectivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Connectivity.swift; sourceTree = "<group>"; };
 		891C346A297C112900F8F8EA /* InternetChecker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InternetChecker.swift; sourceTree = "<group>"; };
 		891C346D297C159F00F8F8EA /* ArraySorter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArraySorter.swift; sourceTree = "<group>"; };
@@ -103,25 +113,35 @@
 		897279C4297B69C8004DCF21 /* TransactionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionTableViewCell.swift; sourceTree = "<group>"; };
 		897279C6297B7AA0004DCF21 /* DateConverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateConverter.swift; sourceTree = "<group>"; };
 		897279C9297B7F8D004DCF21 /* TransactionsVMDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsVMDelegate.swift; sourceTree = "<group>"; };
-		897279CB297B7FB2004DCF21 /* TransactionsVMCoordinatorDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsVMCoordinatorDelegate.swift; sourceTree = "<group>"; };
+		897279CB297B7FB2004DCF21 /* TransactionsVCCoordinatorDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsVCCoordinatorDelegate.swift; sourceTree = "<group>"; };
 		897279CD297B7FC4004DCF21 /* TransactionsVMType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsVMType.swift; sourceTree = "<group>"; };
+		89731F46297C9F3B0063448D /* DetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsVC.swift; sourceTree = "<group>"; };
+		89731F48297CA06D0063448D /* DetailsView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DetailsView.storyboard; sourceTree = "<group>"; };
+		89731F4A297CA10B0063448D /* TransactionDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionDetails.swift; sourceTree = "<group>"; };
+		89E2EEEF297D4D4E00E35AB7 /* SettingsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsVC.swift; sourceTree = "<group>"; };
+		89E2EEF0297D4D4E00E35AB7 /* SettingsView.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SettingsView.storyboard; sourceTree = "<group>"; };
+		89E8490B297D64ED00B98DCC /* TransactionsVMFilteringTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsVMFilteringTests.swift; sourceTree = "<group>"; };
+		89E8490D297D6BE700B98DCC /* TransactionsMockData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsMockData.swift; sourceTree = "<group>"; };
+		89E8490F297D7DC800B98DCC /* TransactionsVMGetUniqueCategoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsVMGetUniqueCategoryTests.swift; sourceTree = "<group>"; };
+		89EF0AA4297D5EFE0016EE51 /* TransactionsMonitorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TransactionsMonitorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		89EF0AAE297D5F770016EE51 /* DateConverterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateConverterTests.swift; sourceTree = "<group>"; };
 		943136329B21FFF23497888D /* Pods-TransactionsMonitor.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TransactionsMonitor.debug.xcconfig"; path = "Target Support Files/Pods-TransactionsMonitor/Pods-TransactionsMonitor.debug.xcconfig"; sourceTree = "<group>"; };
 		E5B69045E4706E5A133BAA76 /* Pods_TransactionsMonitor.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TransactionsMonitor.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		891C345C297C095400F8F8EA /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		89520F4A297AD5A90092210A /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				4E6882EC49A1693297AFE710 /* Pods_TransactionsMonitor.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		89EF0AA1297D5EFE0016EE51 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -136,12 +156,24 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		891C3460297C095400F8F8EA /* DateFormatterTests */ = {
+		890E6F09297D27E700FF4B88 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
-				891C3461297C095400F8F8EA /* DateConverterTests.swift */,
+				897279B5297AE84F004DCF21 /* ViewCodeableTemplate.swift */,
+				89727997297ADFFB004DCF21 /* Constants.swift */,
+				897279C6297B7AA0004DCF21 /* DateConverter.swift */,
+				891C3471297C15C400F8F8EA /* TransactionsSorter */,
 			);
-			path = DateFormatterTests;
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		890E6F0E297D35F800FF4B88 /* Shopping */ = {
+			isa = PBXGroup;
+			children = (
+				890E6F0C297D35F200FF4B88 /* ShoppingVC.swift */,
+				890E6F0A297D35DA00FF4B88 /* ShoppingView.storyboard */,
+			);
+			path = Shopping;
 			sourceTree = "<group>";
 		};
 		891C346C297C113A00F8F8EA /* InternetChecker */ = {
@@ -166,7 +198,7 @@
 			isa = PBXGroup;
 			children = (
 				89520F4F297AD5A90092210A /* TransactionsMonitor */,
-				891C3460297C095400F8F8EA /* DateFormatterTests */,
+				89EF0AA5297D5EFE0016EE51 /* TransactionsMonitorTests */,
 				89520F4E297AD5A90092210A /* Products */,
 				C6BE8A309C8B5F808352BDAD /* Pods */,
 				3D242DED43EDD5D9511D5900 /* Frameworks */,
@@ -177,7 +209,7 @@
 			isa = PBXGroup;
 			children = (
 				89520F4D297AD5A90092210A /* TransactionsMonitor.app */,
-				891C345F297C095400F8F8EA /* DateFormatterTests.xctest */,
+				89EF0AA4297D5EFE0016EE51 /* TransactionsMonitorTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -185,13 +217,13 @@
 		89520F4F297AD5A90092210A /* TransactionsMonitor */ = {
 			isa = PBXGroup;
 			children = (
-				897279BF297B5E00004DCF21 /* Extensions */,
 				8972798C297ADE5D004DCF21 /* Delegates */,
 				8972798F297ADEBE004DCF21 /* Coordinator */,
-				897279AE297AE774004DCF21 /* Models */,
 				8972798E297ADEAB004DCF21 /* Screens */,
 				8972799B297AE530004DCF21 /* Services */,
+				890E6F09297D27E700FF4B88 /* Helpers */,
 				8972798D297ADE87004DCF21 /* Resources */,
+				897279BF297B5E00004DCF21 /* Extensions */,
 			);
 			path = TransactionsMonitor;
 			sourceTree = "<group>";
@@ -208,14 +240,10 @@
 		8972798D297ADE87004DCF21 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				897279B5297AE84F004DCF21 /* ViewCodeableTemplate.swift */,
 				8972799C297AE543004DCF21 /* PBTransactions.json */,
 				89520F59297AD5AB0092210A /* Assets.xcassets */,
 				89520F5B297AD5AB0092210A /* LaunchScreen.storyboard */,
 				89520F5E297AD5AB0092210A /* Info.plist */,
-				89727997297ADFFB004DCF21 /* Constants.swift */,
-				897279C6297B7AA0004DCF21 /* DateConverter.swift */,
-				891C3471297C15C400F8F8EA /* TransactionsSorter */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -224,7 +252,10 @@
 			isa = PBXGroup;
 			children = (
 				897279C2297B62C8004DCF21 /* ProgressHUD.swift */,
-				89727994297ADF84004DCF21 /* Main */,
+				89727994297ADF84004DCF21 /* Transactions */,
+				89731F43297C9F150063448D /* Details */,
+				890E6F0E297D35F800FF4B88 /* Shopping */,
+				89E2EEEE297D4D4E00E35AB7 /* Settings */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -238,18 +269,18 @@
 			path = Coordinator;
 			sourceTree = "<group>";
 		};
-		89727994297ADF84004DCF21 /* Main */ = {
+		89727994297ADF84004DCF21 /* Transactions */ = {
 			isa = PBXGroup;
 			children = (
-				891C3474297C328A00F8F8EA /* FilterPopoverVC.swift */,
-				891C3476297C329A00F8F8EA /* FilterPopoverView.storyboard */,
-				897279C8297B7F68004DCF21 /* TransactionsTableView */,
-				897279CF297B803D004DCF21 /* TransactionsVM */,
 				89727995297ADF91004DCF21 /* TransactionsCoordinator.swift */,
 				897279B3297AE7EC004DCF21 /* TransactionsView.swift */,
-				89520F54297AD5A90092210A /* TransactionsVC.swift */,
+				897279AE297AE774004DCF21 /* Models */,
+				89731F4C297CA4B90063448D /* FilterPopover */,
+				897279C8297B7F68004DCF21 /* TransactionsTableView */,
+				897279CF297B803D004DCF21 /* TransactionsVM */,
+				89E2EEF3297D508E00E35AB7 /* TransactionsVC */,
 			);
-			path = Main;
+			path = Transactions;
 			sourceTree = "<group>";
 		};
 		8972799B297AE530004DCF21 /* Services */ = {
@@ -317,10 +348,57 @@
 			children = (
 				897279B9297B08D7004DCF21 /* TransactionsVM.swift */,
 				897279C9297B7F8D004DCF21 /* TransactionsVMDelegate.swift */,
-				897279CB297B7FB2004DCF21 /* TransactionsVMCoordinatorDelegate.swift */,
 				897279CD297B7FC4004DCF21 /* TransactionsVMType.swift */,
 			);
 			path = TransactionsVM;
+			sourceTree = "<group>";
+		};
+		89731F43297C9F150063448D /* Details */ = {
+			isa = PBXGroup;
+			children = (
+				89731F4A297CA10B0063448D /* TransactionDetails.swift */,
+				89731F46297C9F3B0063448D /* DetailsVC.swift */,
+				89731F48297CA06D0063448D /* DetailsView.storyboard */,
+			);
+			path = Details;
+			sourceTree = "<group>";
+		};
+		89731F4C297CA4B90063448D /* FilterPopover */ = {
+			isa = PBXGroup;
+			children = (
+				891C3474297C328A00F8F8EA /* FilterPopoverVC.swift */,
+				891C3476297C329A00F8F8EA /* FilterPopoverView.storyboard */,
+			);
+			path = FilterPopover;
+			sourceTree = "<group>";
+		};
+		89E2EEEE297D4D4E00E35AB7 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				89E2EEEF297D4D4E00E35AB7 /* SettingsVC.swift */,
+				89E2EEF0297D4D4E00E35AB7 /* SettingsView.storyboard */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		89E2EEF3297D508E00E35AB7 /* TransactionsVC */ = {
+			isa = PBXGroup;
+			children = (
+				897279CB297B7FB2004DCF21 /* TransactionsVCCoordinatorDelegate.swift */,
+				89520F54297AD5A90092210A /* TransactionsVC.swift */,
+			);
+			path = TransactionsVC;
+			sourceTree = "<group>";
+		};
+		89EF0AA5297D5EFE0016EE51 /* TransactionsMonitorTests */ = {
+			isa = PBXGroup;
+			children = (
+				89E8490D297D6BE700B98DCC /* TransactionsMockData.swift */,
+				89EF0AAE297D5F770016EE51 /* DateConverterTests.swift */,
+				89E8490B297D64ED00B98DCC /* TransactionsVMFilteringTests.swift */,
+				89E8490F297D7DC800B98DCC /* TransactionsVMGetUniqueCategoryTests.swift */,
+			);
+			path = TransactionsMonitorTests;
 			sourceTree = "<group>";
 		};
 		C6BE8A309C8B5F808352BDAD /* Pods */ = {
@@ -335,24 +413,6 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		891C345E297C095400F8F8EA /* DateFormatterTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 891C3465297C095400F8F8EA /* Build configuration list for PBXNativeTarget "DateFormatterTests" */;
-			buildPhases = (
-				891C345B297C095400F8F8EA /* Sources */,
-				891C345C297C095400F8F8EA /* Frameworks */,
-				891C345D297C095400F8F8EA /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				891C3464297C095400F8F8EA /* PBXTargetDependency */,
-			);
-			name = DateFormatterTests;
-			productName = DateFormatterTests;
-			productReference = 891C345F297C095400F8F8EA /* DateFormatterTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 		89520F4C297AD5A90092210A /* TransactionsMonitor */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 89520F61297AD5AB0092210A /* Build configuration list for PBXNativeTarget "TransactionsMonitor" */;
@@ -372,6 +432,24 @@
 			productReference = 89520F4D297AD5A90092210A /* TransactionsMonitor.app */;
 			productType = "com.apple.product-type.application";
 		};
+		89EF0AA3297D5EFE0016EE51 /* TransactionsMonitorTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 89EF0AAC297D5EFE0016EE51 /* Build configuration list for PBXNativeTarget "TransactionsMonitorTests" */;
+			buildPhases = (
+				89EF0AA0297D5EFE0016EE51 /* Sources */,
+				89EF0AA1297D5EFE0016EE51 /* Frameworks */,
+				89EF0AA2297D5EFE0016EE51 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				89EF0AA9297D5EFE0016EE51 /* PBXTargetDependency */,
+			);
+			name = TransactionsMonitorTests;
+			productName = TransactionsMonitorTests;
+			productReference = 89EF0AA4297D5EFE0016EE51 /* TransactionsMonitorTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -382,12 +460,12 @@
 				LastSwiftUpdateCheck = 1410;
 				LastUpgradeCheck = 1410;
 				TargetAttributes = {
-					891C345E297C095400F8F8EA = {
-						CreatedOnToolsVersion = 14.1;
-						TestTargetID = 89520F4C297AD5A90092210A;
-					};
 					89520F4C297AD5A90092210A = {
 						CreatedOnToolsVersion = 14.1;
+					};
+					89EF0AA3297D5EFE0016EE51 = {
+						CreatedOnToolsVersion = 14.1;
+						TestTargetID = 89520F4C297AD5A90092210A;
 					};
 				};
 			};
@@ -405,27 +483,30 @@
 			projectRoot = "";
 			targets = (
 				89520F4C297AD5A90092210A /* TransactionsMonitor */,
-				891C345E297C095400F8F8EA /* DateFormatterTests */,
+				89EF0AA3297D5EFE0016EE51 /* TransactionsMonitorTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		891C345D297C095400F8F8EA /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		89520F4B297AD5A90092210A /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				890E6F0B297D35DA00FF4B88 /* ShoppingView.storyboard in Resources */,
 				89520F5D297AD5AB0092210A /* LaunchScreen.storyboard in Resources */,
 				8972799D297AE543004DCF21 /* PBTransactions.json in Resources */,
+				89731F49297CA06D0063448D /* DetailsView.storyboard in Resources */,
 				89520F5A297AD5AB0092210A /* Assets.xcassets in Resources */,
+				89E2EEF2297D4D4E00E35AB7 /* SettingsView.storyboard in Resources */,
 				891C3477297C329A00F8F8EA /* FilterPopoverView.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		89EF0AA2297D5EFE0016EE51 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -474,14 +555,6 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		891C345B297C095400F8F8EA /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				891C3462297C095400F8F8EA /* DateConverterTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		89520F49297AD5A90092210A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -490,15 +563,17 @@
 				897279CE297B7FC4004DCF21 /* TransactionsVMType.swift in Sources */,
 				89727992297ADF67004DCF21 /* AppCoordinator.swift in Sources */,
 				897279B6297AE84F004DCF21 /* ViewCodeableTemplate.swift in Sources */,
-				897279CC297B7FB2004DCF21 /* TransactionsVMCoordinatorDelegate.swift in Sources */,
+				897279CC297B7FB2004DCF21 /* TransactionsVCCoordinatorDelegate.swift in Sources */,
 				891C3475297C328A00F8F8EA /* FilterPopoverVC.swift in Sources */,
 				89727996297ADF91004DCF21 /* TransactionsCoordinator.swift in Sources */,
 				89520F55297AD5A90092210A /* TransactionsVC.swift in Sources */,
 				897279C5297B69C8004DCF21 /* TransactionTableViewCell.swift in Sources */,
 				89727993297ADF67004DCF21 /* Coordinator.swift in Sources */,
 				897279C3297B62C8004DCF21 /* ProgressHUD.swift in Sources */,
+				89731F4B297CA10B0063448D /* TransactionDetails.swift in Sources */,
 				891C3470297C15BC00F8F8EA /* TransactionsArraySorter.swift in Sources */,
 				897279A1297AE565004DCF21 /* LocalJSONLoader.swift in Sources */,
+				89731F47297C9F3B0063448D /* DetailsVC.swift in Sources */,
 				894B1B7A297C761000B3C3BB /* TransactionTableViewDelegate.swift in Sources */,
 				891C346B297C112900F8F8EA /* InternetChecker.swift in Sources */,
 				897279B2297AE781004DCF21 /* PBTransaction.swift in Sources */,
@@ -510,10 +585,12 @@
 				89727998297ADFFB004DCF21 /* Constants.swift in Sources */,
 				897279A9297AE6B7004DCF21 /* TransactionsAPISessionManager.swift in Sources */,
 				897279BA297B08D7004DCF21 /* TransactionsVM.swift in Sources */,
+				89E2EEF1297D4D4E00E35AB7 /* SettingsVC.swift in Sources */,
 				897279B4297AE7EC004DCF21 /* TransactionsView.swift in Sources */,
 				891C3469297C106900F8F8EA /* Connectivity.swift in Sources */,
 				897279AB297AE6E0004DCF21 /* TransactionsAPIRouter.swift in Sources */,
 				89520F53297AD5A90092210A /* SceneDelegate.swift in Sources */,
+				890E6F0D297D35F200FF4B88 /* ShoppingVC.swift in Sources */,
 				897279A5297AE593004DCF21 /* Networkable.swift in Sources */,
 				894B1B78297C710100B3C3BB /* TransactionTableViewFooter.swift in Sources */,
 				897279A3297AE576004DCF21 /* Servers.swift in Sources */,
@@ -524,13 +601,24 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		89EF0AA0297D5EFE0016EE51 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				89EF0AAF297D5F770016EE51 /* DateConverterTests.swift in Sources */,
+				89E84910297D7DC800B98DCC /* TransactionsVMGetUniqueCategoryTests.swift in Sources */,
+				89E8490E297D6BE700B98DCC /* TransactionsMockData.swift in Sources */,
+				89E8490C297D64ED00B98DCC /* TransactionsVMFilteringTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		891C3464297C095400F8F8EA /* PBXTargetDependency */ = {
+		89EF0AA9297D5EFE0016EE51 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 89520F4C297AD5A90092210A /* TransactionsMonitor */;
-			targetProxy = 891C3463297C095400F8F8EA /* PBXContainerItemProxy */;
+			targetProxy = 89EF0AA8297D5EFE0016EE51 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -546,40 +634,6 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		891C3466297C095400F8F8EA /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = de.kabok.DateFormatterTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TransactionsMonitor.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/TransactionsMonitor";
-			};
-			name = Debug;
-		};
-		891C3467297C095400F8F8EA /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = de.kabok.DateFormatterTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TransactionsMonitor.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/TransactionsMonitor";
-			};
-			name = Release;
-		};
 		89520F5F297AD5AB0092210A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -756,18 +810,43 @@
 			};
 			name = Release;
 		};
+		89EF0AAA297D5EFE0016EE51 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = de.kabok.TransactionsMonitorTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TransactionsMonitor.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/TransactionsMonitor";
+			};
+			name = Debug;
+		};
+		89EF0AAB297D5EFE0016EE51 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = de.kabok.TransactionsMonitorTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TransactionsMonitor.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/TransactionsMonitor";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		891C3465297C095400F8F8EA /* Build configuration list for PBXNativeTarget "DateFormatterTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				891C3466297C095400F8F8EA /* Debug */,
-				891C3467297C095400F8F8EA /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		89520F48297AD5A90092210A /* Build configuration list for PBXProject "TransactionsMonitor" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -782,6 +861,15 @@
 			buildConfigurations = (
 				89520F62297AD5AB0092210A /* Debug */,
 				89520F63297AD5AB0092210A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		89EF0AAC297D5EFE0016EE51 /* Build configuration list for PBXNativeTarget "TransactionsMonitorTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				89EF0AAA297D5EFE0016EE51 /* Debug */,
+				89EF0AAB297D5EFE0016EE51 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

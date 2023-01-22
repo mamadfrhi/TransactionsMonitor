@@ -7,9 +7,9 @@
 
 import UIKit
 
-// MARK: Transactions VM Coordinator Delegate
+// MARK: Transactions VC Coordinator Delegate
 // implement in TransactionsCoordinator
-// call in VM
-protocol TransactionsVMCoordinatorDelegate {
+// call in VC
+protocol TransactionsVCCoordinatorDelegate {
     func didSelect(transaction: PBTransaction, from controller: UIViewController)
 }

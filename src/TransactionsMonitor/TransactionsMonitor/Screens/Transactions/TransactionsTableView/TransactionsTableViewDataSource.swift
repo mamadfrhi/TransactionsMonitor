@@ -41,5 +41,9 @@ class TransactionsTableViewDataSource: NSObject, UITableViewDataSource {
         }
         return UITableViewCell()
     }
+    
+    func getTransaction(at indexPath: IndexPath) -> PBTransaction? {
+        transactions?[indexPath.row]
+    }
 }
 

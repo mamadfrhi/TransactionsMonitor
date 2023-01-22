@@ -9,22 +9,16 @@ import UIKit
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
-
+    
     var window: UIWindow?
-    var transactionsCoordinator: TransactionsCoordinator?
-    let navController = UINavigationController()
-
+    var appCoordinator: AppCoordinator!
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
-        // create a basic UIWindow and activate it
-        window = UIWindow(frame: screenBounds)
-        window?.rootViewController = navController
-        window?.makeKeyAndVisible()
+        window = UIWindow(frame: UIScreen.main.bounds)
+        appCoordinator = AppCoordinator(window: window)
+        appCoordinator.start()
         
-        // Setup Coordinator
-        transactionsCoordinator = TransactionsCoordinator(rootNavigationController: navController)
-        transactionsCoordinator!.start()
-
         return true
     }
 }

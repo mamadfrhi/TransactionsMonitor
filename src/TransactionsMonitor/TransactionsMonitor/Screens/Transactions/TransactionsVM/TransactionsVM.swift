@@ -9,52 +9,49 @@ import Foundation
 
 class TransactionsVM {
     
-    // MARK: Delegates
-    var transactionsCoordinatorDelegate: TransactionsVMCoordinatorDelegate?
-    var viewDelegate: TransactionsVMDelegate?
-    
     // MARK: Dependecies
-    private let services = TransactionServices(transactionsAPI:
-                                                TransactionsAPI(session:
-                                                                    TransactionsAPISessionManager(with: "Token").getTransactionsSession(),
-                                                                localJSONLoader: LocalJSONLoader()))
-    private let transactionsSorter = TransactionsArraySorter()
     
-    // MARK: Obserbables
+    private let services: TransactionServices
+    private let transactionsSorter: TransactionsArraySorter
+    var filterIsActive = false
+    
+    // MARK: Publisheds
+    
+    @Published var showHUD: Bool = false
     @Published var errorMessage: String?
     @Published var transactions: [PBTransaction] = []
     @Published var filteredTransactions: [PBTransaction] = []
-    var filterIsActive = false
     @Published var summation: Int = 0
+    
+    
+    // MARK: Init
+    required
+    init(services: TransactionServices,
+         transactionsSorter: TransactionsArraySorter,
+         transactions: [PBTransaction] = []) {
+        self.services = services
+        self.transactionsSorter = transactionsSorter
+        self.transactions = transactions
+    }
 }
 
 // MARK: Network
 extension TransactionsVM {
     
-    func fetchTransactions() {
+    func fetchTransactions() async {
         
-        self.viewDelegate?.hud(show: true)
+        showHUD = true
+        let response = await services.fetchTransactions()
         
-        services.fetchTransactions { transactions, error in
-            // failure
-            if let error = error {
-                let errorMessage = error.localizedDescription
-                self.showError(with: errorMessage)
-                self.viewDelegate?.hud(show: false)
-                return
-            }
-            
-            if let transactions = transactions {
-                // success
-                let sorted = self.transactionsSorter.sortByDate(transactions: transactions)
-                self.transactions = sorted
-                self.viewDelegate?.updateScreen()
-            } else {
-                // failure
-                self.showError(with: TransactionsAPIError.noData.localizedDescription)
-            }
-            self.viewDelegate?.hud(show: false)
+        switch response {
+        case .success(let transactions):
+            self.transactions = transactions
+        case .failure(let error):
+            self.showError(with: error.localizedDescription)
         }
+        
+        showHUD = false
+        setSummationVarialbe()
     }
     
     private func showError(with errorMessage: String) {
@@ -66,7 +63,7 @@ extension TransactionsVM {
 extension TransactionsVM {
     
     private func resetFilter() {
-        self.filteredTransactions = transactions
+        filteredTransactions = transactions
         filterIsActive = false
     }
     

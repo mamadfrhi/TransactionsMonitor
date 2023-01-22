@@ -9,7 +9,7 @@ import Foundation
 
 struct DateConverter {
     
-    func readablestringDate(from ISO8601Date: String) -> String {
+    func readableStringDate(from ISO8601Date: String) -> String {
         // iso
         let isoString = ISO8601Date
         let formatter = DateFormatter()
@@ -24,8 +24,8 @@ struct DateConverter {
         // if data conversion failed, return today's date
     }
     
-    func readableDate(from ISO8601Date: String) -> Date {
-        ISO8601DateFormatter().date(from: ISO8601Date) ?? Date()
+    func isoDate(isoString isoInput: String) -> Date {
+        ISO8601DateFormatter().date(from: isoInput) ?? Date()
         // if date conversion failed, return today's date
     }
     

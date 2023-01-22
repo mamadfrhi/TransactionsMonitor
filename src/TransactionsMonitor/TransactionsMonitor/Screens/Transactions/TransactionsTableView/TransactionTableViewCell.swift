@@ -80,6 +80,7 @@ class TransactionTableViewCell: UITableViewCell {
 
 //MARK: - Template
 extension TransactionTableViewCell: ViewCodeableTemplate {
+    
     func buildViewHierarchy() {
         setupLeftStack()
         contentView.addSubview(leftStack)

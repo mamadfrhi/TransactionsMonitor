@@ -31,6 +31,8 @@ class FilterPopoverVC: UIViewController {
     
 }
 
+// MARK: TableView Delegate
+
 extension FilterPopoverVC: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         list.count
