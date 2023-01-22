@@ -56,6 +56,22 @@ struct PBTransaction: Codable {
         self.amount = try valueContainer.decode(Int.self, forKey: .amount)
         self.currency = try valueContainer.decode(String.self, forKey: .currency)
     }
+    
+    init(companyName: String,
+         reference: String,
+         category: Int,
+         description: String? = nil,
+         bookingISODate: String,
+         amount: Int,
+         currency: String) {
+        self.companyName = companyName
+        self.reference = reference
+        self.category = category
+        self.description = description
+        self.bookingISODate = bookingISODate
+        self.amount = amount
+        self.currency = currency
+    }
 }
 
 
@@ -63,10 +79,10 @@ struct PBTransaction: Codable {
 // it can be done also using Decorator Design Pattern
 extension PBTransaction: PBTransactionReadable {
     func getBookingDate() -> Date {
-        DateConverter().readableDate(from: bookingISODate)
+        DateConverter().isoDate(isoString: bookingISODate)
     }
     
     func getBookingDateString() -> String {
-        DateConverter().readablestringDate(from: bookingISODate)
+        DateConverter().readableStringDate(from: bookingISODate)
     }
 }
