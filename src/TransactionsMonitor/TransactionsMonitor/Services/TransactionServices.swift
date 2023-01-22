@@ -33,7 +33,8 @@ extension TransactionServices {
                let transactions = try? decoder.decode(Array<PBTransaction>.self, from: transactionItemsData) {
                 return .success(transactions)
             }
-            return .failure(TransactionsAPIError.noData)
+            let error = NSError(domain: "Error happened during conversion!", code: 05)
+            return .failure(error)
             
         case .failure(let error):
             return .failure(error)
