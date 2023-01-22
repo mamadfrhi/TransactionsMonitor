@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		4E6882EC49A1693297AFE710 /* Pods_TransactionsMonitor.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5B69045E4706E5A133BAA76 /* Pods_TransactionsMonitor.framework */; };
+		890E6F0B297D35DA00FF4B88 /* Shopping.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 890E6F0A297D35DA00FF4B88 /* Shopping.storyboard */; };
+		890E6F0D297D35F200FF4B88 /* ShoppingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 890E6F0C297D35F200FF4B88 /* ShoppingVC.swift */; };
 		891C3462297C095400F8F8EA /* DateConverterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 891C3461297C095400F8F8EA /* DateConverterTests.swift */; };
 		891C3469297C106900F8F8EA /* Connectivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 891C3468297C106900F8F8EA /* Connectivity.swift */; };
 		891C346B297C112900F8F8EA /* InternetChecker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 891C346A297C112900F8F8EA /* InternetChecker.swift */; };
@@ -65,6 +67,8 @@
 
 /* Begin PBXFileReference section */
 		5D2B6116BF967F39276E5720 /* Pods-TransactionsMonitor.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TransactionsMonitor.release.xcconfig"; path = "Target Support Files/Pods-TransactionsMonitor/Pods-TransactionsMonitor.release.xcconfig"; sourceTree = "<group>"; };
+		890E6F0A297D35DA00FF4B88 /* Shopping.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Shopping.storyboard; sourceTree = "<group>"; };
+		890E6F0C297D35F200FF4B88 /* ShoppingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingVC.swift; sourceTree = "<group>"; };
 		891C345F297C095400F8F8EA /* DateFormatterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DateFormatterTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		891C3461297C095400F8F8EA /* DateConverterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateConverterTests.swift; sourceTree = "<group>"; };
 		891C3468297C106900F8F8EA /* Connectivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Connectivity.swift; sourceTree = "<group>"; };
@@ -153,6 +157,15 @@
 			path = Helpers;
 			sourceTree = "<group>";
 		};
+		890E6F0E297D35F800FF4B88 /* Shopping */ = {
+			isa = PBXGroup;
+			children = (
+				890E6F0A297D35DA00FF4B88 /* Shopping.storyboard */,
+				890E6F0C297D35F200FF4B88 /* ShoppingVC.swift */,
+			);
+			path = Shopping;
+			sourceTree = "<group>";
+		};
 		891C3460297C095400F8F8EA /* DateFormatterTests */ = {
 			isa = PBXGroup;
 			children = (
@@ -236,9 +249,10 @@
 		8972798E297ADEAB004DCF21 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				897279C2297B62C8004DCF21 /* ProgressHUD.swift */,
 				89727994297ADF84004DCF21 /* Transactions */,
 				89731F43297C9F150063448D /* Details */,
-				897279C2297B62C8004DCF21 /* ProgressHUD.swift */,
+				890E6F0E297D35F800FF4B88 /* Shopping */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -255,11 +269,11 @@
 		89727994297ADF84004DCF21 /* Transactions */ = {
 			isa = PBXGroup;
 			children = (
+				89727995297ADF91004DCF21 /* TransactionsCoordinator.swift */,
 				897279AE297AE774004DCF21 /* Models */,
 				89731F4C297CA4B90063448D /* FilterPopover */,
 				897279C8297B7F68004DCF21 /* TransactionsTableView */,
 				897279CF297B803D004DCF21 /* TransactionsVM */,
-				89727995297ADF91004DCF21 /* TransactionsCoordinator.swift */,
 				897279B3297AE7EC004DCF21 /* TransactionsView.swift */,
 				89520F54297AD5A90092210A /* TransactionsVC.swift */,
 			);
@@ -455,6 +469,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				890E6F0B297D35DA00FF4B88 /* Shopping.storyboard in Resources */,
 				89520F5D297AD5AB0092210A /* LaunchScreen.storyboard in Resources */,
 				8972799D297AE543004DCF21 /* PBTransactions.json in Resources */,
 				89731F49297CA06D0063448D /* DetailsView.storyboard in Resources */,
@@ -550,6 +565,7 @@
 				891C3469297C106900F8F8EA /* Connectivity.swift in Sources */,
 				897279AB297AE6E0004DCF21 /* TransactionsAPIRouter.swift in Sources */,
 				89520F53297AD5A90092210A /* SceneDelegate.swift in Sources */,
+				890E6F0D297D35F200FF4B88 /* ShoppingVC.swift in Sources */,
 				897279A5297AE593004DCF21 /* Networkable.swift in Sources */,
 				894B1B78297C710100B3C3BB /* TransactionTableViewFooter.swift in Sources */,
 				897279A3297AE576004DCF21 /* Servers.swift in Sources */,
