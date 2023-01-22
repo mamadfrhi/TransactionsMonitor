@@ -12,7 +12,7 @@ final class AppCoordinator: Coordinator {
     // MARK: Properties
     let window: UIWindow?
     
-    private var rootNavigationController = UINavigationController()
+    private var rootTabBarController = UITabBarController()
     
     // MARK: Coordinator
     init(window: UIWindow?) { self.window = window }
@@ -20,10 +20,10 @@ final class AppCoordinator: Coordinator {
     override func start() {
         guard let window = window else { return }
         
-        window.rootViewController = rootNavigationController
+        window.rootViewController = rootTabBarController
         window.makeKeyAndVisible()
         
-        let transactionsCoordinator = TransactionsCoordinator(rootNavigationController: rootNavigationController)
+        let transactionsCoordinator = TransactionsCoordinator(rootTabBarController: rootTabBarController)
         transactionsCoordinator.start()
     }
 }

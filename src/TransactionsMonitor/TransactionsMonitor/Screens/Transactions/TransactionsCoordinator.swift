@@ -10,16 +10,24 @@ import UIKit
 class TransactionsCoordinator: Coordinator {
     
     // MARK: Properties
-    private let rootNavigationController: UINavigationController
+    private let rootTabBarController: UITabBarController
+    private let transactionsNavigationContrller = UINavigationController()
     
     // MARK: Coordinator
-    init(rootNavigationController: UINavigationController) { self.rootNavigationController = rootNavigationController }
+    init(rootTabBarController: UITabBarController) { self.rootTabBarController = rootTabBarController }
     
     override func start() {
         super.addChildCoordinator(self)
+        
         let transactionsVC = TransactionsVC()
         transactionsVC.transactionsCoordinatorDelegate = self
-        rootNavigationController.pushViewController(transactionsVC, animated: true)
+        
+        let tabBar = UITabBarItem(title: "Transactions",
+                                  image: UIImage(systemName: "banknote"), tag: 0)
+        transactionsVC.tabBarItem = tabBar
+        
+        transactionsNavigationContrller.setViewControllers([transactionsVC], animated: true)
+        rootTabBarController.setViewControllers([transactionsNavigationContrller], animated: true)
     }
 }
 
@@ -36,8 +44,8 @@ extension TransactionsCoordinator {
         let transactionDetails = TransactionDetails(companyName: transaction.companyName,
                                                     description: transaction.description)
         let detailVC = DetailsVC.`init`(transactionDetails)
-        rootNavigationController.present(detailVC,
-                                         animated: true,
-                                         completion: nil)
+        transactionsNavigationContrller.present(detailVC,
+                                                animated: true,
+                                                completion: nil)
     }
 }
