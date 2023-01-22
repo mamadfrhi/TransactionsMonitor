@@ -16,7 +16,7 @@ final class TransactionVMFilteringTests: XCTestCase {
 
 extension TransactionVMFilteringTests {
     
-    func testSummationFunc() async {
+    func testSummationFunc() {
         let mockData = TransactionsMockData()
         trasnactionVM.transactions = mockData.transactions
         
