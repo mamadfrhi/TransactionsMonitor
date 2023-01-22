@@ -164,8 +164,8 @@
 		890E6F0E297D35F800FF4B88 /* Shopping */ = {
 			isa = PBXGroup;
 			children = (
-				890E6F0A297D35DA00FF4B88 /* ShoppingView.storyboard */,
 				890E6F0C297D35F200FF4B88 /* ShoppingVC.swift */,
+				890E6F0A297D35DA00FF4B88 /* ShoppingView.storyboard */,
 			);
 			path = Shopping;
 			sourceTree = "<group>";
