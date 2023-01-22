@@ -18,11 +18,15 @@ class DetailsVC: UIViewController {
         return vc
     }
     
+    // MARK: Properties
     private var transactionDetails: TransactionDetails! = nil
     
+    // MARK: Outlets
     @IBOutlet weak var companyLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
     
+    
+    // MARK: LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
         setupVC()
