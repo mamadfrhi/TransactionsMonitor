@@ -148,6 +148,14 @@ extension TransactionsVC {
                 sSelf.didSelect(transaction: transaction, from: sSelf)
             }
             .store(in: &cancelables)
+        
+        transactionsVM.$showHUD
+            .receive(on: DispatchQueue.main)
+            .sink {
+                [weak self] showHUD in
+                self?.hud(show: showHUD)
+            }
+            .store(in: &cancelables)
     }
     
     private func setSummationLabel(_ value: Int) {
@@ -168,9 +176,7 @@ extension TransactionsVC: TransactionsVMDelegate {
     }
     
     func hud(show: Bool) {
-        DispatchQueue.main.async {
-            show ? self.hud.show() : self.hud.hide()
-        }
+        show ? self.hud.show() : self.hud.hide()
     }
     
     func showError(errorMessage: String) {
