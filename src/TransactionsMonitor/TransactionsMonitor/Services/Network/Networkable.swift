@@ -8,5 +8,5 @@
 import Foundation
 
 protocol Networkable {
-    func fetch(completionHandler: @escaping (Result<Any?, Error>) -> ())
+    func fetch() async -> (Result<Any, Error>)
 }

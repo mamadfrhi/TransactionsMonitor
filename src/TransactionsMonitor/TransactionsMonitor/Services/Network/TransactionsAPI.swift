@@ -43,24 +43,21 @@ extension TransactionsAPI: Networkable {
             }
     }
     
-    func fetch(completionHandler: @escaping (Result<Any?, Error>) -> ()) {
+    private func delay(secounds: Double) async {
+        try! await Task.sleep(nanoseconds: UInt64(secounds * Double(NSEC_PER_SEC)))
+    }
+    
+    func fetch() async -> (Result<Any, Error>) {
         
-        if !internetChecker.isOnline() {
-            completionHandler(.failure(TransactionsAPIError.disconnected))
-            return
-        }
+        await delay(secounds: 2)
         
-        DispatchQueue.global().asyncAfter(deadline: .now() + 2) {
-            if raiseFailure() {
-                completionHandler(.failure(TransactionsAPIError.serverError))
-            } else {
-                if let transactions = localJSONLoader.loadJson(filename: localJSONFileName) {
-                    completionHandler(.success(transactions))
-                    return
-                }
-                completionHandler(.failure(TransactionsAPIError.serverError))
-                return
+        if raiseFailure() {
+            return .failure(TransactionsAPIError.serverError)
+        } else {
+            if let transactions = localJSONLoader.loadJson(filename: localJSONFileName) {
+                return .success(transactions)
             }
+            return .failure(TransactionsAPIError.serverError)
         }
     }
 }
