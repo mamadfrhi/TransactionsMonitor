@@ -9,6 +9,8 @@ import UIKit
 
 class TransactionTableViewFooter: UIView {
     
+    // MARK: Views
+    
     private let summationLabel: UILabel = {
         let lbl = UILabel()
         lbl.font = UIFont.boldSystemFont(ofSize: 20)
@@ -21,6 +23,8 @@ class TransactionTableViewFooter: UIView {
         let blurEffectView = UIVisualEffectView(effect: blurEffect)
         return blurEffectView
     }()
+    
+    // MARK: Init
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -41,6 +45,7 @@ class TransactionTableViewFooter: UIView {
     }
 }
 
+// MARK: Custom View Template
 extension TransactionTableViewFooter: ViewCodeableTemplate {
     func buildViewHierarchy() {
         self.addSubview(backgroudEffect)

@@ -15,7 +15,7 @@ class TransactionsVM {
     private let transactionsSorter: TransactionsArraySorter
     var filterIsActive = false
     
-    // MARK: Obserbables
+    // MARK: Publisheds
     
     @Published var showHUD: Bool = false
     @Published var errorMessage: String?

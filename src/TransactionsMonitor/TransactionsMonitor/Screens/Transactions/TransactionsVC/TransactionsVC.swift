@@ -160,9 +160,7 @@ extension TransactionsVC {
     
     private func setSummationLabel(_ value: Int) {
         let footerView = transactionsTableViewDelegate.transactionTableViewFooter
-        DispatchQueue.main.async {
-            footerView.setSummation(value)
-        }
+        footerView.setSummation(value)
     }
 }
 

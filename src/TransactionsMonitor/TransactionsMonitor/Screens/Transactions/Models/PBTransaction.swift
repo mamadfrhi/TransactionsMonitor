@@ -78,6 +78,7 @@ struct PBTransaction: Codable {
 // MARK: PBTransactionReadable
 // it can be done also using Decorator Design Pattern
 extension PBTransaction: PBTransactionReadable {
+    
     func getBookingDate() -> Date {
         DateConverter().isoDate(isoString: bookingISODate)
     }
