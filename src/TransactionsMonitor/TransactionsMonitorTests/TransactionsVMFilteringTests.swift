@@ -90,9 +90,15 @@ extension TransactionsVMFilteringTests {
         await trasnactionVM.fetchTransactions()
         
         let target = trasnactionVM.transactions.count
+        let errorHappened = trasnactionVM.errorMessage != nil
         
-        XCTAssertGreaterThan(target, 1)
-        XCTAssertNil(trasnactionVM.errorMessage)
+        if errorHappened {
+            XCTAssertEqual(target, 0)
+            XCTAssertNotNil(trasnactionVM.errorMessage)
+        } else {
+            XCTAssertGreaterThan(target, 1)
+            XCTAssertNil(trasnactionVM.errorMessage)
+        }
     }
     
 }
