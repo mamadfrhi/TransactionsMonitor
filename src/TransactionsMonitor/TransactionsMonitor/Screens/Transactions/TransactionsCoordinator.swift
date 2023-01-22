@@ -51,7 +51,10 @@ class TransactionsCoordinator: Coordinator {
         let transactionSorter = TransactionsArraySorter()
         
         let session = TransactionsAPISessionManager(with: "Token").getTransactionsSession()
-        let transactionAPI = TransactionsAPI(session: session, localJSONLoader: jsonLoader)
+        let transactionAPI = TransactionsAPI(session: session,
+                                             localJSONLoader: jsonLoader,
+                                             internetChecker: InternetChecker(),
+                                             errorsCollection: TransactionsAPIErrors())
         let transactionServices = TransactionServices(transactionsAPI: transactionAPI)
         let transactionsVM = TransactionsVM(services: transactionServices, transactionsSorter: transactionSorter)
         return transactionsVM
