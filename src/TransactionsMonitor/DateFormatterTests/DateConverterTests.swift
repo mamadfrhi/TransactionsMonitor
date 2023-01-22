@@ -9,12 +9,17 @@ import XCTest
 @testable import TransactionsMonitor
 
 final class DateConverterTests: XCTestCase {
-
+    
     private let dateConverter = DateConverter()
     
-    func testRecentDateOnDateConverter() {
+}
+
+// MARK: To String Date Converter Tests
+
+extension DateConverterTests {
+    
+    func testRecentStringDateOnDateConverter() {
         
-        // Test time convertor (in catView wrapper)
         let isoTimeStamp = "2022-07-22T10:59:05+0200"    // input
         let dateStringFromisoTimeStamp = "2022-07-22"    // output
         
@@ -24,9 +29,8 @@ final class DateConverterTests: XCTestCase {
         
     }
     
-    func testOldDateOnDateConverter() {
+    func testOldStringDateOnDateConverter() {
         
-        // Test time convertor (in catView wrapper)
         let isoTimeStamp = "1980-01-01T10:59:05+0000"    // input
         let dateStringFromisoTimeStamp = "1980-01-01"    // output
         
@@ -35,4 +39,34 @@ final class DateConverterTests: XCTestCase {
         XCTAssertEqual(convertedDate, dateStringFromisoTimeStamp)
         
     }
+}
+
+// MARK: To Date Converter Tests
+
+extension DateConverterTests {
+    
+    func testRecentDateOnDateConverter() {
+        
+        let inputStringDate = "2022-07-22T10:59:05+0000"
+        let dateObject = ISO8601DateFormatter().date(from: inputStringDate)
+        
+        XCTAssertNotNil(dateObject)
+        
+        let convertedDate = dateConverter.readableDate(from: inputStringDate)
+        
+        XCTAssertEqual(convertedDate, convertedDate)
+    }
+    
+    func testOldDateOnDateConverter() {
+        
+        let inputStringDate = "1800-07-22T10:59:00+0000"
+        let dateObject = ISO8601DateFormatter().date(from: inputStringDate)
+        
+        XCTAssertNotNil(dateObject)
+        
+        let convertedDate = dateConverter.readableDate(from: inputStringDate)
+        
+        XCTAssertEqual(convertedDate, convertedDate)
+    }
+    
 }
