@@ -142,6 +142,17 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		890E6F09297D27E700FF4B88 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				897279B5297AE84F004DCF21 /* ViewCodeableTemplate.swift */,
+				89727997297ADFFB004DCF21 /* Constants.swift */,
+				897279C6297B7AA0004DCF21 /* DateConverter.swift */,
+				891C3471297C15C400F8F8EA /* TransactionsSorter */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
 		891C3460297C095400F8F8EA /* DateFormatterTests */ = {
 			isa = PBXGroup;
 			children = (
@@ -191,6 +202,7 @@
 		89520F4F297AD5A90092210A /* TransactionsMonitor */ = {
 			isa = PBXGroup;
 			children = (
+				890E6F09297D27E700FF4B88 /* Helpers */,
 				897279BF297B5E00004DCF21 /* Extensions */,
 				8972798C297ADE5D004DCF21 /* Delegates */,
 				8972798F297ADEBE004DCF21 /* Coordinator */,
@@ -213,14 +225,10 @@
 		8972798D297ADE87004DCF21 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				897279B5297AE84F004DCF21 /* ViewCodeableTemplate.swift */,
 				8972799C297AE543004DCF21 /* PBTransactions.json */,
 				89520F59297AD5AB0092210A /* Assets.xcassets */,
 				89520F5B297AD5AB0092210A /* LaunchScreen.storyboard */,
 				89520F5E297AD5AB0092210A /* Info.plist */,
-				89727997297ADFFB004DCF21 /* Constants.swift */,
-				897279C6297B7AA0004DCF21 /* DateConverter.swift */,
-				891C3471297C15C400F8F8EA /* TransactionsSorter */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
