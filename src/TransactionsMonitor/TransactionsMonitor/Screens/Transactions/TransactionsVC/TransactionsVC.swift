@@ -12,7 +12,6 @@ final
 class TransactionsVC: UIViewController {
     
     // MARK: Dependencies
-    
     private let transactionsTableViewDataSource: TransactionsTableViewDataSource
     private let transactionsTableViewDelegate: TransactionTableViewDelegate
     private let transactionsView: TransactionsView
@@ -79,7 +78,7 @@ class TransactionsVC: UIViewController {
     }
 }
 
-// MARK: - Setups
+// MARK: Setups
 extension TransactionsVC {
     private func configTableView() {
         transactionsView.tableView.dataSource = transactionsTableViewDataSource
