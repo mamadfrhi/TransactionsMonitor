@@ -8,7 +8,7 @@
 import XCTest
 @testable import TransactionsMonitor
 
-struct TransactionsMockData {
+class TransactionsMockData {
     
     init(fromJson fileName: String = "PBTransactions" ) {
         let decoder = JSONDecoder()
@@ -23,6 +23,10 @@ struct TransactionsMockData {
     var sumValue: Int {
         transactions.map{ $0.amount }
             .reduce(0, +)
+    }
+    
+    func filterBy(category: Int) {
+        transactions = transactions.filter { $0.category == 9999 }
     }
     
     
