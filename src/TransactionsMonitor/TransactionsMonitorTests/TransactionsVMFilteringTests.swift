@@ -8,13 +8,13 @@
 import XCTest
 @testable import TransactionsMonitor
 
-final class TransactionVMFilteringTests: XCTestCase {
+final class TransactionsVMFilteringTests: XCTestCase {
     
     private let trasnactionVM = TransactionsVM()
     
 }
 
-extension TransactionVMFilteringTests {
+extension TransactionsVMFilteringTests {
     
     func testSummationFunc() {
         let mockData = TransactionsMockData()
