@@ -21,21 +21,20 @@ How DO I **respect** the topics below while developing a software:
 #### MVVM-C + Services
 
 
-<img src="https://www.uplooder.net/img/image/88/f2b1d43c9ca8db58dea1fa056c320bdf/architecture-diagram.jpg" alt="J" width="300"/>
+<img src="https://www.uplooder.net/img/image/29/f488e11986c241381552c7c7f9427b79/architecture-diagram.jpg" alt="J" width="300"/>
 
 
-
-
-## Main Components
-* Popovers
-* Tab Bar Controller 
-* Navigation Controller 🧭
-* Table View 
 
 ## Frameworks
-* Combine
-* Swift Concurrency
-* Reactive Progamming
+* Combine 👀
+* Swift Concurrency 🤞🏼
+* Reactive Progamming 👀
+
+## Main Components
+* Navigation Controller 🧭
+* Tab Bar Controller 
+* Table View 
+* Popovers 🍾
 
 
 ## Video 🎥
