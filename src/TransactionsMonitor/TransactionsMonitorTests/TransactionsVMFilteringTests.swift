@@ -84,6 +84,15 @@ extension TransactionsVMFilteringTests {
         XCTAssertEqual(sumValueOnVM, target)
     }
     
+    // test fetch func
+    func testFetchFunc() async {
+
+        await trasnactionVM.fetchTransactions()
+        
+        let target = trasnactionVM.transactions.count
+        
+        XCTAssertGreaterThan(target, 1)
+        XCTAssertNil(trasnactionVM.errorMessage)
+    }
+    
 }
-
-
