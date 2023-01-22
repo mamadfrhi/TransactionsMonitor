@@ -123,6 +123,7 @@ extension TransactionsVC {
             .store(in: &cancelables)
         
         transactionsVM.$filteredTransactions
+            .receive(on: DispatchQueue.main)
             .sink {
                 [weak self] filteredTransactions in
                 self?.transactionsTableViewDataSource.transactions = filteredTransactions
@@ -169,10 +170,8 @@ extension TransactionsVC {
 // MARK: Transactions VM Delegate
 extension TransactionsVC: TransactionsVMDelegate {
     func updateScreen() {
-        DispatchQueue.main.async {
-            self.transactionsView.tableView.reloadData()
-            self.transactionsView.hideRetryButton(true)
-        }
+        self.transactionsView.tableView.reloadData()
+        self.transactionsView.hideRetryButton(true)
     }
     
     func hud(show: Bool) {
