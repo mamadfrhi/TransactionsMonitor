@@ -1,5 +1,5 @@
 //
-//  TransactionVMTests.swift
+//  TransactionVMFilteringTests.swift
 //  TransactionsMonitorTests
 //
 //  Created by Mohammad Farrahi on 22.01.23.
@@ -8,13 +8,13 @@
 import XCTest
 @testable import TransactionsMonitor
 
-final class TransactionVMTests: XCTestCase {
+final class TransactionVMFilteringTests: XCTestCase {
     
     private let trasnactionVM = TransactionsVM()
     
 }
 
-extension TransactionVMTests {
+extension TransactionVMFilteringTests {
     
     func testSummationFunc() async {
         let mockData = TransactionsMockData()
