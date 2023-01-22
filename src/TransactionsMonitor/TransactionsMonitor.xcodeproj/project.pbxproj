@@ -217,13 +217,13 @@
 		89520F4F297AD5A90092210A /* TransactionsMonitor */ = {
 			isa = PBXGroup;
 			children = (
-				897279BF297B5E00004DCF21 /* Extensions */,
 				8972798C297ADE5D004DCF21 /* Delegates */,
 				8972798F297ADEBE004DCF21 /* Coordinator */,
 				8972798E297ADEAB004DCF21 /* Screens */,
 				8972799B297AE530004DCF21 /* Services */,
 				890E6F09297D27E700FF4B88 /* Helpers */,
 				8972798D297ADE87004DCF21 /* Resources */,
+				897279BF297B5E00004DCF21 /* Extensions */,
 			);
 			path = TransactionsMonitor;
 			sourceTree = "<group>";

@@ -9,29 +9,28 @@ import Foundation
 
 class TransactionsVM {
     
-    // MARK: Delegates
-    
-    var viewDelegate: TransactionsVMDelegate?
-    
     // MARK: Dependecies
     
-    private let services = TransactionServices(transactionsAPI:
-                                                TransactionsAPI(session:
-                                                                    TransactionsAPISessionManager(with: "Token").getTransactionsSession(),
-                                                                localJSONLoader: LocalJSONLoader()))
-    private let transactionsSorter = TransactionsArraySorter()
+    private let services: TransactionServices
+    private let transactionsSorter: TransactionsArraySorter
+    var filterIsActive = false
     
-    // MARK: Obserbables
+    // MARK: Publisheds
     
+    @Published var showHUD: Bool = false
     @Published var errorMessage: String?
     @Published var transactions: [PBTransaction] = []
     @Published var filteredTransactions: [PBTransaction] = []
-    var filterIsActive = false
     @Published var summation: Int = 0
     
-    // MARK: Init
     
-    init(transactions: [PBTransaction] = []) {
+    // MARK: Init
+    required
+    init(services: TransactionServices,
+         transactionsSorter: TransactionsArraySorter,
+         transactions: [PBTransaction] = []) {
+        self.services = services
+        self.transactionsSorter = transactionsSorter
         self.transactions = transactions
     }
 }
@@ -41,7 +40,7 @@ extension TransactionsVM {
     
     func fetchTransactions() async {
         
-        self.viewDelegate?.hud(show: true)
+        showHUD = true
         let response = await services.fetchTransactions()
         
         switch response {
@@ -51,7 +50,8 @@ extension TransactionsVM {
             self.showError(with: error.localizedDescription)
         }
         
-        self.viewDelegate?.hud(show: false)
+        showHUD = false
+        setSummationVarialbe()
     }
     
     private func showError(with errorMessage: String) {
@@ -63,7 +63,7 @@ extension TransactionsVM {
 extension TransactionsVM {
     
     private func resetFilter() {
-        self.filteredTransactions = transactions
+        filteredTransactions = transactions
         filterIsActive = false
     }
     
