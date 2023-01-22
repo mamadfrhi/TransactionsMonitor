@@ -48,4 +48,4 @@ https://user-images.githubusercontent.com/28094207/213930508-6a478b5c-7696-4f30-
 
 
 ### Diagram
-You can find the diagram file in the repo and open it in [here](draw.io) 
+You can find the diagram file in the repo and open it in [here](architecture_diagram.drawio) 
