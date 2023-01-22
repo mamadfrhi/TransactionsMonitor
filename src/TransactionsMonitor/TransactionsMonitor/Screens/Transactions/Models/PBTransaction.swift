@@ -56,6 +56,22 @@ struct PBTransaction: Codable {
         self.amount = try valueContainer.decode(Int.self, forKey: .amount)
         self.currency = try valueContainer.decode(String.self, forKey: .currency)
     }
+    
+    init(companyName: String,
+         reference: String,
+         category: Int,
+         description: String? = nil,
+         bookingISODate: String,
+         amount: Int,
+         currency: String) {
+        self.companyName = companyName
+        self.reference = reference
+        self.category = category
+        self.description = description
+        self.bookingISODate = bookingISODate
+        self.amount = amount
+        self.currency = currency
+    }
 }
 
 
