@@ -40,6 +40,7 @@ extension TransactionsVMFilteringTests {
         trasnactionVM.filterTransactions(by: filterBy)
         let sumValueOnVM = trasnactionVM.summation
         XCTAssertEqual(sumValueOnVM, target)
+        XCTAssertEqual(trasnactionVM.filterIsActive, true)
     }
     
     func testSummationOnFilteredCategory2() {
@@ -54,6 +55,7 @@ extension TransactionsVMFilteringTests {
         trasnactionVM.filterTransactions(by: filterBy)
         let sumValueOnVM = trasnactionVM.summation
         XCTAssertEqual(sumValueOnVM, target)
+        XCTAssertEqual(trasnactionVM.filterIsActive, true)
     }
     
     func testSummationOnFilteredCategory3() {
@@ -68,6 +70,7 @@ extension TransactionsVMFilteringTests {
         trasnactionVM.filterTransactions(by: filterBy)
         let sumValueOnVM = trasnactionVM.summation
         XCTAssertEqual(sumValueOnVM, target)
+        XCTAssertEqual(trasnactionVM.filterIsActive, true)
     }
     
     func testSummationOnNoFilter() {
@@ -82,6 +85,7 @@ extension TransactionsVMFilteringTests {
         trasnactionVM.filterTransactions(by: filterBy)
         let sumValueOnVM = trasnactionVM.summation
         XCTAssertEqual(sumValueOnVM, target)
+        XCTAssertEqual(trasnactionVM.filterIsActive, false)
     }
     
     // test fetch func
