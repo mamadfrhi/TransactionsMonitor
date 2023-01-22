@@ -42,12 +42,22 @@ final class AppCoordinator: Coordinator {
 extension AppCoordinator {
     private func configTabBar() {
         addShoppingTabBar()
+        addSettingsTabBar()
     }
     
     func addShoppingTabBar() {
         let transactionsVC = ShoppingVC.`init`()
         let tabBar = UITabBarItem(title: "Shopping",
                                   image: UIImage(systemName: "cart"), tag: 0)
+        transactionsVC.tabBarItem = tabBar
+        
+        rootTabBarController.viewControllers?.append(transactionsVC)
+    }
+    
+    func addSettingsTabBar() {
+        let transactionsVC = SettingsVC.`init`()
+        let tabBar = UITabBarItem(title: "Settings",
+                                  image: UIImage(systemName: "gear"), tag: 1)
         transactionsVC.tabBarItem = tabBar
         
         rootTabBarController.viewControllers?.append(transactionsVC)
