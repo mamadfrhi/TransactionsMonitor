@@ -9,7 +9,6 @@ import UIKit
 
 class SettingsVC: UIViewController {
 
-    
     //MARK: Factory
     class func `init`() -> SettingsVC {
         let id = "SettingsView"
@@ -17,10 +16,5 @@ class SettingsVC: UIViewController {
         let vc = storyboard.instantiateViewController(withIdentifier: id) as! SettingsVC
         return vc
     }
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        self.title = "Settings"
-    }
-
+    
 }
