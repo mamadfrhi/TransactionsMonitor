@@ -21,9 +21,7 @@ struct PBTransaction: Codable {
     // MARK: Keys
     enum TransactionKeys: String, CodingKey {
         case companyName = "partnerDisplayName",
-             alias,
-             category,
-             transactionDetail
+             alias, category, transactionDetail
     }
     
     enum AliasKeys: String, CodingKey {
