@@ -16,29 +16,72 @@ final class TransactionVMTests: XCTestCase {
 
 extension TransactionVMTests {
     
-    func testSummation() async {
-
-        let mockkData = TransactionsMockData()
-        let targetValue = mockkData.sumValue
+    func testSummationFunc() async {
+        let mockData = TransactionsMockData()
+        trasnactionVM.transactions = mockData.transactions
         
-        trasnactionVM.transactions = mockkData.transactions
+        let target = mockData.sumValue
+        
         trasnactionVM.setSummationVarialbe()
-        
-        XCTAssertEqual(targetValue, trasnactionVM.summation)
+        let sumValueOnVM = trasnactionVM.summation
+        XCTAssertEqual(sumValueOnVM, target)
         
     }
     
-    func testNoFilter() {
-        let mockkData = TransactionsMockData()
+    func testSummationOnFilteredCategory1() {
+        let mockData = TransactionsMockData()
+        let filterBy = "1"
         
-        mockkData.filterBy(category: -1)
-        let targetValue = mockkData.transactions.count
+        trasnactionVM.transactions = mockData.transactions
+        mockData.filterBy(category: filterBy)
         
-        trasnactionVM.filterTransactions(by: Constants.clearFilterKey)
-        let filteredCountOnVM = trasnactionVM.filteredTransactions.count
+        let target = mockData.sumValue
         
-        XCTAssertEqual(filteredCountOnVM, targetValue)
+        trasnactionVM.filterTransactions(by: filterBy)
+        let sumValueOnVM = trasnactionVM.summation
+        XCTAssertEqual(sumValueOnVM, target)
+    }
+    
+    func testSummationOnFilteredCategory2() {
+        let mockData = TransactionsMockData()
+        let filterBy = "2"
         
+        trasnactionVM.transactions = mockData.transactions
+        mockData.filterBy(category: filterBy)
+        
+        let target = mockData.sumValue
+        
+        trasnactionVM.filterTransactions(by: filterBy)
+        let sumValueOnVM = trasnactionVM.summation
+        XCTAssertEqual(sumValueOnVM, target)
+    }
+    
+    func testSummationOnFilteredCategory3() {
+        let mockData = TransactionsMockData()
+        let filterBy = "3"
+        
+        trasnactionVM.transactions = mockData.transactions
+        mockData.filterBy(category: filterBy)
+        
+        let target = mockData.sumValue
+        
+        trasnactionVM.filterTransactions(by: filterBy)
+        let sumValueOnVM = trasnactionVM.summation
+        XCTAssertEqual(sumValueOnVM, target)
+    }
+    
+    func testSummationOnNoFilter() {
+        let mockData = TransactionsMockData()
+        let filterBy = Constants.clearFilterKey
+        
+        trasnactionVM.transactions = mockData.transactions
+        mockData.filterBy(category: filterBy)
+        
+        let target = mockData.sumValue
+        
+        trasnactionVM.filterTransactions(by: filterBy)
+        let sumValueOnVM = trasnactionVM.summation
+        XCTAssertEqual(sumValueOnVM, target)
     }
     
 }

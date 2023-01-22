@@ -25,8 +25,11 @@ class TransactionsMockData {
             .reduce(0, +)
     }
     
-    func filterBy(category: Int) {
-        transactions = transactions.filter { $0.category == 9999 }
+    func filterBy(category: String) {
+        if category == Constants.clearFilterKey { //TODO: It must convert to an enum
+            return
+        }
+        transactions = transactions.filter { $0.category == Int(category) }
     }
     
     
