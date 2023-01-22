@@ -16,8 +16,22 @@
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Settings Screen" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="km5-NV-bvK">
+                                <rect key="frame" x="56" y="365" width="281" height="123"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="km5-NV-bvK" firstAttribute="centerX" secondItem="vDu-zF-Fre" secondAttribute="centerX" id="Z25-Oc-x14"/>
+                            <constraint firstItem="km5-NV-bvK" firstAttribute="centerY" secondItem="vDu-zF-Fre" secondAttribute="centerY" constant="-12" id="eHi-HH-o6d"/>
+                            <constraint firstItem="km5-NV-bvK" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="306" id="wJb-3x-gVz"/>
+                            <constraint firstItem="km5-NV-bvK" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="56" id="zav-F4-8Ws"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
