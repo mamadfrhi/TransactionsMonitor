@@ -9,7 +9,7 @@
     
 "error.server" = "Server response is not valid."
 
-"error.client" = "A HTTPS client error occured."
+"error.client" = "A HTTPS client error occurred."
 
 "error.no.data" = "A HTTPS server error occured."
 

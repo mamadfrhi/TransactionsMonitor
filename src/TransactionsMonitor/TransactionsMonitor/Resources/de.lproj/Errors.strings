@@ -7,12 +7,12 @@
 */
 
     
-"error.server" = "Server response is not valid."
+"error.server" = "Die Server-Antwort ist nicht gültig."
 
-"error.client" = "A HTTPS client error occured."
+"error.client" = "Ein HTTPS-Client-Fehler ist aufgetreten."
 
-"error.no.data" = "A HTTPS server error occured."
+"error.no.data" = "Ein HTTPS-Client-Fehler ist aufgetreten."
 
-"error.internet.disconnect" = " You're not connected to the internet."
+"error.internet.disconnect" = "Sie haben keine Internetverbindung."
 
 
