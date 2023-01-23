@@ -23,6 +23,7 @@
 		89520F55297AD5A90092210A /* TransactionsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89520F54297AD5A90092210A /* TransactionsVC.swift */; };
 		89520F5A297AD5AB0092210A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 89520F59297AD5AB0092210A /* Assets.xcassets */; };
 		89520F5D297AD5AB0092210A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 89520F5B297AD5AB0092210A /* LaunchScreen.storyboard */; };
+		89695F49297EE8E7009B3069 /* TransactionVMTestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89695F48297EE8E7009B3069 /* TransactionVMTestHelpers.swift */; };
 		89727992297ADF67004DCF21 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89727990297ADF67004DCF21 /* AppCoordinator.swift */; };
 		89727993297ADF67004DCF21 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89727991297ADF67004DCF21 /* Coordinator.swift */; };
 		89727996297ADF91004DCF21 /* TransactionsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89727995297ADF91004DCF21 /* TransactionsCoordinator.swift */; };
@@ -87,6 +88,7 @@
 		89520F59297AD5AB0092210A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		89520F5C297AD5AB0092210A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		89520F5E297AD5AB0092210A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		89695F48297EE8E7009B3069 /* TransactionVMTestHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionVMTestHelpers.swift; sourceTree = "<group>"; };
 		89727990297ADF67004DCF21 /* AppCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		89727991297ADF67004DCF21 /* Coordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		89727995297ADF91004DCF21 /* TransactionsCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionsCoordinator.swift; sourceTree = "<group>"; };
@@ -383,6 +385,7 @@
 				89EF0AAE297D5F770016EE51 /* DateConverterTests.swift */,
 				89E8490B297D64ED00B98DCC /* TransactionsVMFilteringTests.swift */,
 				89E8490F297D7DC800B98DCC /* TransactionsVMGetUniqueCategoryTests.swift */,
+				89695F48297EE8E7009B3069 /* TransactionVMTestHelpers.swift */,
 			);
 			path = TransactionsMonitorTests;
 			sourceTree = "<group>";
@@ -592,6 +595,7 @@
 				89EF0AAF297D5F770016EE51 /* DateConverterTests.swift in Sources */,
 				89E84910297D7DC800B98DCC /* TransactionsVMGetUniqueCategoryTests.swift in Sources */,
 				89E8490E297D6BE700B98DCC /* TransactionsMockData.swift in Sources */,
+				89695F49297EE8E7009B3069 /* TransactionVMTestHelpers.swift in Sources */,
 				89E8490C297D64ED00B98DCC /* TransactionsVMFilteringTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
