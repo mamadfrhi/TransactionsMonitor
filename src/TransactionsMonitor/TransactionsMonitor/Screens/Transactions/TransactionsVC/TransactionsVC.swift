@@ -142,7 +142,8 @@ extension TransactionsVC {
             hud(show: value)
             
         case .failed(let error):
-            showError(errorMessage: error.localizedDescription)
+            let localizedAPIError = (error as! TransactionsAPIErrors).errorDescription
+            showError(errorMessage: localizedAPIError)
             
         case .loaded(let transactions):
             transactionsTableViewDataSource.transactions = transactions
