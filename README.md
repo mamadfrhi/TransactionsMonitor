@@ -5,7 +5,7 @@ You can touch my coding skills on this project.
 
 ## What do you want to show by this project❓
 
-How DO I **respect** the topics below while developing a software:
+How DO I **care** the topics below while developing a software:
 
 * Reusability of the code 🔁
 * Clean Code Principles 🧼
