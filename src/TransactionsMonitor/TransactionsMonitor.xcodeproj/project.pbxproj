@@ -228,7 +228,6 @@
 				890E6F09297D27E700FF4B88 /* Helpers */,
 				8972798D297ADE87004DCF21 /* Resources */,
 				897279BF297B5E00004DCF21 /* Extensions */,
-				890201C3297F16F500859CB6 /* Errors.strings */,
 			);
 			path = TransactionsMonitor;
 			sourceTree = "<group>";
@@ -245,6 +244,7 @@
 		8972798D297ADE87004DCF21 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				890201C3297F16F500859CB6 /* Errors.strings */,
 				8972799C297AE543004DCF21 /* PBTransactions.json */,
 				89520F59297AD5AB0092210A /* Assets.xcassets */,
 				89520F5B297AD5AB0092210A /* LaunchScreen.storyboard */,
