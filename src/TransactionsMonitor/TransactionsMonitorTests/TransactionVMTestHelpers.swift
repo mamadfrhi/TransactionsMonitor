@@ -15,8 +15,7 @@ func makeVM(with transactions: [PBTransaction]) -> TransactionsVM {
     let session = TransactionsAPISessionManager(with: "Token").getTransactionsSession()
     let transactionAPI = TransactionsAPI(session: session,
                                          localJSONLoader: jsonLoader,
-                                         internetChecker: InternetChecker(),
-                                         errorsCollection: TransactionsAPIErrors())
+                                         internetChecker: InternetChecker())
     let transactionServices = TransactionServices(transactionsAPI: transactionAPI)
     let transactionsVM = TransactionsVM(services: transactionServices,
                                         transactionsSorter: transactionSorter,
