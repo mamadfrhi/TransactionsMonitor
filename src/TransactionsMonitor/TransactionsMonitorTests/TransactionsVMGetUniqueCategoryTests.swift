@@ -10,74 +10,59 @@ import XCTest
 
 final class TransactionsVMGetUniqueCategoryTests: XCTestCase {
 
-    private let trasnactionVM = TransactionsVM()
+    private var transactionsMockData: TransactionsMockData!
+    private var transactionVM: TransactionsVM!
+    
+    override func setUp() {
+        transactionsMockData = TransactionsMockData()
+        transactionVM = makeVM(with: transactionsMockData.transactions)
+    }
 
 }
 
 extension TransactionsVMGetUniqueCategoryTests {
     
     func testGetNormalCategories() {
-        let mockData = TransactionsMockData()
-        trasnactionVM.transactions = mockData.transactions
         
         let target = ["1", "2", "3"]
-        let test = trasnactionVM.getUniqueCategories()
+        let categories = transactionVM.getUniqueCategories()
         
-        XCTAssertEqual(target, test)
+        XCTAssertEqual(target, categories)
     }
     
     func testGetCategoriesWithNewCategory() {
         
-        let mockData = TransactionsMockData()
         let newCategory = 999999999999999
         
         let newTransaction = makeDummyTransaction(category: newCategory)
-        mockData.transactions.append(newTransaction)
+        transactionsMockData.transactions.append(newTransaction)
         
-        trasnactionVM.transactions = mockData.transactions
+        transactionVM = makeVM(with: transactionsMockData.transactions)
         
         let target = ["1", "2", "3", "\(newCategory)"]
-        let test = trasnactionVM.getUniqueCategories()
+        let categories = transactionVM.getUniqueCategories()
         
-        XCTAssertEqual(target, test)
+        XCTAssertEqual(target, categories)
     }
     
     func testGetCategoriesWithRemovedCategory() {
         
-        let mockData = TransactionsMockData()
+        transactionsMockData.transactions.removeAll { $0.category == 3 }
         
-        mockData.transactions.removeAll { $0.category == 3 }
-        
-        trasnactionVM.transactions = mockData.transactions
+        transactionVM = makeVM(with: transactionsMockData.transactions)
         
         let target = ["1", "2"]
-        let test = trasnactionVM.getUniqueCategories()
+        let categories = transactionVM.getUniqueCategories()
         
-        XCTAssertEqual(target, test)
+        XCTAssertEqual(target, categories)
     }
     
     func testGetCategoriesSorting() {
         
-        let mockData = TransactionsMockData()
-        trasnactionVM.transactions = mockData.transactions
-        
         let target = ["1", "3", "2"]
-        let test = trasnactionVM.getUniqueCategories()
+        let categories = transactionVM.getUniqueCategories()
         
-        XCTAssertNotEqual(target, test)
+        XCTAssertNotEqual(target, categories)
     }
     
-    
-    // MARK: Helper
-    
-    func makeDummyTransaction(category: Int) -> PBTransaction {
-        // append new transaction with a new category
-        let transaction = PBTransaction(companyName: "Apple",
-                                           reference: "1100",
-                                           category: category,
-                                           bookingISODate: "2022-02-04T10:59:05+0200",
-                                           amount: 0,
-                                           currency: "Dollar")
-        return transaction
-    }
 }

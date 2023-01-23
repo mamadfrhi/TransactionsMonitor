@@ -8,100 +8,101 @@
 import XCTest
 @testable import TransactionsMonitor
 
+
+
 final class TransactionsVMFilteringTests: XCTestCase {
     
-    private let trasnactionVM = TransactionsVM()
+    private var transactionsMockData: TransactionsMockData!
+    private var transactionVM: TransactionsVM!
+    
+    override func setUp() {
+        transactionsMockData = TransactionsMockData()
+        transactionVM = makeVM(with: transactionsMockData.transactions)
+    }
     
 }
 
 extension TransactionsVMFilteringTests {
     
     func testSummationFunc() {
-        let mockData = TransactionsMockData()
-        trasnactionVM.transactions = mockData.transactions
         
-        let target = mockData.sumValue
+        let target = transactionsMockData.sumValue
         
-        trasnactionVM.setSummationVarialbe()
-        let sumValueOnVM = trasnactionVM.summation
+        transactionVM.setSummationVarialbe()
+        let sumValueOnVM = transactionVM.summation
+        
         XCTAssertEqual(sumValueOnVM, target)
         
     }
     
     func testSummationOnFilteredCategory1() {
-        let mockData = TransactionsMockData()
+        
         let filterBy = "1"
+        transactionsMockData.filterBy(category: filterBy)
         
-        trasnactionVM.transactions = mockData.transactions
-        mockData.filterBy(category: filterBy)
+        let target = transactionsMockData.sumValue
         
-        let target = mockData.sumValue
+        transactionVM.filterTransactions(by: filterBy)
+        let sumValueOnVM = transactionVM.summation
         
-        trasnactionVM.filterTransactions(by: filterBy)
-        let sumValueOnVM = trasnactionVM.summation
         XCTAssertEqual(sumValueOnVM, target)
-        XCTAssertEqual(trasnactionVM.filterIsActive, true)
     }
     
     func testSummationOnFilteredCategory2() {
-        let mockData = TransactionsMockData()
+        
         let filterBy = "2"
+        transactionsMockData.filterBy(category: filterBy)
         
-        trasnactionVM.transactions = mockData.transactions
-        mockData.filterBy(category: filterBy)
+        let target = transactionsMockData.sumValue
         
-        let target = mockData.sumValue
+        transactionVM.filterTransactions(by: filterBy)
+        let sumValueOnVM = transactionVM.summation
         
-        trasnactionVM.filterTransactions(by: filterBy)
-        let sumValueOnVM = trasnactionVM.summation
         XCTAssertEqual(sumValueOnVM, target)
-        XCTAssertEqual(trasnactionVM.filterIsActive, true)
     }
     
     func testSummationOnFilteredCategory3() {
-        let mockData = TransactionsMockData()
+        
         let filterBy = "3"
+        transactionsMockData.filterBy(category: filterBy)
         
-        trasnactionVM.transactions = mockData.transactions
-        mockData.filterBy(category: filterBy)
+        let target = transactionsMockData.sumValue
         
-        let target = mockData.sumValue
+        transactionVM.filterTransactions(by: filterBy)
+        let sumValueOnVM = transactionVM.summation
         
-        trasnactionVM.filterTransactions(by: filterBy)
-        let sumValueOnVM = trasnactionVM.summation
         XCTAssertEqual(sumValueOnVM, target)
-        XCTAssertEqual(trasnactionVM.filterIsActive, true)
     }
     
     func testSummationOnNoFilter() {
-        let mockData = TransactionsMockData()
+        
         let filterBy = Constants.clearFilterKey
+        transactionsMockData.filterBy(category: filterBy)
         
-        trasnactionVM.transactions = mockData.transactions
-        mockData.filterBy(category: filterBy)
+        let target = transactionsMockData.sumValue
         
-        let target = mockData.sumValue
+        transactionVM.filterTransactions(by: filterBy)
+        let sumValueOnVM = transactionVM.summation
         
-        trasnactionVM.filterTransactions(by: filterBy)
-        let sumValueOnVM = trasnactionVM.summation
         XCTAssertEqual(sumValueOnVM, target)
-        XCTAssertEqual(trasnactionVM.filterIsActive, false)
     }
     
     // test fetch func
     func testFetchFunc() async {
-
-        await trasnactionVM.fetchTransactions()
         
-        let target = trasnactionVM.transactions.count
-        let errorHappened = trasnactionVM.errorMessage != nil
+        await transactionVM.fetchTransactions()
         
-        if errorHappened {
+        let target = transactionVM.summation
+        let state = transactionVM.state
+        
+        switch state {
+        case .isLoading(let value):
+            value ? XCTAssertNotEqual(target, 0) : XCTAssertNotEqual(target, 0)
+            return
+        case .failed(_):
             XCTAssertEqual(target, 0)
-            XCTAssertNotNil(trasnactionVM.errorMessage)
-        } else {
-            XCTAssertGreaterThan(target, 1)
-            XCTAssertNil(trasnactionVM.errorMessage)
+        case .loaded(_):
+            XCTAssertNotEqual(target, 0)
         }
     }
     
