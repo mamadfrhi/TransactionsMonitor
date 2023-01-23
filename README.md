@@ -15,6 +15,7 @@ How DO I **care** the topics below while developing a software:
 * Abstraction ☁️
 * Modularity 🧱
 * Testability 🧪
+* Localization 🌍
 * and Clean Architecture for sure! 😁
 
 ## Architecture (heart of the app❤️)
