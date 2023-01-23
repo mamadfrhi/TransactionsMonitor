@@ -1,0 +1,16 @@
+/* 
+  Localizable.strings
+  TransactionsMonitor
+
+  Created by Mohammad Farrahi on 23.01.23.
+  
+*/
+
+
+"error.server" = "Die Server-Antwort ist nicht gültig.";
+
+"error.client" = "Ein HTTPS-Client-Fehler ist aufgetreten.";
+
+"error.no.data" = "Ein HTTPS-Client-Fehler ist aufgetreten.";
+
+"error.internet.disconnect" = "Sie haben keine Internetverbindung.";

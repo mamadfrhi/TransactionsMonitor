@@ -13,18 +13,15 @@ struct TransactionsAPI {
     private let localJSONLoader   : any LocalJSONLoaderInterface
     private let internetChecker   : InternetChecker
     private let localJSONFileName : String
-    private let errorsCollection  : TransactionsAPIErrors
     
     internal init(session: Session,
                   localJSONLoader: any LocalJSONLoaderInterface,
                   internetChecker: InternetChecker,
-                  jsonFileName: String = "PBTransactions",
-                  errorsCollection: TransactionsAPIErrors) {
+                  jsonFileName: String = "PBTransactions") {
         self.session = session
         self.localJSONLoader = localJSONLoader
         self.internetChecker = internetChecker
         self.localJSONFileName = jsonFileName
-        self.errorsCollection = errorsCollection
     }
 }
 
@@ -36,12 +33,12 @@ extension TransactionsAPI: Networkable {
         await delay(secounds: 2)
         
         if raiseFailure() {
-            return .failure(errorsCollection.serverError)
+            return .failure(TransactionsAPIErrors.serverError)
         } else {
             if let transactions = localJSONLoader.loadJson(filename: localJSONFileName) {
                 return .success(transactions)
             }
-            return .failure(errorsCollection.serverError)
+            return .failure(TransactionsAPIErrors.serverError)
         }
     }
     
@@ -59,10 +56,10 @@ extension TransactionsAPI: Networkable {
                         let json = try JSONSerialization.jsonObject(with: data)
                         completionHandler(.success(json))
                     } catch {
-                        completionHandler(.failure(self.errorsCollection.clientError))
+                        completionHandler(.failure(TransactionsAPIErrors.clientError))
                     }
                 case .failure:
-                    completionHandler(.failure(self.errorsCollection.serverError))
+                    completionHandler(.failure(TransactionsAPIErrors.serverError))
                 }
             }
     }
