@@ -1,0 +1,18 @@
+/* 
+  Errors.strings
+  TransactionsMonitor
+
+  Created by Mohammad Farrahi on 23.01.23.
+  
+*/
+
+    
+"error.server" = "Server response is not valid."
+
+"error.client" = "A HTTPS client error occured."
+
+"error.no.data" = "A HTTPS server error occured."
+
+"error.internet.disconnect" = " You're not connected to the internet."
+
+
