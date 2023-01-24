@@ -47,20 +47,15 @@ extension TransactionsVM {
         
         self.state = .isLoading(true)
         
-        let response = await services.fetchTransactions()
-        
-        switch response {
-            
-        case .success(let transactions):
+        do {
+            let transactions = try await services.fetchTransactions()
             self.transactions = transactions
             self.state = .loaded(transactions)
-            
-        case .failure(let error):
+        } catch {
             self.state = .failed(error)
         }
         
         self.state = .isLoading(false)
-        
         setSummationVarialbe()
     }
 }

@@ -28,18 +28,19 @@ struct TransactionsAPI {
 extension TransactionsAPI: Networkable {
     
     // API call mocked function
-    func fetch() async -> (Result<Any, Error>) {
+    func fetch() async throws -> [Any] {
         
         await delay(secounds: 2)
         
         if raiseFailure() {
-            return .failure(TransactionsAPIErrors.serverError)
+            throw TransactionsAPIErrors.serverError
         } else {
-            if let transactions = localJSONLoader.loadJson(filename: localJSONFileName) {
-                return .success(transactions)
+            if let transactions = localJSONLoader.loadJson(filename: localJSONFileName) as? [Any] {
+                return transactions
             }
-            return .failure(TransactionsAPIErrors.serverError)
+            throw TransactionsAPIErrors.serverError
         }
+        
     }
     
     // API call real function
