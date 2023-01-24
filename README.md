@@ -30,6 +30,7 @@ How DO I **care** the topics below while developing a software:
 * Combine 👀
 * Swift Concurrency 🤞🏼
 * Reactive Progamming 👀
+* Rich Network Layer using Alamofire 🌍
 
 ## Main Components
 * Navigation Controller 🧭
