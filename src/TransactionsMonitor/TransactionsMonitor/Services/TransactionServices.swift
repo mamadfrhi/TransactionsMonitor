@@ -19,27 +19,23 @@ class TransactionServices {
 // MARK: API Calls
 extension TransactionServices {
     
-    func fetchTransactions() async -> Result<[PBTransaction], Error> {
+    func fetchTransactions() async throws -> [PBTransaction] {
         
-        let result = await transactionsAPI.fetch()
-        
-        switch result {
-            
-        case .success(let success):
-            
+        do {
+            let fetchedTransactions = try await transactionsAPI.fetch()
             let decoder = JSONDecoder()
-            let fetchedTransactions = success
+            
             if let transactionItemsData = try? JSONSerialization.data(withJSONObject: fetchedTransactions),
                let transactions = try? decoder.decode(Array<PBTransaction>.self, from: transactionItemsData) {
-                return .success(transactions)
+                return transactions
             }
             let error = NSError(domain: "Error happened during conversion!", code: 05)
-            return .failure(error)
+            throw error
             
-        case .failure(let error):
-            return .failure(error)
-            
+        } catch let error {
+            throw error
         }
+        
     }
     
 }
