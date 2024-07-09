@@ -22,7 +22,7 @@ How DO I **care** the topics below while developing a software:
 #### MVVM-C + Services
 
 
-<img src="https://www.uplooder.net/img/image/29/f488e11986c241381552c7c7f9427b79/architecture-diagram.jpg" alt="J" width="300"/>
+<img src="https://github.com/mamadfrhi/TransactionsMonitor/assets/28094207/72bb33f2-2fe5-4b7d-8af1-13fd57c9edd9" alt="J" width="300"/>
 
 
 
