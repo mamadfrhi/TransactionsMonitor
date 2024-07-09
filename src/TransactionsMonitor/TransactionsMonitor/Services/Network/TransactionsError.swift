@@ -5,11 +5,25 @@
 //  Created by Mohammad Farrahi on 19.01.23.
 //
 
-import Foundation
+import SwiftUI
 
-struct TransactionsAPIErrors: Error {
-    let noData = NSError(domain: "Server response is not valid.", code: 01, userInfo: nil)
-    let clientError = NSError(domain: "A HTTPS client error occured.", code: 02, userInfo: nil)
-    let serverError = NSError(domain: "A HTTPS server error occured.", code: 03, userInfo: nil)
-    let disconnected = NSError(domain: " You're not connected to the internet.", code: 04, userInfo: nil)
+enum TransactionsAPIErrors: LocalizedError {
+    
+    case noData ,clientError ,serverError ,disconnected
+    
+    var errorDescription: String {
+        switch self {
+            
+        case .noData:
+            return String(localized: "error.no.data")
+        case .clientError:
+            return String(localized: "error.client")
+        case .serverError:
+            return String(localized: "error.server")
+        case .disconnected:
+            return String(localized: "error.internet.disconnect")
+        }
+    }
+    
+    
 }

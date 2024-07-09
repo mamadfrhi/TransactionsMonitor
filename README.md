@@ -5,7 +5,7 @@ You can touch my coding skills on this project.
 
 ## What do you want to show by this project❓
 
-How DO I **respect** the topics below while developing a software:
+How DO I **care** the topics below while developing a software:
 
 * Reusability of the code 🔁
 * Clean Code Principles 🧼
@@ -15,6 +15,7 @@ How DO I **respect** the topics below while developing a software:
 * Abstraction ☁️
 * Modularity 🧱
 * Testability 🧪
+* Localization 🌍
 * and Clean Architecture for sure! 😁
 
 ## Architecture (heart of the app❤️)
@@ -29,6 +30,7 @@ How DO I **respect** the topics below while developing a software:
 * Combine 👀
 * Swift Concurrency 🤞🏼
 * Reactive Progamming 👀
+* Rich Network Layer using Alamofire 🌍
 
 ## Main Components
 * Navigation Controller 🧭
@@ -48,4 +50,4 @@ https://user-images.githubusercontent.com/28094207/213930508-6a478b5c-7696-4f30-
 
 
 ### Diagram
-You can find the diagram file in the repo and open it in [here](draw.io) 
+You can find the diagram file in the repo and open it in [here](architecture_diagram.drawio) 

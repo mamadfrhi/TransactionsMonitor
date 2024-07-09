@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		4E6882EC49A1693297AFE710 /* Pods_TransactionsMonitor.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5B69045E4706E5A133BAA76 /* Pods_TransactionsMonitor.framework */; };
+		890201C0297F164D00859CB6 /* String+localized.swift in Sources */ = {isa = PBXBuildFile; fileRef = 890201BF297F164D00859CB6 /* String+localized.swift */; };
+		890201C2297F167400859CB6 /* currentFileName.swift in Sources */ = {isa = PBXBuildFile; fileRef = 890201C1297F167400859CB6 /* currentFileName.swift */; };
+		890201D2297F256C00859CB6 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 890201D4297F256C00859CB6 /* Localizable.strings */; };
 		890E6F0B297D35DA00FF4B88 /* ShoppingView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 890E6F0A297D35DA00FF4B88 /* ShoppingView.storyboard */; };
 		890E6F0D297D35F200FF4B88 /* ShoppingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 890E6F0C297D35F200FF4B88 /* ShoppingVC.swift */; };
 		891C3469297C106900F8F8EA /* Connectivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 891C3468297C106900F8F8EA /* Connectivity.swift */; };
@@ -23,6 +26,7 @@
 		89520F55297AD5A90092210A /* TransactionsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89520F54297AD5A90092210A /* TransactionsVC.swift */; };
 		89520F5A297AD5AB0092210A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 89520F59297AD5AB0092210A /* Assets.xcassets */; };
 		89520F5D297AD5AB0092210A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 89520F5B297AD5AB0092210A /* LaunchScreen.storyboard */; };
+		89695F49297EE8E7009B3069 /* TransactionVMTestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89695F48297EE8E7009B3069 /* TransactionVMTestHelpers.swift */; };
 		89727992297ADF67004DCF21 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89727990297ADF67004DCF21 /* AppCoordinator.swift */; };
 		89727993297ADF67004DCF21 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89727991297ADF67004DCF21 /* Coordinator.swift */; };
 		89727996297ADF91004DCF21 /* TransactionsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89727995297ADF91004DCF21 /* TransactionsCoordinator.swift */; };
@@ -70,6 +74,11 @@
 
 /* Begin PBXFileReference section */
 		5D2B6116BF967F39276E5720 /* Pods-TransactionsMonitor.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TransactionsMonitor.release.xcconfig"; path = "Target Support Files/Pods-TransactionsMonitor/Pods-TransactionsMonitor.release.xcconfig"; sourceTree = "<group>"; };
+		890201BF297F164D00859CB6 /* String+localized.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+localized.swift"; sourceTree = "<group>"; };
+		890201C1297F167400859CB6 /* currentFileName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = currentFileName.swift; sourceTree = "<group>"; };
+		890201C8297F17F200859CB6 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		890201D3297F256C00859CB6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		890201D5297F257000859CB6 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
 		890E6F0A297D35DA00FF4B88 /* ShoppingView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ShoppingView.storyboard; sourceTree = "<group>"; };
 		890E6F0C297D35F200FF4B88 /* ShoppingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingVC.swift; sourceTree = "<group>"; };
 		891C3468297C106900F8F8EA /* Connectivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Connectivity.swift; sourceTree = "<group>"; };
@@ -87,6 +96,7 @@
 		89520F59297AD5AB0092210A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		89520F5C297AD5AB0092210A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		89520F5E297AD5AB0092210A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		89695F48297EE8E7009B3069 /* TransactionVMTestHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionVMTestHelpers.swift; sourceTree = "<group>"; };
 		89727990297ADF67004DCF21 /* AppCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		89727991297ADF67004DCF21 /* Coordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		89727995297ADF91004DCF21 /* TransactionsCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionsCoordinator.swift; sourceTree = "<group>"; };
@@ -237,6 +247,7 @@
 			isa = PBXGroup;
 			children = (
 				8972799C297AE543004DCF21 /* PBTransactions.json */,
+				890201D4297F256C00859CB6 /* Localizable.strings */,
 				89520F59297AD5AB0092210A /* Assets.xcassets */,
 				89520F5B297AD5AB0092210A /* LaunchScreen.storyboard */,
 				89520F5E297AD5AB0092210A /* Info.plist */,
@@ -324,6 +335,8 @@
 			isa = PBXGroup;
 			children = (
 				897279C0297B5E15004DCF21 /* UIViewController+showAlert.swift */,
+				890201BF297F164D00859CB6 /* String+localized.swift */,
+				890201C1297F167400859CB6 /* currentFileName.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -383,6 +396,7 @@
 				89EF0AAE297D5F770016EE51 /* DateConverterTests.swift */,
 				89E8490B297D64ED00B98DCC /* TransactionsVMFilteringTests.swift */,
 				89E8490F297D7DC800B98DCC /* TransactionsVMGetUniqueCategoryTests.swift */,
+				89695F48297EE8E7009B3069 /* TransactionVMTestHelpers.swift */,
 			);
 			path = TransactionsMonitorTests;
 			sourceTree = "<group>";
@@ -462,6 +476,7 @@
 			knownRegions = (
 				en,
 				Base,
+				de,
 			);
 			mainGroup = 89520F44297AD5A90092210A;
 			productRefGroup = 89520F4E297AD5A90092210A /* Products */;
@@ -484,6 +499,7 @@
 				8972799D297AE543004DCF21 /* PBTransactions.json in Resources */,
 				89731F49297CA06D0063448D /* DetailsView.storyboard in Resources */,
 				89520F5A297AD5AB0092210A /* Assets.xcassets in Resources */,
+				890201D2297F256C00859CB6 /* Localizable.strings in Resources */,
 				89E2EEF2297D4D4E00E35AB7 /* SettingsView.storyboard in Resources */,
 				891C3477297C329A00F8F8EA /* FilterPopoverView.storyboard in Resources */,
 			);
@@ -556,6 +572,7 @@
 				89727993297ADF67004DCF21 /* Coordinator.swift in Sources */,
 				897279C3297B62C8004DCF21 /* ProgressHUD.swift in Sources */,
 				89731F4B297CA10B0063448D /* TransactionDetails.swift in Sources */,
+				890201C2297F167400859CB6 /* currentFileName.swift in Sources */,
 				891C3470297C15BC00F8F8EA /* TransactionsArraySorter.swift in Sources */,
 				897279A1297AE565004DCF21 /* LocalJSONLoader.swift in Sources */,
 				89731F47297C9F3B0063448D /* DetailsVC.swift in Sources */,
@@ -569,6 +586,7 @@
 				897279C7297B7AA0004DCF21 /* DateConverter.swift in Sources */,
 				89727998297ADFFB004DCF21 /* Constants.swift in Sources */,
 				897279A9297AE6B7004DCF21 /* TransactionsAPISessionManager.swift in Sources */,
+				890201C0297F164D00859CB6 /* String+localized.swift in Sources */,
 				897279BA297B08D7004DCF21 /* TransactionsVM.swift in Sources */,
 				89E2EEF1297D4D4E00E35AB7 /* SettingsVC.swift in Sources */,
 				897279B4297AE7EC004DCF21 /* TransactionsView.swift in Sources */,
@@ -592,6 +610,7 @@
 				89EF0AAF297D5F770016EE51 /* DateConverterTests.swift in Sources */,
 				89E84910297D7DC800B98DCC /* TransactionsVMGetUniqueCategoryTests.swift in Sources */,
 				89E8490E297D6BE700B98DCC /* TransactionsMockData.swift in Sources */,
+				89695F49297EE8E7009B3069 /* TransactionVMTestHelpers.swift in Sources */,
 				89E8490C297D64ED00B98DCC /* TransactionsVMFilteringTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -607,10 +626,20 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		890201D4297F256C00859CB6 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				890201D3297F256C00859CB6 /* en */,
+				890201D5297F257000859CB6 /* de */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 		89520F5B297AD5AB0092210A /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				89520F5C297AD5AB0092210A /* Base */,
+				890201C8297F17F200859CB6 /* de */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -622,6 +651,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -682,6 +712,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";

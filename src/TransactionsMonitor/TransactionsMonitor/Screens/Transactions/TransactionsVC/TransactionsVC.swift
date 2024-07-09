@@ -95,39 +95,12 @@ extension TransactionsVC {
     
     private func setupBindings() {
         
-        transactionsVM.$transactions
+        transactionsVM.$state
             .receive(on: DispatchQueue.main)
             .sink {
-                [weak self] transactions in
-                self?.transactionsTableViewDataSource.transactions = transactions
-                self?.updateScreen()
-            }
-            .store(in: &cancelables)
-        
-        transactionsVM.$errorMessage
-            .dropFirst()
-            .receive(on: DispatchQueue.main)
-            .sink {
-                [weak self] errorMessage in
-                let errorText = errorMessage ?? "Something wrong happened"
-                self?.showError(errorMessage: errorText)
-            }
-            .store(in: &cancelables)
-        
-        filterPopoverVC.$chosenCategory
-            .dropFirst()
-            .sink {
-                [weak self] category in
-                self?.transactionsVM.filterTransactions(by: category ?? Constants.clearFilterKey)
-            }
-            .store(in: &cancelables)
-        
-        transactionsVM.$filteredTransactions
-            .receive(on: DispatchQueue.main)
-            .sink {
-                [weak self] filteredTransactions in
-                self?.transactionsTableViewDataSource.transactions = filteredTransactions
-                self?.updateScreen()
+                [weak self] state in
+                self?.render(state)
+                
             }
             .store(in: &cancelables)
         
@@ -136,6 +109,14 @@ extension TransactionsVC {
             .sink {
                 [weak self] sum in
                 self?.setSummationLabel(sum)
+            }
+            .store(in: &cancelables)
+        
+        filterPopoverVC.$chosenCategory
+            .dropFirst()
+            .sink {
+                [weak self] category in
+                self?.transactionsVM.filterTransactions(by: category ?? Constants.clearFilterKey)
             }
             .store(in: &cancelables)
         
@@ -150,13 +131,24 @@ extension TransactionsVC {
             }
             .store(in: &cancelables)
         
-        transactionsVM.$showHUD
-            .receive(on: DispatchQueue.main)
-            .sink {
-                [weak self] showHUD in
-                self?.hud(show: showHUD)
-            }
-            .store(in: &cancelables)
+        
+    }
+    
+    private func render(_ state: TransactionsVM.State) {
+        
+        switch state {
+            
+        case .isLoading(let value):
+            hud(show: value)
+            
+        case .failed(let error):
+            let localizedAPIError = (error as! TransactionsAPIErrors).errorDescription
+            showError(errorMessage: localizedAPIError)
+            
+        case .loaded(let transactions):
+            transactionsTableViewDataSource.transactions = transactions
+            updateScreen()
+        }
     }
     
     private func setSummationLabel(_ value: Int) {
